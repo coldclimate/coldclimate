@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	var imgBase="/ant-or-dec/img/";
 	score = 0;
-	inital_image = Math.floor(Math.random() * 6) + 1;
+	inital_image = Math.floor(Math.random() * 24) + 1;
 	$("#the_image").attr("src", imgBase+inital_image + ".jpg");
 
 	reload = function(result, current, score) {
-		count = Math.floor(Math.random() * 6) + 1;
+		count = Math.floor(Math.random() * 6) + 1;	
 
 		$("#the_image").attr("src", imgBase+count + ".jpg");
 
