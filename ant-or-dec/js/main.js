@@ -6,10 +6,8 @@ $(document).ready(function() {
 
 	reload = function(result, current, score) {
 		count = Math.floor(Math.random() * 6) + 1;
-		console.log(count,current)
 
 		$("#the_image").attr("src", imgBase+count + ".jpg");
-		console.log(count + ".jpg");
 
 		$("#latest_result").text(result)
 		$("#latest_score").text(score)
@@ -25,12 +23,13 @@ $(document).ready(function() {
 	}
 
 	var check = function(who) {
+		debugger;
 		var src = $('#the_image').attr('src');
-		guess = parseInt(src.replace("/img/","").split(".")[0]);
+		guess = parseInt(src.replace(imgBase,"").split(".")[0]);
 
-		dec = guess % 2 == 0;
+		isAnt = guess % 2 == 0;
 
-		if(dec){
+		if(isAnt){
 			if(who==="ant"){
 				score += 1;
 				sucess = true;
@@ -47,9 +46,6 @@ $(document).ready(function() {
 				sucess = false;
 			}
 		}
-
-		console.log("who:" + who);
-		console.log("guess:" + guess);
 		reload(sucess, guess, score);
 	}
 
