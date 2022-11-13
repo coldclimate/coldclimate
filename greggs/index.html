@@ -45,7 +45,7 @@ html, body, #map {
 	function setGreggses(json){
 		this.greggses = json
 		this.gregCount = greggses.length
-		var intervalID = window.setInterval(myCallback, 1500);
+		setTimeout(myCallback, gregCount);
 	}
 
 	function myCallback() {
@@ -58,7 +58,7 @@ html, body, #map {
   			L.marker([
   				tempLat,
   				tempLong
-  				]).addTo(map)
+  				]).bindPopup(greggses[gregCount-1].name).addTo(map)
 
   			//add lat and long to array
   			lats.push(tempLat)
@@ -71,6 +71,10 @@ html, body, #map {
   			// update the average marker
   			marker.setLatLng([avgLat, avgLong])
   			gregCount -=1
+
+  			// update the interval so it goes faster and faster
+
+  			 setTimeout(myCallback, gregCount/10);
   		}
 	}
 
