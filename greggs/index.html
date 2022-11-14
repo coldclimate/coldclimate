@@ -50,7 +50,7 @@ html, body, #map {
 
 	function myCallback() {
  		// add a marker
- 		if(gregCount >= 0){
+ 		if(gregCount > 0){
  		//console.log(greggses[gregCount-1].name)
 
  		var tempLat = greggses[gregCount-1].lat
@@ -74,7 +74,7 @@ html, body, #map {
 
   			// update the interval so it goes faster and faster
 
-  			 setTimeout(myCallback, gregCount/10);
+  			 setTimeout(myCallback, 1);
   		}
 	}
 
