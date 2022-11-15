@@ -19,9 +19,10 @@ html, body, #map {
 }</style>
 </head>
 <body>
-<div id="map"></div>
+<div id="map"><span id="howfar">0</span></div>
+
 <script>
-	var longs=[], lats=[];
+	var longs=[], lats=[], howFars=[];
 	var map = L.map('map').setView([53.05635624819027, -1.836601434782714], 5);
 	var greggses;
 	var gregCount;
@@ -68,9 +69,21 @@ html, body, #map {
   			var avgLat = lats.reduce((partialSum, a) => partialSum + a, 0)/lats.length;
   			var avgLong = longs.reduce((partialSum, a) => partialSum + a, 0)/longs.length;
 
+  			// update howFars
+  			var dLat = avgLat - marker.getLatLng().lat
+  			var dLong = avgLong - marker.getLatLng().lng
+  			howFars.push({
+  				step:greggses.length-gregCount,
+  				lat: dLat,
+  				long: dLong,
+  				distance: Math.sqrt((dLat^2) + (dLong^2))
+  			})
+
   			// update the average marker
   			marker.setLatLng([avgLat, avgLong])
   			gregCount -=1
+
+  			console.log(howFars)
 
   			// update the interval so it goes faster and faster
 
