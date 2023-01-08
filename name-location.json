@@ -15,11 +15,6 @@
     "long": -2.527510757087
   },
   {
-    "name": "Nottingham, U32 Victoria CTR",
-    "lat": 52.956300318004,
-    "long": -1.147137900259
-  },
-  {
     "name": "Birmingham, 85 New St",
     "lat": 52.47929131,
     "long": -1.901865823
@@ -185,11 +180,6 @@
     "long": 0.112653588101
   },
   {
-    "name": "Sheerness, 52 High St",
-    "lat": 51.440646525746,
-    "long": 0.761113067152
-  },
-  {
     "name": "Thornton Heath, 758 London Rd",
     "lat": 51.393661035429,
     "long": -0.11388601615
@@ -245,9 +235,19 @@
     "long": -2.7239489
   },
   {
+    "name": "Burnley, Trafalgar St",
+    "lat": 53.78659865,
+    "long": -2.248907272
+  },
+  {
     "name": "Huddersfield, Leeds Road RP",
     "lat": 53.657870013517,
     "long": -1.767907170635
+  },
+  {
+    "name": "Cheltenham, 219 High St",
+    "lat": 51.901737100778,
+    "long": -2.07531370216
   },
   {
     "name": "Ystradgynlais, 34 Heol Eglwys",
@@ -295,6 +295,16 @@
     "long": -2.287009744118
   },
   {
+    "name": "Liverpool, 2A Catharine St",
+    "lat": 53.398857275333,
+    "long": -2.968748923036
+  },
+  {
+    "name": "Lincoln, U4 Brant Rd SC",
+    "lat": 53.191366524436,
+    "long": -0.556907845534
+  },
+  {
     "name": "Netherfield, U1 Victoria BP",
     "lat": 52.962006559446,
     "long": -1.065529736993
@@ -318,6 +328,11 @@
     "name": "Newport, U4 Audley Avenue RP",
     "lat": 52.763682113331,
     "long": -2.361838041326
+  },
+  {
+    "name": "Bristol, U8 Peterson Ave",
+    "lat": 51.4048620771,
+    "long": -2.598148856977
   },
   {
     "name": "Caerphilly, 47 Cardiff Rd",
@@ -408,11 +423,6 @@
     "name": "Loughborough, 5 Market St",
     "lat": 52.771247512891,
     "long": -1.207958118874
-  },
-  {
-    "name": "Solihull, 33 High St",
-    "lat": 52.41375887,
-    "long": -1.77871961
   },
   {
     "name": "Cardiff, 39 Wellfield Rd",
@@ -540,6 +550,11 @@
     "long": -0.255223850917
   },
   {
+    "name": "Petersfield, 23 Chapel St",
+    "lat": 51.005337619253,
+    "long": -0.938075394282
+  },
+  {
     "name": "Harlow, Edinburgh Way",
     "lat": 51.785888503359,
     "long": 0.118148145697
@@ -553,6 +568,11 @@
     "name": "Downham Market, U1 Wales Crt",
     "lat": 52.602118347879,
     "long": 0.376930774204
+  },
+  {
+    "name": "Chelmsford, Chelmer SC",
+    "lat": 51.733902871294,
+    "long": 0.471696426116
   },
   {
     "name": "Godalming, 8 High St",
@@ -595,19 +615,9 @@
     "long": -1.88381382
   },
   {
-    "name": "Newport, 13 Ringland CTR",
-    "lat": 51.594552275368,
-    "long": -2.930277736994
-  },
-  {
     "name": "Abingdon, 7 Bury St",
     "lat": 51.670406755574,
     "long": -1.282218654662
-  },
-  {
-    "name": "Wantage, U1 Victoria Cross",
-    "lat": 51.58838,
-    "long": -1.42691
   },
   {
     "name": "Newport, Coedkernew, 3 Lakeside Dr",
@@ -623,11 +633,6 @@
     "name": "Southampton, 101 Above Bar St",
     "lat": 50.905997830547,
     "long": -1.404753643028
-  },
-  {
-    "name": "Chadderton, U3A Shopping PCT",
-    "lat": 53.545621940373,
-    "long": -2.140959967211
   },
   {
     "name": "Dewsbury, The Princess Of Wales PCT",
@@ -705,11 +710,6 @@
     "long": -2.22943855325
   },
   {
-    "name": "Wirral, U2 Croft RP, Welton Rd",
-    "lat": 53.340839657248,
-    "long": -2.975708863804
-  },
-  {
     "name": "Ledbury, 2 High St",
     "lat": 52.03635930012,
     "long": -2.422306213795
@@ -728,11 +728,6 @@
     "name": "Harborne, 83 High St",
     "lat": 52.45980272,
     "long": -1.946811718
-  },
-  {
-    "name": "Saltcoats, 29 Dockhead St",
-    "lat": 55.633043964618,
-    "long": -4.787075259514
   },
   {
     "name": "Washington, U1 Arndale House SC",
@@ -1145,11 +1140,6 @@
     "long": -1.509769074578
   },
   {
-    "name": "Salford, 258 Eccles Old Rd",
-    "lat": 53.489269897645,
-    "long": -2.326557259411
-  },
-  {
     "name": "Hyde, 14 Clarendon Sq",
     "lat": 53.450932763717,
     "long": -2.07815603158
@@ -1170,9 +1160,9 @@
     "long": -0.892562370347
   },
   {
-    "name": "Warminster, U18 Three Horseshoes Wlk",
-    "lat": 51.20526674,
-    "long": -2.180120686
+    "name": "Northampton, 9 Alexandra Tce",
+    "lat": 52.264247377473,
+    "long": -0.900134055855
   },
   {
     "name": "Milton Keynes, Westcroft District Ctr",
@@ -1315,6 +1305,11 @@
     "long": -0.810199774964
   },
   {
+    "name": "Southend, 100 High St",
+    "lat": 51.537505948824,
+    "long": 0.713901845166
+  },
+  {
     "name": "Portsmouth, U4 Charter House",
     "lat": 50.795201468568,
     "long": -1.094451118616
@@ -1333,6 +1328,11 @@
     "name": "Glasgow, Easterhouse, Shandwick Sq SC",
     "lat": 55.868509008966,
     "long": -4.122275232422
+  },
+  {
+    "name": "Marple, 3 The Hollins",
+    "lat": 53.394700597815,
+    "long": -2.062909478293
   },
   {
     "name": "Warrington, U27 Birchwood SC",
@@ -1365,11 +1365,6 @@
     "long": -1.825733531737
   },
   {
-    "name": "Maesteg, 8 Talbot St",
-    "lat": 51.608948144647,
-    "long": -3.659606556427
-  },
-  {
     "name": "Tonypandy, 37 Dunraven St",
     "lat": 51.621740241319,
     "long": -3.453786037882
@@ -1380,9 +1375,19 @@
     "long": -1.531536707968
   },
   {
+    "name": "Pontyclun, 48 Talbot Rd",
+    "lat": 51.536976808592,
+    "long": -3.38432385768
+  },
+  {
     "name": "Pontyclun, 19 Cowbridge Rd",
     "lat": 51.522696560628,
     "long": -3.391241946384
+  },
+  {
+    "name": "Tamworth, UM Ventura RP, Ventura Park Rd",
+    "lat": 52.62693583,
+    "long": -1.700515282
   },
   {
     "name": "Birtley, 37 Durham Rd",
@@ -1675,11 +1680,6 @@
     "long": 0.71156895667
   },
   {
-    "name": "Thurrock, U58B Intu Lakeside SC",
-    "lat": 51.485729699399,
-    "long": 0.284445228246
-  },
-  {
     "name": "Oadby, 28 The Parade",
     "lat": 52.59965449623,
     "long": -1.084020918145
@@ -1853,11 +1853,6 @@
     "name": "Ebbw Vale, U21 Market St",
     "lat": 51.779820453042,
     "long": -3.20721195913
-  },
-  {
-    "name": "Brighton, 96 Queens Rd",
-    "lat": 50.82713405,
-    "long": -0.141468131
   },
   {
     "name": "Hardgate, 5 Rockbank Pl",
@@ -2310,11 +2305,6 @@
     "long": -0.750943994
   },
   {
-    "name": "London North Greenwich Underground Stn",
-    "lat": 51.5003,
-    "long": -0.0032
-  },
-  {
     "name": "Outlet: Preston, U1 London Rd",
     "lat": 53.757344495297,
     "long": -2.682942918003
@@ -2463,6 +2453,11 @@
     "name": "Ashford, Ashford RP, Barrey Rd",
     "lat": 51.13032,
     "long": 0.90564
+  },
+  {
+    "name": "Brynmawr, U4 Brynmawr RP, Blaina Rd",
+    "lat": 51.79657339,
+    "long": -3.17639449
   },
   {
     "name": "RONTEC Chelmsford",
@@ -2625,11 +2620,6 @@
     "long": -3.17729335317
   },
   {
-    "name": "Shepton Mallet, U2 Townsend Rd",
-    "lat": 51.18900757,
-    "long": -2.549545489
-  },
-  {
     "name": "Glasgow, 1029 Shettleston Rd",
     "lat": 55.851904350903,
     "long": -4.169970423743
@@ -2683,6 +2673,11 @@
     "name": "Anniesland, 1580 Great Western Rd",
     "lat": 55.889550778763,
     "long": -4.3231702729
+  },
+  {
+    "name": "Newcastle Under Lyme, U15 Castle Wlk",
+    "lat": 53.011479505545,
+    "long": -2.225163637265
   },
   {
     "name": "Merthyr Tydfl, 21 Chestnut Way",
@@ -2845,6 +2840,11 @@
     "long": -0.645795791674
   },
   {
+    "name": "Shrewsbury, 1 Harlescott Ln",
+    "lat": 52.738668411807,
+    "long": -2.726966171996
+  },
+  {
     "name": "Uddingston, 319 Old Edinburgh Rd",
     "lat": 55.830881469581,
     "long": -4.075307457865
@@ -2935,6 +2935,11 @@
     "long": -1.946488698865
   },
   {
+    "name": "Willenhall, 36 The Square",
+    "lat": 52.612771378829,
+    "long": -2.037011283658
+  },
+  {
     "name": "Street, 98B High St",
     "lat": 51.12650951,
     "long": -2.740744501
@@ -3005,11 +3010,6 @@
     "long": -0.752385094867
   },
   {
-    "name": "Dagenham, 12 Woodward Rd",
-    "lat": 51.53891631573,
-    "long": 0.127022196227
-  },
-  {
     "name": "Ashford, Mx, Grove House, Church Rd",
     "lat": 51.433806426474,
     "long": -0.465312695599
@@ -3040,11 +3040,6 @@
     "long": -1.4691658
   },
   {
-    "name": "Bilston, 102 Church St",
-    "lat": 52.565114432249,
-    "long": -2.078056822896
-  },
-  {
     "name": "Swansea, UB Swansea Bus Station",
     "lat": 51.618430680632,
     "long": -3.946662028145
@@ -3060,19 +3055,14 @@
     "long": -0.70133779438
   },
   {
+    "name": "Guisborough, 39 Westgate",
+    "lat": 54.535429840095,
+    "long": -1.052380111642
+  },
+  {
     "name": "Gateshead, Metrocentre, Red Mall",
     "lat": 54.957640546294,
     "long": -1.668555247618
-  },
-  {
-    "name": "Dalkeith, 17 Jarnac Crt",
-    "lat": 55.89371030525,
-    "long": -3.070292509346
-  },
-  {
-    "name": "Glasgow, 242 Smithycroft Rd",
-    "lat": 55.870603462714,
-    "long": -4.186406502949
   },
   {
     "name": "South Shields, 15 King St",
@@ -3113,11 +3103,6 @@
     "name": "Ipswich, U3 Ipswich Station, Burrwell Rd",
     "lat": 52.050721318928,
     "long": 1.144201439481
-  },
-  {
-    "name": "Hornchurch, 12 Broadway Pde",
-    "lat": 51.5506087141,
-    "long": 0.198146452786
   },
   {
     "name": "Great Yarmouth, 182 King St",
@@ -3190,11 +3175,6 @@
     "long": -2.980748014222
   },
   {
-    "name": "Chelmsford, 146 Gloucester Ave",
-    "lat": 51.716590682595,
-    "long": 0.475138886711
-  },
-  {
     "name": "Bishops Stortford, U2 South St",
     "lat": 51.869169329247,
     "long": 0.160059808384
@@ -3213,6 +3193,11 @@
     "name": "Pontefract, 27 Barnsley Rd",
     "lat": 53.594753018005,
     "long": -1.290008012818
+  },
+  {
+    "name": "Barry, 133 Holton Rd",
+    "lat": 51.40639357489,
+    "long": -3.26502469936
   },
   {
     "name": "Cardiff, 205 Cowbridge Rd Est",
@@ -3260,11 +3245,6 @@
     "long": -0.61568
   },
   {
-    "name": "Cwmbran, Llantarnam Lakeside Crt",
-    "lat": 51.632793,
-    "long": -3.012472
-  },
-  {
     "name": "Coventry, U7 Cannon Park SC",
     "lat": 52.387812325672,
     "long": -1.554876612586
@@ -3293,6 +3273,11 @@
     "name": "Bath, 8 Westgate St",
     "lat": 51.38133837,
     "long": -2.361414756
+  },
+  {
+    "name": "Mackworth, 91 Prince Charles Ave",
+    "lat": 52.928241400672,
+    "long": -1.518176515217
   },
   {
     "name": "Melksham, 29 High St",
@@ -3360,6 +3345,11 @@
     "long": -0.982553102843
   },
   {
+    "name": "Dorchester, 55 South St",
+    "lat": 50.713955500367,
+    "long": -2.437385258513
+  },
+  {
     "name": "Cardiff, 23 Caroline St",
     "lat": 51.478262207625,
     "long": -3.176537085649
@@ -3380,11 +3370,6 @@
     "long": -1.677469412354
   },
   {
-    "name": "Carlisle, 131 Denton St",
-    "lat": 54.886677857001,
-    "long": -2.940114839846
-  },
-  {
     "name": "Battle Hill, U6 Battle Hill SC",
     "lat": 55.006634373773,
     "long": -1.518134484991
@@ -3395,9 +3380,9 @@
     "long": -2.929588974572
   },
   {
-    "name": "Birmingham, 26 Glebe Farm Rd",
-    "lat": 52.48831388,
-    "long": -1.794103878
+    "name": "Shard End, 3 Ownall Rd",
+    "lat": 52.49535548,
+    "long": -1.775659464
   },
   {
     "name": "Newbridge, 16 High St",
@@ -3465,6 +3450,11 @@
     "long": -1.615613373193
   },
   {
+    "name": "Southampton, Hedge End, 3 Lwr Northam Rd",
+    "lat": 50.914085582226,
+    "long": -1.302972364745
+  },
+  {
     "name": "Orpington, 238 High St",
     "lat": 51.37631196,
     "long": 0.099300871
@@ -3498,11 +3488,6 @@
     "name": "March, 33 Broad St",
     "lat": 52.550424362139,
     "long": 0.088579311269
-  },
-  {
-    "name": "Oldham, U6 Town Sq SC",
-    "lat": 53.541723105581,
-    "long": -2.113709635223
   },
   {
     "name": "Kendal, U11 Westmorland Ctr",
@@ -3540,19 +3525,9 @@
     "long": 0.051942048278
   },
   {
-    "name": "Alfreton, 1 Institute Lane",
-    "lat": 53.096875485427,
-    "long": -1.388116932582
-  },
-  {
     "name": "Bangor, 266 High St",
     "lat": 53.227084974896,
     "long": -4.125092317849
-  },
-  {
-    "name": "Leeds, U7 Central Arc",
-    "lat": 53.796332799999,
-    "long": -1.5418988
   },
   {
     "name": "Stockport, U5 Manchester Rd",
@@ -3563,11 +3538,6 @@
     "name": "Stocksbridge, UA4 Fox Valley RP",
     "lat": 53.4828608,
     "long": -1.5906669
-  },
-  {
-    "name": "Huddersfield, Bus Station",
-    "lat": 53.645204203875,
-    "long": -1.786476819115
   },
   {
     "name": "Stretford, U1B Trafford Pk",
@@ -3643,6 +3613,11 @@
     "name": "Team Valley, U4 Maingate",
     "lat": 54.94343,
     "long": -1.62443
+  },
+  {
+    "name": "Wakefield, The Ridings Ctr",
+    "lat": 53.682055971856,
+    "long": -1.497613537962
   },
   {
     "name": "Wallasey, 20 Liscard Way",
@@ -3785,11 +3760,6 @@
     "long": -0.7457369967
   },
   {
-    "name": "Edenbridge, U3 Fircroft Way",
-    "lat": 51.206536995082,
-    "long": 0.063596726275
-  },
-  {
     "name": "Cambuslang, 136 Main St",
     "lat": 55.818872782449,
     "long": -4.168625616166
@@ -3823,11 +3793,6 @@
     "name": "Perry Barr, 97 Thornbridge Ave",
     "lat": 52.53541798,
     "long": -1.905058171
-  },
-  {
-    "name": "Lydney, 63 Newerne St",
-    "lat": 51.727194610973,
-    "long": -2.529424091133
   },
   {
     "name": "Gloucester, U4a Gloucester BP",
@@ -3868,11 +3833,6 @@
     "name": "Waterlooville, 302 London Rd",
     "lat": 50.879398420248,
     "long": -1.031471510336
-  },
-  {
-    "name": "Worthing, 2 Chapel Rd",
-    "lat": 50.81226949,
-    "long": -0.370155877
   },
   {
     "name": "Christchurch, U1 Saxon Sq SC",
@@ -3948,11 +3908,6 @@
     "name": "Pembroke Dock, 6 Dimond St",
     "lat": 51.693696064503,
     "long": -4.941926533023
-  },
-  {
-    "name": "Bromsgrove, 53 Sherwood Rd",
-    "lat": 52.31925768,
-    "long": -2.058638179
   },
   {
     "name": "Llandrindod Wells, Station Cres",
@@ -4033,6 +3988,11 @@
     "name": "Bridgend, U1 Triangle SC",
     "lat": 51.507418269266,
     "long": -3.560621996229
+  },
+  {
+    "name": "Cardiff, Leckwith Rd, Capital SP",
+    "lat": 51.470915981914,
+    "long": -3.206597596539
   },
   {
     "name": "Hull, U15 Kingswood RP",
@@ -4175,6 +4135,11 @@
     "long": -1.43471359882
   },
   {
+    "name": "Newcastle, U8 Eldon Sq",
+    "lat": 54.975033297969,
+    "long": -1.615060863217
+  },
+  {
     "name": "Houghton Le Spring, 36 Newbottle St",
     "lat": 54.843427205951,
     "long": -1.471417990943
@@ -4203,11 +4168,6 @@
     "name": "New Addington, 33 Central Pde",
     "lat": 51.341031599147,
     "long": -0.014090731984
-  },
-  {
-    "name": "Paddock Wood, 43 Commercial Rd",
-    "lat": 51.180769556038,
-    "long": 0.388770843511
   },
   {
     "name": "Sunbury On Thames, 17 Staines Rd Wst",
@@ -4310,11 +4270,6 @@
     "long": 0.504052104831
   },
   {
-    "name": "Slough, Buckingham CTR SC",
-    "lat": 51.521347037238,
-    "long": -0.625710644585
-  },
-  {
     "name": "Byker, 209 Shields Rd",
     "lat": 54.977871323805,
     "long": -1.576677409957
@@ -4373,6 +4328,11 @@
     "name": "Swansea, 241 Oxford St",
     "lat": 51.6291204,
     "long": -3.9065562
+  },
+  {
+    "name": "Wishaw, 83 Main St",
+    "lat": 55.775085573096,
+    "long": -3.922509280025
   },
   {
     "name": "Hetton Le Hole, 15 Front St",
@@ -4850,9 +4810,9 @@
     "long": -1.218685824
   },
   {
-    "name": "Blackpool, UB Squires Gate RP",
-    "lat": 53.7790784,
-    "long": -3.0333493
+    "name": "Manchester, U6 Peter House, Oxford St",
+    "lat": 53.477099677965,
+    "long": -2.243670270454
   },
   {
     "name": "Truro, 7 St Nicholas St",
@@ -4895,11 +4855,6 @@
     "long": -1.73295
   },
   {
-    "name": "Harwich, U1A Harwich Gateway RP",
-    "lat": 51.941163,
-    "long": 1.258335
-  },
-  {
     "name": "Dundee, U3A Myrekirk Rd",
     "lat": 56.47583068,
     "long": -3.047799133
@@ -4938,11 +4893,6 @@
     "name": "Northampton, U2 The Causeway",
     "lat": 52.243849,
     "long": -0.80956744
-  },
-  {
-    "name": "Wednesbury, U2A1 Gallagher SP",
-    "lat": 52.56657,
-    "long": -2.00886
   },
   {
     "name": "London, 1 Leicester Sq",
@@ -4990,16 +4940,6 @@
     "long": -2.168464557
   },
   {
-    "name": "Poole, 18 Towngate SC, Falkland Sq",
-    "lat": 50.71842136,
-    "long": -1.981841049
-  },
-  {
-    "name": "Greggs @ Tesco Coventry",
-    "lat": 52.43385,
-    "long": -1.43281
-  },
-  {
     "name": "Merthyr Tydfil, Cyfarthfa RP",
     "lat": 51.75014278,
     "long": -3.395213712
@@ -5008,11 +4948,6 @@
     "name": "Glasgow, U2 Rutherglen RP, Dalmarnock Rd",
     "lat": 55.836429075985,
     "long": -4.210259176059
-  },
-  {
-    "name": "Evesham, U4A Four Pools RP",
-    "lat": 52.07719,
-    "long": -1.93626
   },
   {
     "name": "Brislington, U4, 821 Bath Rd",
@@ -5115,6 +5050,11 @@
     "long": -0.083424889
   },
   {
+    "name": "Chorley, U1 Calder House, Preston Rd",
+    "lat": 53.66251,
+    "long": -2.63161
+  },
+  {
     "name": "Southampton, 51 Above Bar St",
     "lat": 50.90421913,
     "long": -1.404468293
@@ -5190,14 +5130,9 @@
     "long": -0.644673731742
   },
   {
-    "name": "Greenwich, 5 Greenwich Church St",
-    "lat": 51.481043304584,
-    "long": -0.01001613614
-  },
-  {
-    "name": "Tunbridge Wells, 6 Grosvenor Rd",
-    "lat": 51.134902564848,
-    "long": 0.263067314253
+    "name": "Cambridge, 10 Fitzroy St",
+    "lat": 52.206599797698,
+    "long": 0.130461990912
   },
   {
     "name": "Swanage, 14 Station Rd",
@@ -5305,11 +5240,6 @@
     "long": -3.778956703579
   },
   {
-    "name": "Skelton, Skelton RP, Pheasant Fields Ln",
-    "lat": 54.5679571,
-    "long": -0.9661949
-  },
-  {
     "name": "Liverpool, 549 Prescot Rd",
     "lat": 53.413698038694,
     "long": -2.912847400222
@@ -5350,11 +5280,6 @@
     "long": -2.997255256141
   },
   {
-    "name": "Exeter, 28 Sidwell St",
-    "lat": 50.726374480705,
-    "long": -3.525636001108
-  },
-  {
     "name": "Rushden, L2B Rushden Lakes",
     "lat": 52.30102,
     "long": -0.627056
@@ -5373,11 +5298,6 @@
     "name": "Bradford, 23 Broadway",
     "lat": 53.79380806,
     "long": -1.751360183
-  },
-  {
-    "name": "Porthcawl, 31 St John",
-    "lat": 51.477486687501,
-    "long": -3.703747591359
   },
   {
     "name": "Edinburgh, U5 Newkirkgate SC",
@@ -5480,11 +5400,6 @@
     "long": -2.056322680148
   },
   {
-    "name": "Roath, 20 Clifton St",
-    "lat": 51.486230584804,
-    "long": -3.158321439399
-  },
-  {
     "name": "Melton Mowbray, 26 Market Pl",
     "lat": 52.764393518304,
     "long": -0.886198376226
@@ -5498,11 +5413,6 @@
     "name": "Knightswood, 740 Anniesland Rd",
     "lat": 55.88629085519,
     "long": -4.359849820959
-  },
-  {
-    "name": "Edinburgh, 164 High St Portobello",
-    "lat": 55.95265947375,
-    "long": -3.113317389894
   },
   {
     "name": "Keighley, 58 Towngate",
@@ -5528,11 +5438,6 @@
     "name": "Nottingham, U1 Beechdale RP",
     "lat": 52.960529,
     "long": -1.19161
-  },
-  {
-    "name": "Talke, Congleton Rd",
-    "lat": 53.081908,
-    "long": -2.261825
   },
   {
     "name": "Treorchy, 110 Bute St",
@@ -5585,6 +5490,11 @@
     "long": -3.781913589507
   },
   {
+    "name": "Gateshead, Metrocentre, Blue Mall",
+    "lat": 54.957640546294,
+    "long": -1.668555247618
+  },
+  {
     "name": "Blyth, 16 Regent St",
     "lat": 55.127616161814,
     "long": -1.509371606701
@@ -5610,11 +5520,6 @@
     "long": -0.41860077753
   },
   {
-    "name": "Kilburn, 79 High Rd",
-    "lat": 51.537993135128,
-    "long": -0.193939390054
-  },
-  {
     "name": "Mitcham, 11 Fairgreen Pde",
     "lat": 51.405452476727,
     "long": -0.164414398454
@@ -5623,11 +5528,6 @@
     "name": "North Finchley, 720 High Rd",
     "lat": 51.614123818803,
     "long": -0.175998467018
-  },
-  {
-    "name": "Canterbury, 22 St Georges St",
-    "lat": 51.277324338583,
-    "long": 1.082067040095
   },
   {
     "name": "Andover, 57 High St",
@@ -5665,11 +5565,6 @@
     "long": -1.577594506246
   },
   {
-    "name": "Blaby, 9 St Johns Crt",
-    "lat": 52.574875202832,
-    "long": -1.163896702777
-  },
-  {
     "name": "Glasgow, 2123 Paisley Rd West",
     "lat": 55.845596872557,
     "long": -4.354570733757
@@ -5683,6 +5578,11 @@
     "name": "Cupar, 5 Crossgate",
     "lat": 56.319097596273,
     "long": -3.011996918733
+  },
+  {
+    "name": "Glasgow, 3 Budhill Ave",
+    "lat": 55.854474081748,
+    "long": -4.15876955237
   },
   {
     "name": "Drumchapel, 71 Kinfauns Dr",
@@ -5748,11 +5648,6 @@
     "name": "Whitton, 83 High St",
     "lat": 51.450727990319,
     "long": -0.357655477149
-  },
-  {
-    "name": "Irvine, New St",
-    "lat": 55.611236069982,
-    "long": -4.674534925051
   },
   {
     "name": "Haslingden, 43 Deardengate",
@@ -5850,6 +5745,11 @@
     "long": -0.29518493268
   },
   {
+    "name": "Hawick, 52 High St",
+    "lat": 55.423235721143,
+    "long": -2.785884367969
+  },
+  {
     "name": "Worcester Park, 125 Central Rd",
     "lat": 51.378652363198,
     "long": -0.242277770266
@@ -5868,6 +5768,11 @@
     "name": "Croydon, 66 High St",
     "lat": 51.371172131744,
     "long": -0.100644079766
+  },
+  {
+    "name": "Clifton, 230 Southchurch Dr",
+    "lat": 52.903280520924,
+    "long": -1.177825140644
   },
   {
     "name": "Aspley, Carr Pit Rd",
@@ -5893,11 +5798,6 @@
     "name": "Sutton In Ashfield, U30 The Idlewells SC",
     "lat": 53.124936175618,
     "long": -1.262175375353
-  },
-  {
-    "name": "Bridgnorth, 24 High St",
-    "lat": 52.535877498306,
-    "long": -2.420288963802
   },
   {
     "name": "Workington, U3 Buddle Rd, Clay Flatts IE",
@@ -5935,6 +5835,11 @@
     "long": -1.128898516964
   },
   {
+    "name": "Warrington, U9 Cockhedge SP",
+    "lat": 53.390894791838,
+    "long": -2.589907571992
+  },
+  {
     "name": "Stratford, 2B Bridge St",
     "lat": 52.192365873888,
     "long": -1.705036126366
@@ -5948,11 +5853,6 @@
     "name": "Solihull, 113 Hobs Moat Rd",
     "lat": 52.44496581,
     "long": -1.784933953
-  },
-  {
-    "name": "Yate, U61 Beeches IE",
-    "lat": 51.543588277745,
-    "long": -2.438678506197
   },
   {
     "name": "Northampton, Harvey Reeves Rd",
@@ -6010,24 +5910,9 @@
     "long": -3.355916100956
   },
   {
-    "name": "Bradford, Greengates RP, Harrogate Rd",
-    "lat": 53.8305893,
-    "long": -1.711984055
-  },
-  {
     "name": "Ashton Under Lyne, U3 Arcades SC",
     "lat": 53.489344906595,
     "long": -2.096568692416
-  },
-  {
-    "name": "Birmingham, 6 Watford Rd",
-    "lat": 52.416597,
-    "long": -1.930102066
-  },
-  {
-    "name": "Plymouth, 54 New George St",
-    "lat": 50.371665731591,
-    "long": -4.143661575892
   },
   {
     "name": "Hebburn, U21 St James Mall SC",
@@ -6088,6 +5973,11 @@
     "name": "Luton, U160 The Mall SC",
     "lat": 51.879049103014,
     "long": -0.415534858142
+  },
+  {
+    "name": "Maidstone, 1B Longshaw Rd",
+    "lat": 51.23966457379,
+    "long": 0.557032442465
   },
   {
     "name": "Peacehaven, 165 South Coast Rd",
@@ -6220,11 +6110,6 @@
     "long": -0.270940430031
   },
   {
-    "name": "Huntingdon, St Peters Rd, The Bridge Ctr",
-    "lat": 52.34033128958,
-    "long": -0.187143550149
-  },
-  {
     "name": "Uddingston, 49 Main St",
     "lat": 55.819113053109,
     "long": -4.082470584382
@@ -6258,6 +6143,11 @@
     "name": "Seacroft, 149 South Parkway",
     "lat": 53.816191378695,
     "long": -1.469644250295
+  },
+  {
+    "name": "Flint, UA Flintshire RP",
+    "lat": 53.250529,
+    "long": -3.138139
   },
   {
     "name": "Govan, 378 Helen St",
@@ -6340,11 +6230,6 @@
     "long": -0.226946842663
   },
   {
-    "name": "Luton, 8 Nursery Pde, Marsh Rd",
-    "lat": 51.905102749595,
-    "long": -0.453750982089
-  },
-  {
     "name": "Bridgend, 11B Vlg Farm IE",
     "lat": 51.526378477161,
     "long": -3.687552603625
@@ -6353,11 +6238,6 @@
     "name": "Carlisle, 8 Devonshire St",
     "lat": 54.892739401982,
     "long": -2.933707675477
-  },
-  {
-    "name": "Maryport, 67 Senhouse St",
-    "lat": 54.713735938431,
-    "long": -3.496879945174
   },
   {
     "name": "Rosyth, UA Backmarsh Rd",
@@ -6378,16 +6258,6 @@
     "name": "Chorley, 18 Market Wlk",
     "lat": 53.653327881147,
     "long": -2.629606083751
-  },
-  {
-    "name": "Coventry, 137 Daventry Rd",
-    "lat": 52.394470297485,
-    "long": -1.506357802631
-  },
-  {
-    "name": "Bilston, U1 Roseville PCT",
-    "lat": 52.54039426636,
-    "long": -2.088097924748
   },
   {
     "name": "Swindon, 19 The Parade SC",
@@ -6428,6 +6298,11 @@
     "name": "Bromley, 112 High St",
     "lat": 51.40372131,
     "long": 0.014849069
+  },
+  {
+    "name": "Winton, 379 Wimborne Rd",
+    "lat": 50.74189888,
+    "long": -1.878689813
   },
   {
     "name": "Dover, 71 Biggin St",
@@ -6520,6 +6395,11 @@
     "long": -1.85791566433
   },
   {
+    "name": "Barnsley, 3 Peel Sq",
+    "lat": 53.552700928058,
+    "long": -1.481923911396
+  },
+  {
     "name": "Scunthorpe, 133 High St",
     "lat": 53.591147553226,
     "long": -0.64973414844
@@ -6545,11 +6425,6 @@
     "long": -1.3431081
   },
   {
-    "name": "Broomhill, U12 Broomhill SC",
-    "lat": 55.876137782455,
-    "long": -4.323805721974
-  },
-  {
     "name": "Benwell, 9 Adelaide SC",
     "lat": 54.970248683263,
     "long": -1.655751842875
@@ -6570,11 +6445,6 @@
     "long": -1.088358412459
   },
   {
-    "name": "Ipswich, U6 Hines Rd, Rosehill SC",
-    "lat": 52.047778178838,
-    "long": 1.183773544607
-  },
-  {
     "name": "Newport, U1 Usk Way",
     "lat": 51.578427816992,
     "long": -2.988857336473
@@ -6593,6 +6463,11 @@
     "name": "Middleton, U28 Middleton SC",
     "lat": 53.548241384223,
     "long": -2.201051034763
+  },
+  {
+    "name": "Calverton, U10 St Wilfrids Sq",
+    "lat": 53.037187218787,
+    "long": -1.081891429405
   },
   {
     "name": "Warwick, 20 Swan St",
@@ -6705,6 +6580,11 @@
     "long": -2.100656043
   },
   {
+    "name": "East Kilbride, 12 Calderwood Sq",
+    "lat": 55.772352755096,
+    "long": -4.15696850074
+  },
+  {
     "name": "Whitehaven, 52 Market Pl",
     "lat": 54.54687372655,
     "long": -3.590930236613
@@ -6735,11 +6615,6 @@
     "long": -0.131116307013
   },
   {
-    "name": "Lewisham, 114 High St",
-    "lat": 51.461973613891,
-    "long": -0.010773836748
-  },
-  {
     "name": "Aldershot, 33 Wellington St",
     "lat": 51.249312376565,
     "long": -0.764252400822
@@ -6753,11 +6628,6 @@
     "name": "Woolwich, 64 Powis St",
     "lat": 51.491698817217,
     "long": 0.065947394201
-  },
-  {
-    "name": "Maidstone, Northumberland Crt",
-    "lat": 51.252792183998,
-    "long": 0.545636168513
   },
   {
     "name": "Port Glasgow, U38 Princes St",
@@ -6880,6 +6750,11 @@
     "long": -1.412461068183
   },
   {
+    "name": "Colne, 41 Market St",
+    "lat": 53.85741265,
+    "long": -2.167229887
+  },
+  {
     "name": "Scarborough, 6 Westborough",
     "lat": 54.281446459562,
     "long": -0.401875653702
@@ -6913,11 +6788,6 @@
     "name": "Coventry, 118 Jubilee Cres",
     "lat": 52.430105813742,
     "long": -1.51690244651
-  },
-  {
-    "name": "Windermere, 19 Crescent Rd",
-    "lat": 54.378539280934,
-    "long": -2.905877623964
   },
   {
     "name": "Nottingham, 65 Bracebridge Dr",
@@ -7405,11 +7275,6 @@
     "long": -1.762439913
   },
   {
-    "name": "Bromsgrove, U5A Bromsgrove RP",
-    "lat": 52.33838,
-    "long": -2.05574
-  },
-  {
     "name": "Glasgow, 1 Gorstan Path",
     "lat": 55.90016,
     "long": -4.29022
@@ -7555,11 +7420,6 @@
     "long": -1.6026
   },
   {
-    "name": "Worcester, 59 High St",
-    "lat": 52.19279766,
-    "long": -2.220880749
-  },
-  {
     "name": "Crosshands, UC Heol Stanllyd",
     "lat": 51.79684995,
     "long": -4.08046356
@@ -7573,6 +7433,11 @@
     "name": "Worcester, U1A Blackpole RP",
     "lat": 52.212215,
     "long": -2.19958349
+  },
+  {
+    "name": "Beeston, 27 High Rd",
+    "lat": 52.9274,
+    "long": -1.21486
   },
   {
     "name": "Newport, U2 Port Rd Drive Thru",
@@ -7683,6 +7548,11 @@
     "name": "SSP Oxford Train Station",
     "lat": 51.75342,
     "long": -1.27007
+  },
+  {
+    "name": "Exmouth, 38 Chapel St",
+    "lat": 50.62018092,
+    "long": -3.411839152
   },
   {
     "name": "Outlet: Glasgow, 19 Saltmarket",
@@ -7815,14 +7685,14 @@
     "long": 1.167335167621
   },
   {
+    "name": "Aylesbury, 1 Gatehouse Way",
+    "lat": 51.819610803628,
+    "long": -0.82811963876
+  },
+  {
     "name": "Durham, 2 Saddler St",
     "lat": 54.776390924696,
     "long": -1.575315701659
-  },
-  {
-    "name": "Alloa, 8 High St",
-    "lat": 56.115047197892,
-    "long": -3.791544856524
   },
   {
     "name": "Doncaster, U114 Frenchgate SC",
@@ -7838,11 +7708,6 @@
     "name": "Thornbury, U5 St Marys Way",
     "lat": 51.608069273462,
     "long": -2.525350695619
-  },
-  {
-    "name": "Llantwit Major, U3 Poundfield SC",
-    "lat": 51.40870443795,
-    "long": -3.48282004513
   },
   {
     "name": "Gateshead, Interchange SC",
@@ -7875,19 +7740,14 @@
     "long": -3.532642735838
   },
   {
-    "name": "Penge, 139 High St",
-    "lat": 51.414982611682,
-    "long": -0.052305518008
+    "name": "Glenrothes, U1 Leslie Rd",
+    "lat": 56.198336954694,
+    "long": -3.173144940651
   },
   {
     "name": "Frinton-On-Sea, 66 Connaught Ave",
     "lat": 51.833347678763,
     "long": 1.24532717346
-  },
-  {
-    "name": "Luton, 499 Capability Green BP",
-    "lat": 51.86607208723,
-    "long": -0.408060719595
   },
   {
     "name": "Southall, Ealing Hospital",
@@ -8015,6 +7875,11 @@
     "long": -5.9314641
   },
   {
+    "name": "Bridgeton, 613 London Rd",
+    "lat": 55.849611330221,
+    "long": -4.227355529851
+  },
+  {
     "name": "Southgate, 58 Chase Side",
     "lat": 51.633068355656,
     "long": -0.129621257275
@@ -8025,9 +7890,9 @@
     "long": 1.152920519299
   },
   {
-    "name": "Haywards Hth, 28 South Rd",
-    "lat": 50.996685826443,
-    "long": -0.101781535729
+    "name": "Felixstowe, 35 Hamilton Rd",
+    "lat": 51.962062849443,
+    "long": 1.350949585201
   },
   {
     "name": "Basildon, 44 East Wlk",
@@ -8325,11 +8190,6 @@
     "long": -2.081143202221
   },
   {
-    "name": "Cockerton, 301 Woodland Rd",
-    "lat": 54.533472763686,
-    "long": -1.578658744918
-  },
-  {
     "name": "Belfast, U9B Boucher SP, Boucher Cres",
     "lat": 54.581359,
     "long": -5.965347
@@ -8373,11 +8233,6 @@
     "name": "East Kilbride, 44 Kirkton Pk",
     "lat": 55.76488110743,
     "long": -4.172448938935
-  },
-  {
-    "name": "Perth, 87 South St",
-    "lat": 56.395026679651,
-    "long": -3.430736067643
   },
   {
     "name": "Quinton, 524 Hagley Rd Wst",
@@ -8460,11 +8315,6 @@
     "long": -2.365502512206
   },
   {
-    "name": "Hull, U7b St Andrews RP, Hessle Rd",
-    "lat": 53.733565073784,
-    "long": -0.369109113739
-  },
-  {
     "name": "Wombwell, 245 Barnsley Rd",
     "lat": 53.530377388747,
     "long": -1.410869136122
@@ -8538,11 +8388,6 @@
     "name": "Pitlochry, 92 Atholl Rd",
     "lat": 56.703433345938,
     "long": -3.734512878522
-  },
-  {
-    "name": "Girvan, 69 Dalrymple St",
-    "lat": 55.241118501051,
-    "long": -4.855121286764
   },
   {
     "name": "Edgware, 190 Station Rd",
@@ -8625,14 +8470,14 @@
     "long": -0.7493191
   },
   {
-    "name": "Sudbury, 5 Market Hill",
-    "lat": 52.038671339403,
-    "long": 0.730238797912
-  },
-  {
     "name": "Letchworth, 22 East Cheap",
     "lat": 51.977842964133,
     "long": -0.228328434984
+  },
+  {
+    "name": "Fakenham, U14 Miller'S Wlk",
+    "lat": 52.829670408011,
+    "long": 0.849288359657
   },
   {
     "name": "Livingston, U96 The Centre",
@@ -8663,11 +8508,6 @@
     "name": "Bristol, U15 Broadwalk SC",
     "lat": 51.434423894962,
     "long": -2.568008596509
-  },
-  {
-    "name": "Oxford, Templars Sq SC",
-    "lat": 51.731747557613,
-    "long": -1.217709520686
   },
   {
     "name": "Cwmbran, U7 Gwent Sq,",
@@ -8830,6 +8670,11 @@
     "long": -0.09955
   },
   {
+    "name": "Canterbury, 126 Sturry Rd",
+    "lat": 51.288628425053,
+    "long": 1.096795834431
+  },
+  {
     "name": "Hull, U1 Clough Rd",
     "lat": 53.767755999062,
     "long": -0.336133846522
@@ -8838,6 +8683,11 @@
     "name": "Paisley, 69 Glasgow Rd",
     "lat": 55.847050567934,
     "long": -4.408528116094
+  },
+  {
+    "name": "Penistone, 1 High St",
+    "lat": 53.523581772597,
+    "long": -1.630701936277
   },
   {
     "name": "Coventry, 42 Broadgate",
@@ -8885,19 +8735,9 @@
     "long": -4.251078071526
   },
   {
-    "name": "Wigton, 3 King St",
-    "lat": 54.825035125096,
-    "long": -3.160536144114
-  },
-  {
     "name": "Newcastle, Binswood Ave",
     "lat": 54.99238,
     "long": -1.67544
-  },
-  {
-    "name": "Airdrie, 22 High St",
-    "lat": 55.868307183547,
-    "long": -3.983004880819
   },
   {
     "name": "Edinburgh, U1 Bankhead Medway",
@@ -8918,11 +8758,6 @@
     "name": "Greenford, 16 The Broadway",
     "lat": 51.527904095657,
     "long": -0.352818501083
-  },
-  {
-    "name": "Thurrock, U5 Intu Lakeside SC",
-    "lat": 51.485729699399,
-    "long": 0.284445228246
   },
   {
     "name": "Ammanford, 27 Quay St",
@@ -9005,16 +8840,6 @@
     "long": -0.124589241976
   },
   {
-    "name": "Marshalswick, 45 The Quadrant",
-    "lat": 51.76415711,
-    "long": -0.306889312
-  },
-  {
-    "name": "Norwich, 82 Colman Rd",
-    "lat": 52.621901451134,
-    "long": 1.262311581853
-  },
-  {
     "name": "London, 111 Great Portland St",
     "lat": 51.519749489662,
     "long": -0.142813903049
@@ -9070,16 +8895,6 @@
     "long": -3.785516666771
   },
   {
-    "name": "Bradley Stoke, U2 Willow Brook Ctr",
-    "lat": 51.53427712485,
-    "long": -2.548778788229
-  },
-  {
-    "name": "Madeley, U14 Anstice Sq",
-    "lat": 52.636579447513,
-    "long": -2.450305018044
-  },
-  {
     "name": "Arbertillery, 13 Church St",
     "lat": 51.730869341134,
     "long": -3.134244833283
@@ -9105,11 +8920,6 @@
     "long": -2.836817182688
   },
   {
-    "name": "Leeds, U1 Butt Lane",
-    "lat": 53.795641925652,
-    "long": -1.620681843241
-  },
-  {
     "name": "Newport, 141 Caerleon Rd",
     "lat": 51.596193395886,
     "long": -2.982659924557
@@ -9118,6 +8928,11 @@
     "name": "Hairmyres, U6 St James Ave",
     "lat": 55.760457196123,
     "long": -4.228261451917
+  },
+  {
+    "name": "Longbenton, Quorum Retail Pde",
+    "lat": 55.02091332416,
+    "long": -1.583888134846
   },
   {
     "name": "Dumfries, U7 Dumfries RP",
@@ -9175,11 +8990,6 @@
     "long": -2.15897774806
   },
   {
-    "name": "Northwich, 8 Leicester St",
-    "lat": 53.262291163218,
-    "long": -2.512323060637
-  },
-  {
     "name": "Warrington, Winwick Rd",
     "lat": 53.415366680746,
     "long": -2.596204301489
@@ -9210,11 +9020,6 @@
     "long": -2.987076530683
   },
   {
-    "name": "Wrexham, 54 Hope St",
-    "lat": 53.04548125322,
-    "long": -2.992965133255
-  },
-  {
     "name": "Ashby, 18 Broadway",
     "lat": 53.56644313778,
     "long": -0.648709106059
@@ -9228,6 +9033,11 @@
     "name": "Handforth, 134 Wilmslow Rd",
     "lat": 53.349994278237,
     "long": -2.214657316179
+  },
+  {
+    "name": "Chellaston, Riber Dr",
+    "lat": 52.861154,
+    "long": -1.435629
   },
   {
     "name": "Edinburgh, U10D Newbridge IE",
@@ -9285,11 +9095,6 @@
     "long": -1.654890310577
   },
   {
-    "name": "Middlesbrough, Newport Rd",
-    "lat": 54.57099287023,
-    "long": -1.25418874812
-  },
-  {
     "name": "Chingford, 4 Albert Cres",
     "lat": 51.617544404805,
     "long": -0.018120202649
@@ -9313,6 +9118,11 @@
     "name": "Tunbridge Wells, U7 Fountains RP",
     "lat": 51.1575321,
     "long": 0.2882245
+  },
+  {
+    "name": "Newport, 42 Commercial St",
+    "lat": 51.585261751246,
+    "long": -2.994144087461
   },
   {
     "name": "Prestonpans, 135 High St",
@@ -9355,11 +9165,6 @@
     "long": -1.489288177413
   },
   {
-    "name": "Bishopbriggs, 174 Woodhill Rd",
-    "lat": 55.907092310919,
-    "long": -4.206523470804
-  },
-  {
     "name": "Alnwick, 44 Bondgate",
     "lat": 55.413899262252,
     "long": -1.706433054142
@@ -9393,11 +9198,6 @@
     "name": "Brighton, 112 London Rd",
     "lat": 50.83125791,
     "long": -0.136135241
-  },
-  {
-    "name": "Rustington, 11 Churchill Pde",
-    "lat": 50.81081645,
-    "long": -0.507549395
   },
   {
     "name": "Portslade, 78 Boundary Rd",
@@ -9440,11 +9240,6 @@
     "long": -1.059734541152
   },
   {
-    "name": "Luton, 658 Hitchin Rd",
-    "lat": 51.902621337247,
-    "long": -0.394675114785
-  },
-  {
     "name": "Aberdeen, 65A Wellington Rd",
     "lat": 57.1296407,
     "long": -2.091742893
@@ -9475,6 +9270,11 @@
     "long": -1.124252987221
   },
   {
+    "name": "Aberdare, 22A Victoria Sq",
+    "lat": 51.712724530384,
+    "long": -3.444673794744
+  },
+  {
     "name": "Haverfordwest, 19 Bridge St",
     "lat": 51.803008669409,
     "long": -4.968685614881
@@ -9488,6 +9288,11 @@
     "name": "Dewsbury, 3 Foundry St",
     "lat": 53.692258035545,
     "long": -1.628395548721
+  },
+  {
+    "name": "Porthill Service Station, Porthill Rd",
+    "lat": 53.041478824051,
+    "long": -2.214059483706
   },
   {
     "name": "Cannock, 1 Market Hall St",
@@ -9718,6 +9523,11 @@
     "name": "MOTO Doncaster North FC",
     "lat": 53.59167867,
     "long": -0.99049036
+  },
+  {
+    "name": "Edwalton, U3 Zambra Crt",
+    "lat": 52.902522,
+    "long": -1.12823
   },
   {
     "name": "EURO Heap Bridge",
@@ -10075,11 +9885,6 @@
     "long": -0.337341342
   },
   {
-    "name": "Greggs @ Tesco Extra Altrincham",
-    "lat": 53.385557,
-    "long": -2.346693
-  },
-  {
     "name": "FALCON Gillingham",
     "lat": 51.02969325,
     "long": -2.256648329
@@ -10093,6 +9898,11 @@
     "name": "Greggs @ Tesco Extra Oldham",
     "lat": 53.54532,
     "long": -2.090562
+  },
+  {
+    "name": "Waterloo, U1, 93 Lower Marsh",
+    "lat": 51.50145,
+    "long": -0.11154
   },
   {
     "name": "COMPASS HMS Drake",
@@ -10130,11 +9940,6 @@
     "long": -1.930348477863
   },
   {
-    "name": "Coleshill, U39 Coleshill IE, Station Rd",
-    "lat": 52.5132036,
-    "long": -1.7093739
-  },
-  {
     "name": "Palmers Green, 308 Green Lanes",
     "lat": 51.619040149872,
     "long": -0.107112766152
@@ -10168,6 +9973,11 @@
     "name": "Worksop, 10 Bridge St",
     "lat": 53.30481,
     "long": -1.12449
+  },
+  {
+    "name": "Accrington, The Viaduct, Hyndburn Rd",
+    "lat": 53.7539428,
+    "long": -2.3647408
   },
   {
     "name": "WELCOME BREAK Slade End",
@@ -10310,11 +10120,6 @@
     "long": -1.89063973
   },
   {
-    "name": "Amesbury, U1 Solstice Park Drive Thru",
-    "lat": 51.177294724332,
-    "long": -1.76033049485
-  },
-  {
     "name": "Paisley, 16 Phoenix RP",
     "lat": 55.84399668,
     "long": -4.468159845
@@ -10433,6 +10238,11 @@
     "name": "WELCOME BREAK Peartree",
     "lat": 51.79411652,
     "long": -1.28415716
+  },
+  {
+    "name": "Teignmouth, 12 Wellington St",
+    "lat": 50.546345673243,
+    "long": -3.495017857567
   },
   {
     "name": "Leeds Bradford Airport",
