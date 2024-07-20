@@ -370,14 +370,14 @@
     "long": -1.664534782
   },
   {
-    "name": "London, U1 London Victoria Coach Stn",
-    "lat": 51.4923588,
-    "long": -0.148310277
-  },
-  {
     "name": "Lowestoft, U5C Gateway RP",
     "lat": 52.44647889,
     "long": 1.724130526
+  },
+  {
+    "name": "York, Monks Cross SP",
+    "lat": 53.98829762,
+    "long": -1.043941552
   },
   {
     "name": "South Oxhey, 6 Station Approach",
@@ -660,6 +660,11 @@
     "long": -1.282218654662
   },
   {
+    "name": "Wantage, U1 Victoria Cross",
+    "lat": 51.58843334,
+    "long": -1.426735027
+  },
+  {
     "name": "Newport, Coedkernew, 3 Lakeside Dr",
     "lat": 51.55905113,
     "long": -3.03642517
@@ -693,11 +698,6 @@
     "name": "Cradley Heath, 190C Halesowen Rd",
     "lat": 52.47692986,
     "long": -2.068135288
-  },
-  {
-    "name": "Chelmsley Wood SS, Chester Rd",
-    "lat": 52.49019231,
-    "long": -1.738237735
   },
   {
     "name": "Tow Law, 47A High St",
@@ -1003,6 +1003,11 @@
     "name": "York, U2 Clifton Moor RP",
     "lat": 53.99254276,
     "long": -1.104178108
+  },
+  {
+    "name": "Nuneaton, U33 Abbeygate CTR",
+    "lat": 52.52387646,
+    "long": -1.467671741
   },
   {
     "name": "Swansea, 8 Whitewalls",
@@ -1728,11 +1733,6 @@
     "name": "Sheffield, U2 Beighton BP, Chstrfield Rd",
     "lat": 53.35515049,
     "long": -1.329183439
-  },
-  {
-    "name": "Fulwood, U5 Eastway RP",
-    "lat": 53.79718138,
-    "long": -2.693709188
   },
   {
     "name": "West Bromwich, 146 Walsall Rd",
@@ -2525,6 +2525,11 @@
     "long": -2.581862903
   },
   {
+    "name": "Brynmawr, U4 Brynmawr RP, Blaina Rd",
+    "lat": 51.79662483,
+    "long": -3.176060161
+  },
+  {
     "name": "RONTEC Chelmsford",
     "lat": 51.73255125,
     "long": 0.456061467
@@ -3190,6 +3195,11 @@
     "long": -4.308186788812
   },
   {
+    "name": "Bridgend, U7 Bridgend SC, Brackla St",
+    "lat": 51.50434406,
+    "long": -3.576312017
+  },
+  {
     "name": "Workington, 19 Murray Rd",
     "lat": 54.64357148,
     "long": -3.547471469
@@ -3425,6 +3435,16 @@
     "long": -3.380192494682
   },
   {
+    "name": "Rothwell, 45 Commercial St",
+    "lat": 53.748401050319,
+    "long": -1.477352127766
+  },
+  {
+    "name": "Congleton, 1 Duke St",
+    "lat": 53.16369576,
+    "long": -2.214068918
+  },
+  {
     "name": "Evesham, 14 Bridge St",
     "lat": 52.09242732,
     "long": -1.946547937
@@ -3473,11 +3493,6 @@
     "name": "Newcastle, U1B Haymarket",
     "lat": 54.976860791214,
     "long": -1.614443796632
-  },
-  {
-    "name": "Braehead, U107 Intu SC",
-    "lat": 55.8766427178,
-    "long": -4.365160768357
   },
   {
     "name": "Glenrothes, 31 Lyon Wy",
@@ -3583,11 +3598,6 @@
     "name": "Southall, 43 The Broadway",
     "lat": 51.51129867,
     "long": -0.37789012
-  },
-  {
-    "name": "Tottenham Hale, Uc1 Tottenham Hale RP",
-    "lat": 51.587971847816,
-    "long": -0.062306998271
   },
   {
     "name": "Hounslow, 8 High St",
@@ -3928,6 +3938,11 @@
     "name": "Sunderland, Hylton Riverside RP",
     "lat": 54.91780578,
     "long": -1.433011366
+  },
+  {
+    "name": "Edinburgh, U6 Edin West RP, Chesser Rd",
+    "lat": 55.92978841,
+    "long": -3.246408369
   },
   {
     "name": "Newcastle, 39 Clayton St",
@@ -4575,6 +4590,11 @@
     "long": -0.19405744
   },
   {
+    "name": "London, SU45 Ldn Bridge Statn",
+    "lat": 51.50434808,
+    "long": -0.084154586
+  },
+  {
     "name": "Cirencester, U7 Cirencester TP",
     "lat": 51.70686384,
     "long": -1.960101077
@@ -4728,11 +4748,6 @@
     "name": "Waltham Abbey, 14 Sun St",
     "lat": 51.68695219,
     "long": -0.001642676
-  },
-  {
-    "name": "Portsmouth, U6 Portsmouth RP",
-    "lat": 50.84660039,
-    "long": -1.095763196
   },
   {
     "name": "Cosham, 18 High St",
@@ -6080,11 +6095,6 @@
     "long": -1.8138876
   },
   {
-    "name": "Warwick, UN Leamington SP",
-    "lat": 52.27972379,
-    "long": -1.549099323
-  },
-  {
     "name": "Leicester, U1, 135 Granby St",
     "lat": 52.63239304,
     "long": -1.127608328
@@ -6163,6 +6173,11 @@
     "name": "Bedworth, 32 All Saints Sq",
     "lat": 52.48005718963,
     "long": -1.473228429531
+  },
+  {
+    "name": "Chelmsley Wood, U61 Chelmsly Wood SC",
+    "lat": 52.48030449,
+    "long": -1.739632115
   },
   {
     "name": "Merthyr Tydfil, Pentrebach RP",
@@ -7095,6 +7110,11 @@
     "long": 1.562762047
   },
   {
+    "name": "Kings Lynn, 93 High St",
+    "lat": 52.75412163,
+    "long": 0.395177529
+  },
+  {
     "name": "Brighton, 51 Western Rd",
     "lat": 50.82398952,
     "long": -0.147814408
@@ -7288,6 +7308,11 @@
     "name": "Luton, 8 Nursery Pde, Marsh Rd",
     "lat": 51.90502742,
     "long": -0.453656665
+  },
+  {
+    "name": "Bridgend, 11B Vlg Farm IE",
+    "lat": 51.52547284,
+    "long": -3.691509165
   },
   {
     "name": "Carlisle, 8 Devonshire St",
@@ -7538,6 +7563,11 @@
     "name": "Middleton, U28 Middleton SC",
     "lat": 53.548241384223,
     "long": -2.201051034763
+  },
+  {
+    "name": "Calverton, U10 St Wilfrids Sq",
+    "lat": 53.03721193,
+    "long": -1.08193945
   },
   {
     "name": "Warwick, 20 Swan St",
@@ -9425,11 +9455,6 @@
     "long": -1.983756108355
   },
   {
-    "name": "Pontardawe, 70 Herbert St",
-    "lat": 51.71953645,
-    "long": -3.849672201
-  },
-  {
     "name": "Aberystwyth, U2.1 Parc Melin",
     "lat": 52.40085104,
     "long": -4.043076009
@@ -9588,6 +9613,11 @@
     "name": "Bramley, U5 Bramley SC",
     "lat": 53.81229703,
     "long": -1.62722594
+  },
+  {
+    "name": "Mablethorpe, 37 High St",
+    "lat": 53.34141774,
+    "long": 0.260590076
   },
   {
     "name": "Pontypridd, 79A Taff St",
@@ -10448,11 +10478,6 @@
     "name": "Maidenhead, 43 High St",
     "lat": 51.52275103,
     "long": -0.720098438
-  },
-  {
-    "name": "Wimbledon, 17 Wimbledon Bridge",
-    "lat": 51.4210438,
-    "long": -0.206537777
   },
   {
     "name": "Fenham, 313 Two Ball Lonnen",
@@ -11663,6 +11688,11 @@
     "name": "BLAKEMORE Tipton",
     "lat": 52.54483,
     "long": -2.03777
+  },
+  {
+    "name": "Birmingham, Exchange Sq",
+    "lat": 52.48207065,
+    "long": -1.89063973
   },
   {
     "name": "Amesbury, U1 Solstice Park Drive Thru",
