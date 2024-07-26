@@ -485,6 +485,11 @@
     "long": 0.08327071
   },
   {
+    "name": "Southampton, UJ2 Antelope Park",
+    "lat": 50.90565043,
+    "long": -1.339320819
+  },
+  {
     "name": "Elgin, U2271K Elgin IE",
     "lat": 51.57487801,
     "long": -1.770475239
@@ -578,11 +583,6 @@
     "name": "Chelmsford, U5C Interchange",
     "lat": 51.736080807677,
     "long": 0.466485105764
-  },
-  {
-    "name": "Harlow, Edinburgh Way",
-    "lat": 51.78593584,
-    "long": 0.118265278
   },
   {
     "name": "Wandsworth, 75 Southside SC",
@@ -1355,11 +1355,6 @@
     "long": -2.062612133
   },
   {
-    "name": "Warrington, U27 Birchwood SC",
-    "lat": 53.41421502,
-    "long": -2.527271655
-  },
-  {
     "name": "Morecambe, U8 Arndale CTR",
     "lat": 54.071870583986,
     "long": -2.865672793737
@@ -2115,6 +2110,11 @@
     "long": -0.711928596
   },
   {
+    "name": "EURO Causeway",
+    "lat": 53.380467,
+    "long": -2.588779669
+  },
+  {
     "name": "EURO Deeside",
     "lat": 53.232633410372,
     "long": -3.005523944946
@@ -2283,11 +2283,6 @@
     "name": "EURO Podimore",
     "lat": 51.02255,
     "long": -2.66107
-  },
-  {
-    "name": "EURO Bridlington",
-    "lat": 54.09576888,
-    "long": -0.210621097
   },
   {
     "name": "MFG Newby Bridge",
@@ -2530,6 +2525,11 @@
     "long": -2.581862903
   },
   {
+    "name": "Brynmawr, U4 Brynmawr RP, Blaina Rd",
+    "lat": 51.79662483,
+    "long": -3.176060161
+  },
+  {
     "name": "RONTEC Chelmsford",
     "lat": 51.73255125,
     "long": 0.456061467
@@ -2568,11 +2568,6 @@
     "name": "London, U26 Liverpool St Station",
     "lat": 51.519059,
     "long": -0.081381081
-  },
-  {
-    "name": "Eastleigh, 41 Market St",
-    "lat": 50.96758824,
-    "long": -1.351969028
   },
   {
     "name": "MFG Oakwood Gate",
@@ -2623,11 +2618,6 @@
     "name": "South Bank, U2 Middlesbrough Rd Dr Thru",
     "lat": 54.5792,
     "long": -1.18121
-  },
-  {
-    "name": "Carterton, U5 Kipling Court Drive Thru",
-    "lat": 51.7680325,
-    "long": -1.581695617
   },
   {
     "name": "Port Talbot, Baglan Bay RP Drive Thru",
@@ -3080,11 +3070,6 @@
     "long": -1.276232585
   },
   {
-    "name": "Bingham, 9 Eaton Pl",
-    "lat": 52.95224568,
-    "long": -0.953281125
-  },
-  {
     "name": "Bridgwater, U2, 8 High St",
     "lat": 51.12864152,
     "long": -3.004390547
@@ -3438,6 +3423,16 @@
     "name": "Rothwell, 45 Commercial St",
     "lat": 53.748401050319,
     "long": -1.477352127766
+  },
+  {
+    "name": "Congleton, 1 Duke St",
+    "lat": 53.16369576,
+    "long": -2.214068918
+  },
+  {
+    "name": "Evesham, 14 Bridge St",
+    "lat": 52.09242732,
+    "long": -1.946547937
   },
   {
     "name": "Willenhall, 36 The Square",
@@ -4708,6 +4703,11 @@
     "name": "Surbiton, 77 Victoria Rd",
     "lat": 51.39250066,
     "long": -0.305535646
+  },
+  {
+    "name": "Dalston, 61 Kingsland High St",
+    "lat": 51.5483315,
+    "long": -0.075560283
   },
   {
     "name": "New Addington, 33 Central Pde",
@@ -6485,11 +6485,6 @@
     "long": -2.590814655
   },
   {
-    "name": "Barnstaple, 61 High St",
-    "lat": 51.0819775,
-    "long": -4.061423
-  },
-  {
     "name": "Sunderland, U1 Union St",
     "lat": 54.90677877,
     "long": -1.383141879
@@ -6628,11 +6623,6 @@
     "name": "Portsmouth, 78 London Rd",
     "lat": 50.81533553,
     "long": -1.07940684
-  },
-  {
-    "name": "Sittingbourne, 95 High St",
-    "lat": 51.34008476,
-    "long": 0.735165802
   },
   {
     "name": "Basildon, U8 Mayflower RP",
@@ -7830,6 +7820,11 @@
     "long": -2.582977483
   },
   {
+    "name": "Cumnock, U7 Townhead St",
+    "lat": 55.45425,
+    "long": -4.262144651
+  },
+  {
     "name": "Ayr, 85 High St",
     "lat": 55.46298221,
     "long": -4.630574523
@@ -8880,11 +8875,6 @@
     "long": 1.149482676
   },
   {
-    "name": "Trowbridge, U27 The Shires SC",
-    "lat": 51.3203052,
-    "long": -2.209550727
-  },
-  {
     "name": "Norwich, U2B Riverside RP",
     "lat": 52.62272,
     "long": 1.30714
@@ -9443,11 +9433,6 @@
     "name": "Walsall, U5 Littleton St West",
     "lat": 52.58743245552,
     "long": -1.983756108355
-  },
-  {
-    "name": "Pontardawe, 70 Herbert St",
-    "lat": 51.71953645,
-    "long": -3.849672201
   },
   {
     "name": "Aberystwyth, U2.1 Parc Melin",
@@ -11628,6 +11613,11 @@
     "name": "Bolton, U6A Burden Park, Manchester Rd",
     "lat": 53.56804561,
     "long": -2.417012636
+  },
+  {
+    "name": "Newark on Trent, UD2 The Maltings RP",
+    "lat": 53.081665,
+    "long": -0.805464
   },
   {
     "name": "SSP Derby Train Station",
