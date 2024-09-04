@@ -375,11 +375,6 @@
     "long": -1.664534782
   },
   {
-    "name": "London, U1 London Victoria Coach Stn",
-    "lat": 51.4923588,
-    "long": -0.148310277
-  },
-  {
     "name": "Lowestoft, U5C Gateway RP",
     "lat": 52.44647889,
     "long": 1.724130526
@@ -483,6 +478,11 @@
     "name": "Edinburgh, U7F Fort Kinnaird RP",
     "lat": 55.934337965924,
     "long": -3.103363384932
+  },
+  {
+    "name": "Poplar, Chrisp St, 16 Mkt Sq",
+    "lat": 51.51275476,
+    "long": -0.015288646
   },
   {
     "name": "Bognor Regis, 2B London Rd",
@@ -925,6 +925,11 @@
     "long": -1.211584995
   },
   {
+    "name": "Blackheath, 181 High St",
+    "lat": 52.47562537,
+    "long": -2.03966241
+  },
+  {
     "name": "Brierley Hill, 240 High St",
     "lat": 52.50102847,
     "long": -2.122478877
@@ -1043,11 +1048,6 @@
     "name": "Risca, 43A Tredegar St",
     "lat": 51.60821246,
     "long": -3.100966818
-  },
-  {
-    "name": "Burton Upon Trent, 2 Cooper Sq SC",
-    "lat": 52.802040751982,
-    "long": -1.631870502064
   },
   {
     "name": "Spalding, 8 Hall Pl",
@@ -2440,6 +2440,11 @@
     "long": 1.10886265
   },
   {
+    "name": "MFG Walmer",
+    "lat": 51.20619139,
+    "long": 1.39527239
+  },
+  {
     "name": "BLAKEMORE Carlton",
     "lat": 53.20156589,
     "long": -2.934347387
@@ -3133,6 +3138,11 @@
     "name": "EG On The Move Fickle Mermaid",
     "lat": 53.33066,
     "long": -1.90868
+  },
+  {
+    "name": "Chiswick, 366 Chiswick High Rd",
+    "lat": 51.49262877231,
+    "long": -0.263346579199
   },
   {
     "name": "Sheffield, 95 Pinstone St",
@@ -4048,11 +4058,6 @@
     "name": "Putney, 145 High St",
     "lat": 51.46186887,
     "long": -0.216436505
-  },
-  {
-    "name": "Southampton, Hedge End, 3 Lwr Northam Rd",
-    "lat": 50.91398453,
-    "long": -1.30310283
   },
   {
     "name": "Orpington, 238 High St",
@@ -5710,11 +5715,6 @@
     "long": -4.12511387
   },
   {
-    "name": "Uttoxeter, UR1 Dovefields RP",
-    "lat": 52.90005,
-    "long": -1.85998
-  },
-  {
     "name": "Clacton-On-Sea, UM Clacton TP, Old Rd",
     "lat": 51.79072339,
     "long": 1.147917395
@@ -6335,11 +6335,6 @@
     "long": 0.263694101
   },
   {
-    "name": "Swanage, 14 Station Rd",
-    "lat": 50.60960169,
-    "long": -1.95791042
-  },
-  {
     "name": "Greggs @ Asda Worksop",
     "lat": 53.31362592,
     "long": -1.140488341
@@ -6710,6 +6705,11 @@
     "long": -1.668555247618
   },
   {
+    "name": "Blyth, 16 Regent St",
+    "lat": 55.127616161814,
+    "long": -1.509371606701
+  },
+  {
     "name": "Bonnybridge, U3 Bridge St",
     "lat": 56.0008958,
     "long": -3.888046915
@@ -6808,11 +6808,6 @@
     "name": "Billingham, 83 Station Rd",
     "lat": 54.59938628,
     "long": -1.297744191
-  },
-  {
-    "name": "Edmonton, Bury St West, 8 Cambridge Tce",
-    "lat": 51.63430917,
-    "long": -0.070959018
   },
   {
     "name": "Bromley, 439 Bromley Rd",
@@ -7038,11 +7033,6 @@
     "name": "Wrexham, 38 Regent St",
     "lat": 53.04693702,
     "long": -2.996575596
-  },
-  {
-    "name": "Otley, 36 Market Pl",
-    "lat": 53.90535685,
-    "long": -1.693862447
   },
   {
     "name": "Liverpool, Belle Vale SC",
@@ -7753,6 +7743,11 @@
     "name": "Middleton, U28 Middleton SC",
     "lat": 53.548241384223,
     "long": -2.201051034763
+  },
+  {
+    "name": "Calverton, U10 St Wilfrids Sq",
+    "lat": 53.03721193,
+    "long": -1.08193945
   },
   {
     "name": "Warwick, 20 Swan St",
@@ -9880,6 +9875,11 @@
     "long": -1.62722594
   },
   {
+    "name": "Mablethorpe, 37 High St",
+    "lat": 53.34141774,
+    "long": 0.260590076
+  },
+  {
     "name": "Pontypridd, 79A Taff St",
     "lat": 51.60224149,
     "long": -3.340273587
@@ -10023,6 +10023,11 @@
     "name": "Woking, U136 Woking SC, 33 Wolsey Wlk",
     "lat": 51.319496296218,
     "long": -0.558937862181
+  },
+  {
+    "name": "Altrincham, Farrow House, Atlantic St",
+    "lat": 53.39648001,
+    "long": -2.365552526
   },
   {
     "name": "Hull, U7b St Andrews RP, Hessle Rd",
@@ -12353,6 +12358,11 @@
     "name": "Greggs @ Tesco Extra Romford",
     "lat": 51.593308387,
     "long": 0.2188327067
+  },
+  {
+    "name": "Outlet: Edmonton, 235 Bounces Rd",
+    "lat": 51.628063225902,
+    "long": -0.046659930293
   },
   {
     "name": "MFG Merry Hill",
