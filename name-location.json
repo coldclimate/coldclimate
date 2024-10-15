@@ -350,6 +350,11 @@
     "long": -1.466255255
   },
   {
+    "name": "Bradford, U5 The Parkside CTR",
+    "lat": 53.81649703,
+    "long": -1.773527716
+  },
+  {
     "name": "Liverpool, 17 Castle St",
     "lat": 53.40656039,
     "long": -2.990809539
@@ -673,11 +678,6 @@
     "name": "Abingdon, 7 Bury St",
     "lat": 51.670406755574,
     "long": -1.282218654662
-  },
-  {
-    "name": "Wantage, U1 Victoria Cross",
-    "lat": 51.58843334,
-    "long": -1.426735027
   },
   {
     "name": "Newport, Coedkernew, 3 Lakeside Dr",
@@ -1330,11 +1330,6 @@
     "long": -0.104181974
   },
   {
-    "name": "Portsmouth, 120 Commercial Rd",
-    "lat": 50.79962133,
-    "long": -1.09072565
-  },
-  {
     "name": "Dartford, 15 Priory SC",
     "lat": 51.444010057154,
     "long": 0.216091680043
@@ -1408,6 +1403,11 @@
     "name": "Lichfield, 9 Bakers Ln",
     "lat": 52.683287907384,
     "long": -1.826039144187
+  },
+  {
+    "name": "Maesteg, 8 Talbot St",
+    "lat": 51.60893507,
+    "long": -3.659728676
   },
   {
     "name": "Tonypandy, 37 Dunraven St",
@@ -1700,6 +1700,11 @@
     "long": -0.192149417
   },
   {
+    "name": "Tonbridge, 86 High St",
+    "lat": 51.1948691,
+    "long": 0.274155361
+  },
+  {
     "name": "Hillingdon, 370 Long Lane",
     "lat": 51.55081276,
     "long": -0.448662578
@@ -1888,11 +1893,6 @@
     "name": "Ebbw Vale, U21 Market St",
     "lat": 51.77947784,
     "long": -3.20738558
-  },
-  {
-    "name": "Brighton, 96 Queens Rd",
-    "lat": 50.82703491,
-    "long": -0.141633355
   },
   {
     "name": "Hardgate, 5 Rockbank Pl",
@@ -2820,11 +2820,6 @@
     "long": -2.740130421
   },
   {
-    "name": "MFG Crewe",
-    "lat": 53.11324435013,
-    "long": -2.448098826243
-  },
-  {
     "name": "MFG Thirsk",
     "lat": 54.22894641972,
     "long": -1.32936334631
@@ -3325,9 +3320,9 @@
     "long": -0.077847822
   },
   {
-    "name": "Epping, 257 High St",
-    "lat": 51.69996404,
-    "long": 0.112266339
+    "name": "Wickford, 26 High St",
+    "lat": 51.61277664,
+    "long": 0.520937815
   },
   {
     "name": "Leatherhead, 4 High St",
@@ -4275,6 +4270,11 @@
     "long": -1.479691838
   },
   {
+    "name": "Wythenshawe, UA, The Hub, Ledson Rd",
+    "lat": 53.39289742,
+    "long": -2.292148152
+  },
+  {
     "name": "Outlet: Cardiff. 75 Grand Ave",
     "lat": 51.48130481,
     "long": -3.244246687
@@ -4680,9 +4680,19 @@
     "long": -0.19405744
   },
   {
+    "name": "London, SU45 Ldn Bridge Statn",
+    "lat": 51.50434808,
+    "long": -0.084154586
+  },
+  {
     "name": "Cirencester, U7 Cirencester TP",
     "lat": 51.70686384,
     "long": -1.960101077
+  },
+  {
+    "name": "Pontefract, 18 Market Pl",
+    "lat": 53.69162298,
+    "long": -1.311026793
   },
   {
     "name": "Widnes, 101 Widnes Rd",
@@ -4893,6 +4903,11 @@
     "name": "West Bromwich, Birmingham Rd",
     "lat": 52.50972576,
     "long": -1.965146167
+  },
+  {
+    "name": "Orpington, 113 Cotmandene Cres",
+    "lat": 51.40363678,
+    "long": 0.106063657
   },
   {
     "name": "Pitsea, 5 Northlands Pavement",
@@ -5293,11 +5308,6 @@
     "name": "EG On The Move Frontier Park",
     "lat": 53.75367506,
     "long": -2.440823422
-  },
-  {
-    "name": "MOTO Beaconsfield",
-    "lat": 51.58832968,
-    "long": -0.627569683
   },
   {
     "name": "MOTO Exeter",
@@ -6575,6 +6585,11 @@
     "long": -2.354305541
   },
   {
+    "name": "Nottingham, 93 Carrington St",
+    "lat": 52.94831243,
+    "long": -1.147475159
+  },
+  {
     "name": "Llandudno, 73 Mostyn St",
     "lat": 53.32417674,
     "long": -3.829204151
@@ -6800,11 +6815,6 @@
     "long": -1.297744191
   },
   {
-    "name": "Edmonton, Bury St West, 8 Cambridge Tce",
-    "lat": 51.63430917,
-    "long": -0.070959018
-  },
-  {
     "name": "Bromley, 439 Bromley Rd",
     "lat": 51.42535846,
     "long": -0.004523875
@@ -7018,11 +7028,6 @@
     "name": "Workington, U3 Buddle Rd, Clay Flatts IE",
     "lat": 54.63485327,
     "long": -3.562018848
-  },
-  {
-    "name": "Glasgow, U4 Hillington RP",
-    "lat": 55.86151798,
-    "long": -4.366919603
   },
   {
     "name": "Wrexham, 38 Regent St",
@@ -7773,6 +7778,11 @@
     "name": "Redditch, Moons Moat Dr",
     "lat": 52.31250195,
     "long": -1.888375139
+  },
+  {
+    "name": "Cardiff, U3 BBC Building, Central Sq",
+    "lat": 51.4768386,
+    "long": -3.179075178
   },
   {
     "name": "Fulwell, 29 Sea Rd",
@@ -9210,6 +9220,11 @@
     "long": -0.282644585228
   },
   {
+    "name": "Hedge End, R1 Hedge End TP, Tollbar Way",
+    "lat": 50.9244419,
+    "long": -1.311872804
+  },
+  {
     "name": "Bridgnorth, 39 High St",
     "lat": 52.5350092,
     "long": -2.4198359
@@ -9483,6 +9498,11 @@
     "name": "Bradford, U4 Euroway Te",
     "lat": 53.75844005,
     "long": -1.738825093
+  },
+  {
+    "name": "Moreton, 243 Hoylake Rd",
+    "lat": 53.40073073,
+    "long": -3.11339171
   },
   {
     "name": "Kingstanding, 208 Hawthorn Rd",
@@ -10405,6 +10425,11 @@
     "long": -4.407259599
   },
   {
+    "name": "Penistone, 1 High St",
+    "lat": 53.52519027,
+    "long": -1.630707114
+  },
+  {
     "name": "Coventry, 42 Broadgate",
     "lat": 52.40766713,
     "long": -1.511019559
@@ -10675,6 +10700,11 @@
     "long": -2.836817182688
   },
   {
+    "name": "Leeds, U1 Butt Lane",
+    "lat": 53.79554235,
+    "long": -1.620798384
+  },
+  {
     "name": "Newport, 141 Caerleon Rd",
     "lat": 51.59609102,
     "long": -2.982722282
@@ -10903,6 +10933,11 @@
     "name": "Coventry, 38 Jardine Cres",
     "lat": 52.40659448,
     "long": -1.575744808
+  },
+  {
+    "name": "Great Barr, Scott Arms SC",
+    "lat": 52.54522099,
+    "long": -1.932887929
   },
   {
     "name": "Derby, Pride Park Stadium Ground Fl",
@@ -11955,11 +11990,6 @@
     "long": -2.03777
   },
   {
-    "name": "Birmingham, Exchange Sq",
-    "lat": 52.48207065,
-    "long": -1.89063973
-  },
-  {
     "name": "Amesbury, U1 Solstice Park Drive Thru",
     "lat": 51.177294724332,
     "long": -1.76033049485
@@ -12033,6 +12063,11 @@
     "name": "London, 91 City Rd",
     "lat": 51.52525996,
     "long": -0.087043642
+  },
+  {
+    "name": "Llantwit Major, 2 The Precinct",
+    "lat": 51.4085627,
+    "long": -3.482904646
   },
   {
     "name": "Blaydon, Bridge St",
@@ -12308,6 +12343,11 @@
     "name": "MFG Oulton Broad",
     "lat": 52.4782389965,
     "long": 1.71633571077
+  },
+  {
+    "name": "Northampton, U5 Brackmills TP, Caswell R",
+    "lat": 52.216460975881,
+    "long": -0.870762019951
   },
   {
     "name": "Lye, U5 Forge RP, Dudley Rd",
