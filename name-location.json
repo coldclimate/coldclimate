@@ -20,6 +20,11 @@
     "long": -1.901779855
   },
   {
+    "name": "Daventry, U20 Bowen Sq",
+    "lat": 52.25734156,
+    "long": -1.161484289
+  },
+  {
     "name": "Birmingham, U38 Great Western Arc",
     "lat": 52.48194607,
     "long": -1.897458586
@@ -120,11 +125,6 @@
     "long": -1.535638379
   },
   {
-    "name": "Newcastle, 42 Neville St",
-    "lat": 54.96934767,
-    "long": -1.617641912
-  },
-  {
     "name": "Stretford, U11 Trafford Ctr, Regent Cres",
     "lat": 53.46654,
     "long": -2.35093
@@ -198,11 +198,6 @@
     "name": "Wimborne, Ferndown IE, 110 Cobham Rd",
     "lat": 50.81417298,
     "long": -1.912663789
-  },
-  {
-    "name": "Portsmouth, Quartremaine Rd",
-    "lat": 50.8215076,
-    "long": -1.052608773
   },
   {
     "name": "Inverurie, 5 Market Pl",
@@ -1333,6 +1328,11 @@
     "name": "West Norwood, 324 Norwood Rd",
     "lat": 51.43529115,
     "long": -0.104181974
+  },
+  {
+    "name": "Portsmouth, 120 Commercial Rd",
+    "lat": 50.79962133,
+    "long": -1.09072565
   },
   {
     "name": "Dartford, 15 Priory SC",
@@ -3415,6 +3415,11 @@
     "long": -0.342801948
   },
   {
+    "name": "Boston, 14 Pescod Sq SC",
+    "lat": 52.97892574,
+    "long": -0.021787808
+  },
+  {
     "name": "Hosforth, 33 Town St",
     "lat": 53.837681,
     "long": -1.641283003
@@ -3868,11 +3873,6 @@
     "name": "Manchester, 15A City Tower, Parker St",
     "lat": 53.48009778,
     "long": -2.237778905
-  },
-  {
-    "name": "Burnley, 31 The Mall, Charter Wlk SC",
-    "lat": 53.790247877119,
-    "long": -2.244191615514
   },
   {
     "name": "Eccles, 12 The Mall",
@@ -4945,11 +4945,6 @@
     "long": -1.50567
   },
   {
-    "name": "Milton Keynes, U1 Phoenix Hse",
-    "lat": 52.034160863925,
-    "long": -0.771685790101
-  },
-  {
     "name": "Cardiff, U1 Thornhill Rd",
     "lat": 51.53106451,
     "long": -3.204892964
@@ -4978,6 +4973,11 @@
     "name": "Wolverhampton, 24 Market St",
     "lat": 52.58502296,
     "long": -2.125852517
+  },
+  {
+    "name": "Ripon, 18 Market Pl North",
+    "lat": 54.1367966,
+    "long": -1.523586139
   },
   {
     "name": "Huddersfield, Leeds Rd",
@@ -7290,11 +7290,6 @@
     "long": -0.416103059
   },
   {
-    "name": "Maidstone, 1B Longshaw Rd",
-    "lat": 51.23991205,
-    "long": 0.5572623
-  },
-  {
     "name": "Peacehaven, 165 South Coast Rd",
     "lat": 50.79047096,
     "long": 0.00471284
@@ -7903,6 +7898,11 @@
     "name": "London Westminster Underground Stn",
     "lat": 51.501400120882,
     "long": -0.125002074452
+  },
+  {
+    "name": "Biggleswade, 1A Market Sq",
+    "lat": 52.08656516,
+    "long": -0.265262505
   },
   {
     "name": "Cleator Moor, 2 High St",
@@ -10735,6 +10735,11 @@
     "long": -3.785557963
   },
   {
+    "name": "Bradley Stoke, U2 Willow Brook Ctr",
+    "lat": 51.53515404,
+    "long": -2.548718493
+  },
+  {
     "name": "Madeley, U14 Anstice Sq",
     "lat": 52.636579447513,
     "long": -2.450305018044
@@ -10938,11 +10943,6 @@
     "name": "Swindon, 13 Canal Walk",
     "lat": 51.56099537,
     "long": -1.786002082
-  },
-  {
-    "name": "East Midlands Airport, Arrivals",
-    "lat": 52.826123676677,
-    "long": -1.329623046615
   },
   {
     "name": "Glasgow, 240 Saracen St",
@@ -12676,8 +12676,8 @@
   },
   {
     "name": "Belfast, U4 Forestside SC",
-    "lat": 54.332939,
-    "long": 5.541979
+    "lat": 54.5641333131,
+    "long": -5.90966614894
   },
   {
     "name": "RONTEC Brooklands",
