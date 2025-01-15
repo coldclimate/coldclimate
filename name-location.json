@@ -125,6 +125,11 @@
     "long": -1.535638379
   },
   {
+    "name": "Newcastle, 42 Neville St",
+    "lat": 54.96934767,
+    "long": -1.617641912
+  },
+  {
     "name": "Stretford, U11 Trafford Ctr, Regent Cres",
     "lat": 53.46654,
     "long": -2.35093
@@ -1760,7 +1765,7 @@
     "long": -3.299662346
   },
   {
-    "name": "Sheffield, U2 Beighton BP, Chstrfield Rd",
+    "name": "Sheffield, U2 Beighton BP, Chs",
     "lat": 53.35515049,
     "long": -1.329183439
   },
@@ -2155,11 +2160,6 @@
     "long": -0.711928596
   },
   {
-    "name": "ASDA EXPRESS Causeway",
-    "lat": 53.380467,
-    "long": -2.588779669
-  },
-  {
     "name": "ASDA EXPRESS Deeside",
     "lat": 53.232633410372,
     "long": -3.005523944946
@@ -2380,7 +2380,7 @@
     "long": -0.751076812
   },
   {
-    "name": "London North Greenwich Undergr",
+    "name": "London North Greenwich Underground Stn",
     "lat": 51.5003,
     "long": -0.0032
   },
@@ -2633,6 +2633,11 @@
     "name": "London, U26 Liverpool St Station",
     "lat": 51.519059,
     "long": -0.081381081
+  },
+  {
+    "name": "Eastleigh, 41 Market St",
+    "lat": 50.96758824,
+    "long": -1.351969028
   },
   {
     "name": "MFG Oakwood Gate",
@@ -3145,7 +3150,7 @@
     "long": -3.314770019
   },
   {
-    "name": "Preston, U82 St Georges SC, Fr",
+    "name": "Preston, U82 St Georges SC, Friargte Wlk",
     "lat": 53.7582486,
     "long": -2.7017412
   },
@@ -3165,7 +3170,7 @@
     "long": -0.263346579199
   },
   {
-    "name": "Basingstoke, U12 Chineham SC,",
+    "name": "Basingstoke, U12 Chineham SC, Reading Rd",
     "lat": 51.284580048397,
     "long": -1.059692822572
   },
@@ -3205,7 +3210,7 @@
     "long": -4.1258701102
   },
   {
-    "name": "Edinburgh, RU20B Ocean Terminal SC",
+    "name": "Edinburgh, RU20B Ocean Termina",
     "lat": 55.98090212291,
     "long": -3.178284505106
   },
@@ -3318,6 +3323,11 @@
     "name": "Eltham, 166 High St",
     "lat": 51.45066153,
     "long": 0.056369211
+  },
+  {
+    "name": "Stratford, U3 Westfield SC",
+    "lat": 51.5435545,
+    "long": -0.0066512
   },
   {
     "name": "Loughton, U7 Epping Forest SP, Lngstn Rd",
@@ -3590,7 +3600,7 @@
     "long": -3.025750667
   },
   {
-    "name": "Peterborough, U94 Queensgate SC",
+    "name": "Peterborough, U94 Queensgate S",
     "lat": 52.574402352516,
     "long": -0.245624769904
   },
@@ -4240,11 +4250,6 @@
     "long": -1.589355357
   },
   {
-    "name": "Huddersfield, Bus Station",
-    "lat": 53.645788,
-    "long": -1.7865004
-  },
-  {
     "name": "Stretford, U1B Trafford Pk",
     "lat": 53.46552672,
     "long": -2.32344082
@@ -4268,11 +4273,6 @@
     "name": "Edinburgh, 126 Lothian Rd",
     "lat": 55.9454941,
     "long": -3.205719119
-  },
-  {
-    "name": "Greenock, 44 Hamilton Way",
-    "lat": 55.947814032622,
-    "long": -4.758480336289
   },
   {
     "name": "Thornaby, U6 Fleck Wy, Teesside IE",
@@ -4520,7 +4520,7 @@
     "long": -2.485277828
   },
   {
-    "name": "Exeter, Marsh Barton TE, U12 T",
+    "name": "Exeter, Marsh Barton TE, U12 Trusham Rd",
     "lat": 50.70694747,
     "long": -3.529586415
   },
@@ -5575,7 +5575,7 @@
     "long": -0.18206
   },
   {
-    "name": "Bridlington, U5 The Promenades SC",
+    "name": "Bridlington, U5 The Promenades",
     "lat": 54.082875032827,
     "long": -0.189849106436
   },
@@ -5673,11 +5673,6 @@
     "name": "RONTEC Selby",
     "lat": 53.766984631137,
     "long": -1.063233621929
-  },
-  {
-    "name": "Leeds, U11 Gelderd Park, Gelderd Rd",
-    "lat": 53.78636,
-    "long": -1.57306
   },
   {
     "name": "Northampton, U2 The Causeway",
@@ -6175,11 +6170,6 @@
     "long": 0.241225443461
   },
   {
-    "name": "MOTO Skelton Lake",
-    "lat": 53.77294371617,
-    "long": -1.4711642388
-  },
-  {
     "name": "Rickmansworth, 131 High St",
     "lat": 51.6389484,
     "long": -0.470487001
@@ -6215,7 +6205,7 @@
     "long": -1.784053013803
   },
   {
-    "name": "Wakefield, 5 Westgate, Ridings Centre",
+    "name": "Wakefield, 5 Westgate, Ridings",
     "lat": 53.6825,
     "long": -1.49782
   },
@@ -6490,7 +6480,7 @@
     "long": 0.129915532
   },
   {
-    "name": "Tunbridge Wells, 6 Grosvenor R",
+    "name": "Tunbridge Wells, 6 Grosvenor Rd",
     "lat": 51.13475894,
     "long": 0.263694101
   },
@@ -7260,7 +7250,7 @@
     "long": -0.266048407
   },
   {
-    "name": "Thamesmead, U6 Joyce Dawson Wa",
+    "name": "Thamesmead, U6 Joyce Dawson Way",
     "lat": 51.50695,
     "long": 0.10667
   },
@@ -9295,7 +9285,7 @@
     "long": -3.364786361327
   },
   {
-    "name": "Greggs @ Sainsbury's Crystal Peaks",
+    "name": "Greggs @ Sainsbury's Crystal P",
     "lat": 53.3415673,
     "long": -1.350271965
   },
@@ -9485,7 +9475,7 @@
     "long": -1.069548992998
   },
   {
-    "name": "Gateshead, Metrocentre, 42 The Galleria",
+    "name": "Gateshead, Metrocentre, 42 The",
     "lat": 54.956323968578,
     "long": -1.66876259553
   },
@@ -12275,7 +12265,7 @@
     "long": 0.78161
   },
   {
-    "name": "London, U2 Canary Wharf Statio",
+    "name": "London, U2 Canary Wharf Station",
     "lat": 51.5051,
     "long": -0.0248
   },
