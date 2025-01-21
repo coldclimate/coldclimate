@@ -125,11 +125,6 @@
     "long": -1.535638379
   },
   {
-    "name": "Newcastle, 42 Neville St",
-    "lat": 54.96934767,
-    "long": -1.617641912
-  },
-  {
     "name": "Stretford, U11 Trafford Ctr, Regent Cres",
     "lat": 53.46654,
     "long": -2.35093
@@ -683,11 +678,6 @@
     "name": "Abingdon, 7 Bury St",
     "lat": 51.670406755574,
     "long": -1.282218654662
-  },
-  {
-    "name": "Wantage, U1 Victoria Cross",
-    "lat": 51.58843334,
-    "long": -1.426735027
   },
   {
     "name": "Newport, Coedkernew, 3 Lakeside Dr",
@@ -1320,11 +1310,6 @@
     "long": 0.219978852
   },
   {
-    "name": "Reading, 16 Broad St Mall",
-    "lat": 51.45489036,
-    "long": -0.975629845
-  },
-  {
     "name": "West Norwood, 324 Norwood Rd",
     "lat": 51.43529115,
     "long": -0.104181974
@@ -1408,6 +1393,11 @@
     "name": "Lichfield, 9 Bakers Ln",
     "lat": 52.683287907384,
     "long": -1.826039144187
+  },
+  {
+    "name": "Maesteg, 8 Talbot St",
+    "lat": 51.60893507,
+    "long": -3.659728676
   },
   {
     "name": "Tonypandy, 37 Dunraven St",
@@ -2295,11 +2285,6 @@
     "long": -0.3040372
   },
   {
-    "name": "ASDA EXPRESS Fareham",
-    "lat": 50.84480048,
-    "long": -1.182912142
-  },
-  {
     "name": "ASDA EXPRESS Thame",
     "lat": 51.75677918,
     "long": -0.979130846
@@ -2375,7 +2360,7 @@
     "long": -0.751076812
   },
   {
-    "name": "London North Greenwich Undergr",
+    "name": "London North Greenwich Underground Stn",
     "lat": 51.5003,
     "long": -0.0032
   },
@@ -2540,7 +2525,7 @@
     "long": -0.123467469
   },
   {
-    "name": "Outlet: Handsworth, U1, 121 Villa Rd",
+    "name": "Outlet: Handsworth, U1, 121 Vi",
     "lat": 52.50291248,
     "long": -1.916530844
   },
@@ -3318,6 +3303,11 @@
     "name": "Eltham, 166 High St",
     "lat": 51.45066153,
     "long": 0.056369211
+  },
+  {
+    "name": "Stratford, U3 Westfield SC",
+    "lat": 51.5435545,
+    "long": -0.0066512
   },
   {
     "name": "Loughton, U7 Epping Forest SP, Lngstn Rd",
@@ -4890,7 +4880,7 @@
     "long": 0.388492242
   },
   {
-    "name": "Sunbury On Thames, 17 Staines",
+    "name": "Sunbury On Thames, 17 Staines Rd Wst",
     "lat": 51.41971788,
     "long": -0.420034972
   },
@@ -5555,17 +5545,12 @@
     "long": -4.660742100002
   },
   {
-    "name": "Manchester, U6 Peter House, Oxford St",
-    "lat": 53.4772963,
-    "long": -2.243947681
-  },
-  {
     "name": "London Gatwick Airport",
     "lat": 51.1538,
     "long": -0.18206
   },
   {
-    "name": "Bridlington, U5 The Promenades SC",
+    "name": "Bridlington, U5 The Promenades",
     "lat": 54.082875032827,
     "long": -0.189849106436
   },
@@ -5583,6 +5568,11 @@
     "name": "Crayford, U1 Tower RP, Crayford Rd",
     "lat": 51.45029,
     "long": 0.18228
+  },
+  {
+    "name": "WELCOME BREAK Wyboston",
+    "lat": 52.192833,
+    "long": -0.298179
   },
   {
     "name": "MFG Wynyard",
@@ -5658,6 +5648,11 @@
     "name": "RONTEC Selby",
     "lat": 53.766984631137,
     "long": -1.063233621929
+  },
+  {
+    "name": "Leeds, U11 Gelderd Park, Gelderd Rd",
+    "lat": 53.78636,
+    "long": -1.57306
   },
   {
     "name": "Northampton, U2 The Causeway",
@@ -5853,11 +5848,6 @@
     "name": "Brislington, U4, 821 Bath Rd",
     "lat": 51.430048822372,
     "long": -2.539814879279
-  },
-  {
-    "name": "PGG Lammascote",
-    "lat": 52.80588047338,
-    "long": -2.10684723068
   },
   {
     "name": "Sale, 154A Northenden Rd",
@@ -6475,7 +6465,7 @@
     "long": 0.129915532
   },
   {
-    "name": "Tunbridge Wells, 6 Grosvenor R",
+    "name": "Tunbridge Wells, 6 Grosvenor Rd",
     "lat": 51.13475894,
     "long": 0.263694101
   },
@@ -6630,7 +6620,7 @@
     "long": -0.627033
   },
   {
-    "name": "Fradley, U2A Stirling Ctr, Common Ln",
+    "name": "Fradley, U2A Stirling Ctr, Com",
     "lat": 52.71210658,
     "long": -1.778303841
   },
@@ -6843,6 +6833,11 @@
     "name": "Gateshead, Metrocentre, Blue Mall",
     "lat": 54.957640546294,
     "long": -1.668555247618
+  },
+  {
+    "name": "Blyth, 16 Regent St",
+    "lat": 55.127616161814,
+    "long": -1.509371606701
   },
   {
     "name": "Bonnybridge, U3 Bridge St",
@@ -7270,7 +7265,7 @@
     "long": -1.711721975
   },
   {
-    "name": "Ashton Under Lyne, U3 Arcades SC",
+    "name": "Ashton Under Lyne, U3 Arcades",
     "lat": 53.489344906595,
     "long": -2.096568692416
   },
@@ -8673,11 +8668,6 @@
     "name": "ASDA EXPRESS Frimley Road",
     "lat": 51.32527166,
     "long": -0.754834927
-  },
-  {
-    "name": "MFG North Bradley",
-    "lat": 51.29539626,
-    "long": -2.197001418
   },
   {
     "name": "ASDA EXPRESS Ashby",
@@ -11055,11 +11045,6 @@
     "long": -1.683856204
   },
   {
-    "name": "Morecambe, 22 Glentworth Rd Ws",
-    "lat": 54.061857137837,
-    "long": -2.852913591841
-  },
-  {
     "name": "Swadlincote, 6 High St",
     "lat": 52.77348099,
     "long": -1.55677358
@@ -11150,7 +11135,7 @@
     "long": -1.932887929
   },
   {
-    "name": "Derby, Pride Park Stadium Ground Fl",
+    "name": "Derby, Pride Park Stadium Grou",
     "lat": 52.91587202,
     "long": -1.447345498
   },
@@ -11458,11 +11443,6 @@
     "name": "ASDA EXPRESS Ruddington",
     "lat": 52.89662549,
     "long": -1.142288358
-  },
-  {
-    "name": "PGG Ashington",
-    "lat": 55.16993163,
-    "long": -1.555759313
   },
   {
     "name": "PGG Thinford",
@@ -12015,11 +11995,6 @@
     "long": -0.140931049
   },
   {
-    "name": "COMPASS Swansea University",
-    "lat": 51.609493,
-    "long": -3.980672
-  },
-  {
     "name": "ASDA EXPRESS Milton Keynes",
     "lat": 52.00768849,
     "long": -0.730797539
@@ -12170,7 +12145,7 @@
     "long": 0.445702
   },
   {
-    "name": "Frome, U4 Enterprise House, Wessex Flds",
+    "name": "Frome, U4 Enterprise House, We",
     "lat": 51.21712355,
     "long": -2.332020962
   },
@@ -12295,7 +12270,7 @@
     "long": 0.78161
   },
   {
-    "name": "London, U2 Canary Wharf Statio",
+    "name": "London, U2 Canary Wharf Station",
     "lat": 51.5051,
     "long": -0.0248
   },
