@@ -995,11 +995,6 @@
     "long": -1.713660601
   },
   {
-    "name": "Manchester, 10 Oxford Rd",
-    "lat": 53.47295942,
-    "long": -2.239865498
-  },
-  {
     "name": "Sheffield, 6 Fargate",
     "lat": 53.38233757,
     "long": -1.468793341
@@ -1108,6 +1103,11 @@
     "name": "Leicester, 285 Abbey Ln",
     "lat": 52.65829186,
     "long": -1.133264086
+  },
+  {
+    "name": "Birmingham, U18B Fox SC, Washwood Hth Rd",
+    "lat": 52.49416922,
+    "long": -1.819225665
   },
   {
     "name": "Swansea, U6F Swansea EP",
@@ -2198,11 +2198,6 @@
     "name": "MOTO Lancaster South",
     "lat": 53.96169663,
     "long": -2.760383985
-  },
-  {
-    "name": "MOTO Knutsford North",
-    "lat": 53.30066233,
-    "long": -2.402441075
   },
   {
     "name": "ASDA EXPRESS Holtspur",
@@ -3300,6 +3295,11 @@
     "long": 0.056369211
   },
   {
+    "name": "Stratford, U3 Westfield SC",
+    "lat": 51.5435545,
+    "long": -0.0066512
+  },
+  {
     "name": "Loughton, U7 Epping Forest SP, Lngstn Rd",
     "lat": 51.64321588,
     "long": 0.086790379
@@ -3570,7 +3570,7 @@
     "long": -0.245624769904
   },
   {
-    "name": "Merthyr Tydfl, 16 Nwmrkt Wlk, Tydfil SC",
+    "name": "Merthyr Tydfl, 16 Nwmrkt Wlk,",
     "lat": 51.745150732275,
     "long": -3.380192494682
   },
@@ -4103,6 +4103,11 @@
     "name": "Putney, 145 High St",
     "lat": 51.46186887,
     "long": -0.216436505
+  },
+  {
+    "name": "Southampton, Hedge End, 3 Lwr Northam Rd",
+    "lat": 50.91398453,
+    "long": -1.30310283
   },
   {
     "name": "Orpington, 238 High St",
@@ -4715,11 +4720,6 @@
     "long": -0.19405744
   },
   {
-    "name": "London, SU45 Ldn Bridge Statn",
-    "lat": 51.50434808,
-    "long": -0.084154586
-  },
-  {
     "name": "Cirencester, U7 Cirencester TP",
     "lat": 51.70686384,
     "long": -1.960101077
@@ -4928,11 +4928,6 @@
     "name": "Wakefield, U2 Westgate Station",
     "lat": 53.68295,
     "long": -1.50567
-  },
-  {
-    "name": "Milton Keynes, U1 Phoenix Hse",
-    "lat": 52.034160863925,
-    "long": -0.771685790101
   },
   {
     "name": "Cardiff, U1 Thornhill Rd",
@@ -5528,6 +5523,11 @@
     "name": "Cardigan, 5 Pendre",
     "lat": 52.08430067225,
     "long": -4.660742100002
+  },
+  {
+    "name": "Manchester, U6 Peter House, Oxford St",
+    "lat": 53.4772963,
+    "long": -2.243947681
   },
   {
     "name": "London Gatwick Airport",
@@ -7240,12 +7240,12 @@
     "long": -3.355690768
   },
   {
-    "name": "Bradford, Greengates RP, Harro",
+    "name": "Bradford, Greengates RP, Harrogate Rd",
     "lat": 53.83112248,
     "long": -1.711721975
   },
   {
-    "name": "Ashton Under Lyne, U3 Arcades",
+    "name": "Ashton Under Lyne, U3 Arcades SC",
     "lat": 53.489344906595,
     "long": -2.096568692416
   },
@@ -8795,7 +8795,7 @@
     "long": -0.984663583
   },
   {
-    "name": "Glasgow, 881 Gallowgate, U15 Forge RP",
+    "name": "Glasgow, 881 Gallowgate, U15 F",
     "lat": 55.85398,
     "long": -4.21165
   },
@@ -9198,11 +9198,6 @@
     "name": "EG On The Move Nitshill",
     "lat": 55.803491484475,
     "long": -4.335041245707
-  },
-  {
-    "name": "RONTEC Dartford",
-    "lat": 51.43770128566,
-    "long": 0.237076333786
   },
   {
     "name": "ASDA EXPRESS Baynards Green",
@@ -10735,6 +10730,11 @@
     "long": -4.175858705077
   },
   {
+    "name": "Leven, 53 High St",
+    "lat": 56.194473150297,
+    "long": -2.997093534822
+  },
+  {
     "name": "Carlisle, U1 Kingstown IE",
     "lat": 54.92582082,
     "long": -2.947567188
@@ -10965,7 +10965,7 @@
     "long": -2.117488759
   },
   {
-    "name": "Llanelli, U2 Trostre RP, Trostre Rd",
+    "name": "Llanelli, U2 Trostre RP, Trost",
     "lat": 51.67869266,
     "long": -4.133749866
   },
@@ -11080,7 +11080,7 @@
     "long": 0.547535625
   },
   {
-    "name": "Tunbridge Wells, U7 Fountains",
+    "name": "Tunbridge Wells, U7 Fountains RP",
     "lat": 51.15656467,
     "long": 0.289186617
   },
@@ -11110,7 +11110,7 @@
     "long": -1.932887929
   },
   {
-    "name": "Derby, Pride Park Stadium Grou",
+    "name": "Derby, Pride Park Stadium Ground Fl",
     "lat": 52.91587202,
     "long": -1.447345498
   },
@@ -11330,7 +11330,7 @@
     "long": -2.291614723
   },
   {
-    "name": "Sutton Coldfield, Gracechurch SC",
+    "name": "Sutton Coldfield, Gracechurch",
     "lat": 52.56140797,
     "long": -1.82547812
   },
@@ -12125,7 +12125,7 @@
     "long": 0.445702
   },
   {
-    "name": "Frome, U4 Enterprise House, Wessex Flds",
+    "name": "Frome, U4 Enterprise House, We",
     "lat": 51.21712355,
     "long": -2.332020962
   },
@@ -12340,7 +12340,7 @@
     "long": -0.626611827
   },
   {
-    "name": "Alcester, Acstr BC, 4 Kinwarton Farm Rd",
+    "name": "Alcester, Acstr BC, 4 Kinwarto",
     "lat": 52.22527488,
     "long": -1.862239277
   },
