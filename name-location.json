@@ -20,11 +20,6 @@
     "long": -1.901779855
   },
   {
-    "name": "Daventry, U20 Bowen Sq",
-    "lat": 52.25734156,
-    "long": -1.161484289
-  },
-  {
     "name": "Birmingham, U38 Great Western Arc",
     "lat": 52.48194607,
     "long": -1.897458586
@@ -123,6 +118,11 @@
     "name": "Leamington Spa, 19 The Parade",
     "lat": 52.2925701,
     "long": -1.535638379
+  },
+  {
+    "name": "Newcastle, 42 Neville St",
+    "lat": 54.96934767,
+    "long": -1.617641912
   },
   {
     "name": "Stretford, U11 Trafford Ctr, Regent Cres",
@@ -1585,6 +1585,11 @@
     "long": -0.769930531
   },
   {
+    "name": "Barry, U1 Briscombe RP, Cardiff Rd",
+    "lat": 51.41119008,
+    "long": -3.248086581
+  },
+  {
     "name": "Alfreton, U1B Nottingham Rd",
     "lat": 53.08712864,
     "long": -1.375568453
@@ -2125,11 +2130,6 @@
     "long": -1.719537155757
   },
   {
-    "name": "APPLEGREEN M1 Northbound",
-    "lat": 54.51130371,
-    "long": -6.04852594
-  },
-  {
     "name": "ASDA EXPRESS Rylands",
     "lat": 54.05817123,
     "long": -2.801374553
@@ -2618,6 +2618,11 @@
     "name": "London, U26 Liverpool St Station",
     "lat": 51.519059,
     "long": -0.081381081
+  },
+  {
+    "name": "Eastleigh, 41 Market St",
+    "lat": 50.96758824,
+    "long": -1.351969028
   },
   {
     "name": "MFG Oakwood Gate",
@@ -4090,7 +4095,7 @@
     "long": -1.199038231
   },
   {
-    "name": "Sunderland, Hylton Riverside RP",
+    "name": "Sunderland, Hylton Riverside R",
     "lat": 54.91780578,
     "long": -1.433011366
   },
@@ -4108,11 +4113,6 @@
     "name": "Putney, 145 High St",
     "lat": 51.46186887,
     "long": -0.216436505
-  },
-  {
-    "name": "Southampton, Hedge End, 3 Lwr Northam Rd",
-    "lat": 50.91398453,
-    "long": -1.30310283
   },
   {
     "name": "Orpington, 238 High St",
@@ -4683,6 +4683,11 @@
     "name": "Bridgend, U1 Triangle SC",
     "lat": 51.50710671,
     "long": -3.560431849
+  },
+  {
+    "name": "Cardiff, Leckwith Rd, Capital",
+    "lat": 51.47178788,
+    "long": -3.205045602
   },
   {
     "name": "Hull, U15 Kingswood RP",
@@ -5260,11 +5265,6 @@
     "long": -2.530206035
   },
   {
-    "name": "MOTO Southwaite North FC",
-    "lat": 54.79816395,
-    "long": -2.871535583
-  },
-  {
     "name": "HKS Meteor",
     "lat": 53.10071455,
     "long": -1.34440577
@@ -5313,11 +5313,6 @@
     "name": "ASDA EXPRESS Kimmel Park West",
     "lat": 53.26819872,
     "long": -3.518583842
-  },
-  {
-    "name": "MOTO Southwaite North",
-    "lat": 54.79820995,
-    "long": -2.871451093
   },
   {
     "name": "ASDA EXPRESS Stow Hill",
@@ -5955,6 +5950,11 @@
     "long": -1.61242
   },
   {
+    "name": "Glasgow Airport, International Arrivals",
+    "lat": 55.86484,
+    "long": -4.4342864
+  },
+  {
     "name": "MOTO Knutsford North FC",
     "lat": 53.30077306,
     "long": -2.402270556
@@ -6223,11 +6223,6 @@
     "name": "Hastings, 15 Queens Rd",
     "lat": 50.856472775466,
     "long": 0.58147327275
-  },
-  {
-    "name": "Egremont, 50 Main St",
-    "lat": 54.481907672437,
-    "long": -3.52879996399
   },
   {
     "name": "Caldicot, U6 Wesley Buildings",
@@ -7143,11 +7138,6 @@
     "name": "Newport, 63 High St",
     "lat": 52.76890653,
     "long": -2.378759366
-  },
-  {
-    "name": "Workington, U3 Buddle Rd, Clay Flatts IE",
-    "lat": 54.63485327,
-    "long": -3.562018848
   },
   {
     "name": "Glasgow, U4 Hillington RP",
@@ -8320,11 +8310,6 @@
     "long": -3.028058117
   },
   {
-    "name": "APPLEGREEN Northern Ireland M2",
-    "lat": 54.69415698,
-    "long": -6.017482781
-  },
-  {
     "name": "WELCOME BREAK Sheffield",
     "lat": 53.36695864,
     "long": -1.439439716
@@ -8338,11 +8323,6 @@
     "name": "MOTO Donington Park North",
     "lat": 52.82182266,
     "long": -1.308223414
-  },
-  {
-    "name": "APPLEGREEN Crankhill Belfast",
-    "lat": 54.93755676,
-    "long": -6.32817692
   },
   {
     "name": "BLAKEMORE Brumby Corner",
@@ -8463,11 +8443,6 @@
     "name": "ASDA EXPRESS Newmarket East",
     "lat": 52.24947737,
     "long": 0.362335152
-  },
-  {
-    "name": "APPLEGREEN M1 Belfast",
-    "lat": 54.52607146,
-    "long": -6.002498814
   },
   {
     "name": "MOTO Birch West",
@@ -9210,7 +9185,7 @@
     "long": -3.452278598
   },
   {
-    "name": "Rugeley, U36 Riverside IE, Power Stn Rd",
+    "name": "Rugeley, U36 Riverside IE, Pow",
     "lat": 52.7645049,
     "long": -1.9307084
   },
@@ -9460,7 +9435,7 @@
     "long": -1.069548992998
   },
   {
-    "name": "Gateshead, Metrocentre, 42 The Galleria",
+    "name": "Gateshead, Metrocentre, 42 The",
     "lat": 54.956323968578,
     "long": -1.66876259553
   },
@@ -10008,6 +9983,11 @@
     "name": "Erskine, U6 Bridgewater SC",
     "lat": 55.9038299,
     "long": -4.448808846
+  },
+  {
+    "name": "Glasgow, 64 Gordon St",
+    "lat": 55.86069391,
+    "long": -4.257195844
   },
   {
     "name": "Catford, 136 Rushey Green",
@@ -10705,6 +10685,11 @@
     "long": -2.602337103
   },
   {
+    "name": "Wolverhampton, 749 Cannock Rd",
+    "lat": 52.61258619,
+    "long": -2.099950331
+  },
+  {
     "name": "Hall Green, 1182 Stratford Rd",
     "lat": 52.43741039,
     "long": -1.846570524
@@ -10965,7 +10950,7 @@
     "long": -2.117488759
   },
   {
-    "name": "Llanelli, U2 Trostre RP, Trost",
+    "name": "Llanelli, U2 Trostre RP, Trostre Rd",
     "lat": 51.67869266,
     "long": -4.133749866
   },
@@ -11330,7 +11315,7 @@
     "long": -2.291614723
   },
   {
-    "name": "Sutton Coldfield, Gracechurch",
+    "name": "Sutton Coldfield, Gracechurch SC",
     "lat": 52.56140797,
     "long": -1.82547812
   },
@@ -11405,6 +11390,11 @@
     "long": -0.732583849
   },
   {
+    "name": "ASDA EXPRESS Haslemere",
+    "lat": 51.08795093,
+    "long": -0.732547682
+  },
+  {
     "name": "ASDA EXPRESS Holt Road",
     "lat": 53.06018687,
     "long": -2.957469039
@@ -11413,6 +11403,11 @@
     "name": "ASDA EXPRESS Ruddington",
     "lat": 52.89662549,
     "long": -1.142288358
+  },
+  {
+    "name": "ASDA EXPRESS Folly Tower",
+    "lat": 51.69282121,
+    "long": -3.021125648
   },
   {
     "name": "PGG Thinford",
@@ -12705,7 +12700,7 @@
     "long": -2.275192992237
   },
   {
-    "name": "Tillicoultry, U29 Affinity Sterling Mlls",
+    "name": "Tillicoultry, U29 Affinity Ste",
     "lat": 56.148992049627,
     "long": -3.74089029814
   },
