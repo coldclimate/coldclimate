@@ -550,7 +550,7 @@
     "long": -3.3779801
   },
   {
-    "name": "Melksham, U3 Ashville Ctr, Com",
+    "name": "Melksham, U3 Ashville Ctr, Commerce Way",
     "lat": 51.35509171,
     "long": -2.140384904
   },
@@ -665,7 +665,7 @@
     "long": -2.272827664
   },
   {
-    "name": "York Uni, U4 Heslington East C",
+    "name": "York Uni, U4 Heslington East Campus",
     "lat": 53.95049939,
     "long": -1.029679866
   },
@@ -778,11 +778,6 @@
     "name": "Wirral, U2 Croft RP, Welton Rd",
     "lat": 53.34102533,
     "long": -2.977126139
-  },
-  {
-    "name": "Ledbury, 2 High St",
-    "lat": 52.03706345,
-    "long": -2.422474102
   },
   {
     "name": "Derby, U13 Eagle Park, Alfreton Rd",
@@ -2020,6 +2015,16 @@
     "long": 0.250567758
   },
   {
+    "name": "ASDA EXPRESS Greencroft",
+    "lat": 53.55665924,
+    "long": -2.316776889
+  },
+  {
+    "name": "ASDA EXPRESS Langley Mill",
+    "lat": 53.01997165,
+    "long": -1.325212208
+  },
+  {
     "name": "EG On The Move Plantation",
     "lat": 53.7487021,
     "long": -1.633009423
@@ -2030,14 +2035,29 @@
     "long": -2.455510694
   },
   {
+    "name": "ASDA EXPRESS Weyhill West",
+    "lat": 51.21468883,
+    "long": -1.535344834
+  },
+  {
     "name": "MOTO Kinross Kiosk",
     "lat": 56.20976967,
     "long": -3.439562805
   },
   {
+    "name": "ASDA EXPRESS Manor Weald",
+    "lat": 51.17339163,
+    "long": -0.650505531
+  },
+  {
     "name": "ASDA EXPRESS Stourport",
     "lat": 52.34188296,
     "long": -2.276906728
+  },
+  {
+    "name": "ASDA EXPRESS Whitchurch",
+    "lat": 52.96710708,
+    "long": -2.705308298
   },
   {
     "name": "MOTO Wetherby FC",
@@ -2050,6 +2070,16 @@
     "long": -0.503372508
   },
   {
+    "name": "ASDA EXPRESS Barton Upon Humber",
+    "lat": 53.68050946,
+    "long": -0.454733366
+  },
+  {
+    "name": "ASDA EXPRESS Lawnswood",
+    "lat": 53.8489061,
+    "long": -1.59254415
+  },
+  {
     "name": "ASDA EXPRESS Greatbridge",
     "lat": 50.99810939,
     "long": -1.498786572
@@ -2058,6 +2088,11 @@
     "name": "MFG Wembdon",
     "lat": 51.13176805,
     "long": -3.041237259
+  },
+  {
+    "name": "ASDA EXPRESS Barrowbrook",
+    "lat": 53.84004798,
+    "long": -2.396373456
   },
   {
     "name": "BLAKEMORE Greater Leys",
@@ -2080,6 +2115,11 @@
     "long": -1.308496798
   },
   {
+    "name": "ASDA EXPRESS Hexham",
+    "lat": 54.97873067,
+    "long": -2.091857644
+  },
+  {
     "name": "PGG South Marston",
     "lat": 51.580474359945,
     "long": -1.719537155757
@@ -2090,9 +2130,24 @@
     "long": -6.04852594
   },
   {
+    "name": "ASDA EXPRESS Rylands",
+    "lat": 54.05817123,
+    "long": -2.801374553
+  },
+  {
     "name": "ASDA EXPRESS Braywick",
     "lat": 51.5055203,
     "long": -0.711928596
+  },
+  {
+    "name": "ASDA EXPRESS Causeway",
+    "lat": 53.380467,
+    "long": -2.588779669
+  },
+  {
+    "name": "ASDA EXPRESS Deeside",
+    "lat": 53.232633410372,
+    "long": -3.005523944946
   },
   {
     "name": "ASDA EXPRESS Ormskirk",
@@ -2120,6 +2175,11 @@
     "long": -0.503359379
   },
   {
+    "name": "ASDA EXPRESS Ermont Way",
+    "lat": 52.06899897,
+    "long": -1.316337017
+  },
+  {
     "name": "BLAKEMORE Bentley",
     "lat": 52.5872466,
     "long": -2.034646687
@@ -2128,6 +2188,11 @@
     "name": "ASDA EXPRESS Corby",
     "lat": 52.4961775,
     "long": -0.650743989
+  },
+  {
+    "name": "ASDA EXPRESS Circle",
+    "lat": 53.45707623,
+    "long": -2.336572893
   },
   {
     "name": "ASDA EXPRESS Sandy Lodge",
@@ -2143,6 +2208,11 @@
     "name": "MOTO Knutsford North",
     "lat": 53.30066233,
     "long": -2.402441075
+  },
+  {
+    "name": "ASDA EXPRESS Holtspur",
+    "lat": 51.59983448,
+    "long": -0.668379854
   },
   {
     "name": "MOTO Blackburn",
@@ -2170,9 +2240,24 @@
     "long": -1.311025596
   },
   {
+    "name": "ASDA EXPRESS Shrewsbury",
+    "lat": 52.68212863,
+    "long": -2.760009253
+  },
+  {
     "name": "HKS Dinnington",
     "lat": 53.37566921,
     "long": -1.225100363
+  },
+  {
+    "name": "ASDA EXPRESS Royle Green",
+    "lat": 53.40245154,
+    "long": -2.254636794
+  },
+  {
+    "name": "ASDA EXPRESS Bangor",
+    "lat": 53.20333495,
+    "long": -4.10545665
   },
   {
     "name": "HKS A38 Northbound",
@@ -2190,9 +2275,24 @@
     "long": -1.197903549
   },
   {
+    "name": "ASDA EXPRESS Skipton",
+    "lat": 53.96592311,
+    "long": -2.042522448
+  },
+  {
     "name": "ASDA EXPRESS Elstree Hill",
     "lat": 51.6376959,
     "long": -0.3040372
+  },
+  {
+    "name": "ASDA EXPRESS Fareham",
+    "lat": 50.84480048,
+    "long": -1.182912142
+  },
+  {
+    "name": "ASDA EXPRESS Thame",
+    "lat": 51.75677918,
+    "long": -0.979130846
   },
   {
     "name": "ASDA EXPRESS Chalk",
@@ -2205,14 +2305,29 @@
     "long": -1.214703
   },
   {
+    "name": "ASDA EXPRESS Halt",
+    "lat": 52.26030633,
+    "long": -3.498086767
+  },
+  {
     "name": "ASDA EXPRESS Podimore",
     "lat": 51.02255,
     "long": -2.66107
   },
   {
+    "name": "ASDA EXPRESS Bridlington",
+    "lat": 54.09576888,
+    "long": -0.210621097
+  },
+  {
     "name": "MFG Newby Bridge",
     "lat": 54.26271451,
     "long": -2.961206871
+  },
+  {
+    "name": "ASDA EXPRESS Crofters Lodge",
+    "lat": 55.00149148,
+    "long": -1.666205913
   },
   {
     "name": "Cannock, Cannock Gateway RP, Eastern Wy",
@@ -2238,6 +2353,11 @@
     "name": "Reading, Whiteknights Retail Centre",
     "lat": 51.428616,
     "long": -0.94566
+  },
+  {
+    "name": "ASDA EXPRESS Shavington",
+    "lat": 53.05709941,
+    "long": -2.442515084
   },
   {
     "name": "MFG Aldershot",
@@ -2410,7 +2530,7 @@
     "long": -0.123467469
   },
   {
-    "name": "Outlet: Handsworth, U1, 121 Vi",
+    "name": "Outlet: Handsworth, U1, 121 Villa Rd",
     "lat": 52.50291248,
     "long": -1.916530844
   },
@@ -2475,7 +2595,7 @@
     "long": -1.265544
   },
   {
-    "name": "Sunderland, U4 Salterfen Park,",
+    "name": "Sunderland, U4 Salterfen Park, Ryhope Rd",
     "lat": 54.87714,
     "long": -1.36051
   },
@@ -2495,7 +2615,7 @@
     "long": -2.910650134155
   },
   {
-    "name": "London, U26 Liverpool St Stati",
+    "name": "London, U26 Liverpool St Station",
     "lat": 51.519059,
     "long": -0.081381081
   },
@@ -2560,12 +2680,12 @@
     "long": -1.581695617
   },
   {
-    "name": "Port Talbot, Baglan Bay RP Dri",
+    "name": "Port Talbot, Baglan Bay RP Drive Thru",
     "lat": 51.60278863,
     "long": -3.810856483
   },
   {
-    "name": "Bristol, S20 Venue, Merlin Rd",
+    "name": "Bristol, S20 Venue, Merlin Rd Drive Thru",
     "lat": 51.52258968,
     "long": -2.602023083
   },
@@ -2680,6 +2800,11 @@
     "long": -2.260604871
   },
   {
+    "name": "MFG Orchard",
+    "lat": 52.1855138,
+    "long": 0.158513217
+  },
+  {
     "name": "RONTEC Billinghurst",
     "lat": 51.03028423,
     "long": -0.443869859
@@ -2688,6 +2813,11 @@
     "name": "Widnes, Moore Lane South",
     "lat": 53.3609686,
     "long": -2.740130421
+  },
+  {
+    "name": "MFG Thirsk",
+    "lat": 54.22894641972,
+    "long": -1.32936334631
   },
   {
     "name": "RONTEC Bath Rd",
@@ -2713,6 +2843,11 @@
     "name": "MFG Butts Road",
     "lat": 52.40714,
     "long": -1.5245
+  },
+  {
+    "name": "ASDA EXPRESS Chickerell",
+    "lat": 50.61479097,
+    "long": -2.497442528
   },
   {
     "name": "Greggs @ Tesco Romford",
@@ -2748,6 +2883,11 @@
     "name": "MFG Bridgwater",
     "lat": 51.14642027,
     "long": -2.991708674
+  },
+  {
+    "name": "MFG Jeremeys Corner",
+    "lat": 51.00714385,
+    "long": -0.198293131
   },
   {
     "name": "Outlet: Gorbals, 169 Crown St",
@@ -2835,7 +2975,7 @@
     "long": 0.717822620348
   },
   {
-    "name": "Greggs @ Tesco Extra Brislingt",
+    "name": "Greggs @ Tesco Extra Brislington",
     "lat": 51.432361676603,
     "long": -2.555061919091
   },
@@ -2888,6 +3028,11 @@
     "name": "Prestatyn, U16 Prestatyn SP, Nant Hll Rd",
     "lat": 53.33575353,
     "long": -3.403243431
+  },
+  {
+    "name": "MFG Hyde Road",
+    "lat": 53.456341318059,
+    "long": -2.016889429094
   },
   {
     "name": "RONTEC Sherborne",
@@ -3305,11 +3450,6 @@
     "long": -0.342801948
   },
   {
-    "name": "Boston, 14 Pescod Sq SC",
-    "lat": 52.97892574,
-    "long": -0.021787808
-  },
-  {
     "name": "Horsforth, 33 Town St",
     "lat": 53.837681,
     "long": -1.641283003
@@ -3445,7 +3585,7 @@
     "long": -0.245624769904
   },
   {
-    "name": "Merthyr Tydfl, 16 Nwmrkt Wlk,",
+    "name": "Merthyr Tydfl, 16 Nwmrkt Wlk, Tydfil SC",
     "lat": 51.745150732275,
     "long": -3.380192494682
   },
@@ -3565,7 +3705,7 @@
     "long": -2.078056822896
   },
   {
-    "name": "Swansea, UB Swansea Bus Statio",
+    "name": "Swansea, UB Swansea Bus Station",
     "lat": 51.61806402,
     "long": -3.946505491
   },
@@ -4370,7 +4510,7 @@
     "long": -2.171542568
   },
   {
-    "name": "Exeter, Marsh Barton TE, U12 T",
+    "name": "Exeter, Marsh Barton TE, U12 Trusham Rd",
     "lat": 50.70694747,
     "long": -3.529586415
   },
@@ -4480,7 +4620,7 @@
     "long": -2.061610212
   },
   {
-    "name": "Llandrindod Wells, Station Cre",
+    "name": "Llandrindod Wells, Station Cres",
     "lat": 52.24148854,
     "long": -3.37895736
   },
@@ -4975,6 +5115,11 @@
     "long": -1.085567231
   },
   {
+    "name": "ASDA EXPRESS Wylfa",
+    "lat": 53.16579989,
+    "long": -3.124893197
+  },
+  {
     "name": "EG On The Move Speke",
     "lat": 53.34921817,
     "long": -2.862140936
@@ -4995,6 +5140,11 @@
     "long": -2.572846705
   },
   {
+    "name": "ASDA EXPRESS Kirkaldy",
+    "lat": 56.12747686,
+    "long": -3.171968511
+  },
+  {
     "name": "EG On The Move Rivington North",
     "lat": 53.5992,
     "long": -2.57402
@@ -5005,9 +5155,19 @@
     "long": -0.206188304
   },
   {
+    "name": "ASDA EXPRESS Banbury",
+    "lat": 52.04279939,
+    "long": -1.327561977
+  },
+  {
     "name": "ASDA EXPRESS Monmouth South",
     "lat": 51.77253201,
     "long": -2.812936945
+  },
+  {
+    "name": "ASDA EXPRESS York East",
+    "lat": 53.90371946,
+    "long": -1.196063346
   },
   {
     "name": "ASDA EXPRESS Sheepcot",
@@ -5023,6 +5183,21 @@
     "name": "MOTO Bridgwater North",
     "lat": 51.10481339,
     "long": -2.995955611
+  },
+  {
+    "name": "ASDA EXPRESS Bickenhill",
+    "lat": 52.44484041,
+    "long": -1.721894259
+  },
+  {
+    "name": "ASDA EXPRESS Gateway",
+    "lat": 52.63655612,
+    "long": -2.125776011
+  },
+  {
+    "name": "MOTO Stirling",
+    "lat": 56.07603,
+    "long": -3.92202
   },
   {
     "name": "MOTO Trowell South FC",
@@ -5130,9 +5305,19 @@
     "long": -0.860103226
   },
   {
+    "name": "ASDA EXPRESS Bicester",
+    "lat": 51.89362585,
+    "long": -1.162766048
+  },
+  {
     "name": "BLAKEMORE Newbold",
     "lat": 53.25587955,
     "long": -1.446053558
+  },
+  {
+    "name": "ASDA EXPRESS Blackford Bridge",
+    "lat": 53.57087575,
+    "long": -2.294050708
   },
   {
     "name": "MOTO Trowell South",
@@ -5140,9 +5325,24 @@
     "long": -1.268757329
   },
   {
+    "name": "ASDA EXPRESS Chiseldon Camp",
+    "lat": 51.51473064,
+    "long": -1.723503477
+  },
+  {
+    "name": "ASDA EXPRESS Kimmel Park West",
+    "lat": 53.26819872,
+    "long": -3.518583842
+  },
+  {
     "name": "MOTO Southwaite North",
     "lat": 54.79820995,
     "long": -2.871451093
+  },
+  {
+    "name": "ASDA EXPRESS Stow Hill",
+    "lat": 51.58296573,
+    "long": -3.002378369
   },
   {
     "name": "COMPASS RAF Cosford",
@@ -5160,6 +5360,16 @@
     "long": -2.89519359
   },
   {
+    "name": "ASDA EXPRESS Marcham Rd",
+    "lat": 51.66875208,
+    "long": -1.30302477
+  },
+  {
+    "name": "ASDA EXPRESS Moorland",
+    "lat": 53.0484718,
+    "long": -2.178690304
+  },
+  {
     "name": "EG On The Move Frontier Park",
     "lat": 53.75367506,
     "long": -2.440823422
@@ -5175,6 +5385,16 @@
     "long": -3.466141184
   },
   {
+    "name": "ASDA EXPRESS Acorn",
+    "lat": 51.65076744,
+    "long": -1.5773562
+  },
+  {
+    "name": "ASDA EXPRESS Weyhill East",
+    "lat": 51.21465901,
+    "long": -1.535346175
+  },
+  {
     "name": "ASDA EXPRESS Feering",
     "lat": 51.85302957,
     "long": 0.731904991
@@ -5188,6 +5408,11 @@
     "name": "MOTO Frankley North",
     "lat": 52.42931082,
     "long": -2.019047712
+  },
+  {
+    "name": "ASDA EXPRESS Coronation",
+    "lat": 53.84031413,
+    "long": -1.470353164
   },
   {
     "name": "EG On The Move Ross-on-Wye",
@@ -5210,6 +5435,11 @@
     "long": -0.187350247
   },
   {
+    "name": "ASDA EXPRESS Crewe",
+    "lat": 53.07210635,
+    "long": -2.435504904
+  },
+  {
     "name": "BLAKEMORE Staplehurst",
     "lat": 51.1608216,
     "long": 0.551986962
@@ -5220,9 +5450,29 @@
     "long": 0.231095853
   },
   {
+    "name": "ASDA EXPRESS Barthomley",
+    "lat": 53.06952681,
+    "long": -2.336687702
+  },
+  {
     "name": "MOTO Toddington South",
     "lat": 51.94760741,
     "long": -0.501004903
+  },
+  {
+    "name": "ASDA EXPRESS Mead",
+    "lat": 51.53238232,
+    "long": -0.371007162
+  },
+  {
+    "name": "ASDA EXPRESS Railway Exchange",
+    "lat": 53.0885455,
+    "long": -2.430505321
+  },
+  {
+    "name": "ASDA EXPRESS Penrith",
+    "lat": 54.65042409,
+    "long": -2.770470708
   },
   {
     "name": "EG On The Move Weld Blundell",
@@ -5268,6 +5518,11 @@
     "name": "Acocks Green, 1130 Warwick Rd",
     "lat": 52.44688158,
     "long": -1.820768658
+  },
+  {
+    "name": "ASDA EXPRESS Pinvin",
+    "lat": 52.13046298,
+    "long": -2.062865179
   },
   {
     "name": "MOTO Rugby FC",
@@ -5320,7 +5575,7 @@
     "long": -0.18206
   },
   {
-    "name": "Bridlington, U5 The Promenades",
+    "name": "Bridlington, U5 The Promenades SC",
     "lat": 54.082875032827,
     "long": -0.189849106436
   },
@@ -5358,6 +5613,11 @@
     "name": "Consett, Delves Lane Drive Thru",
     "lat": 54.84815,
     "long": -1.82506
+  },
+  {
+    "name": "MFG Winchester",
+    "lat": 51.053829658,
+    "long": -1.305738299
   },
   {
     "name": "Edinburgh, U7 Muirhouse SC, Pennywell Rd",
@@ -5535,7 +5795,7 @@
     "long": -1.730049840878
   },
   {
-    "name": "Castleford, Junction 32 Outlet",
+    "name": "Castleford, Junction 32 Outlet SC",
     "lat": 53.71293,
     "long": -1.3381
   },
@@ -5630,6 +5890,11 @@
     "long": -2.052034288
   },
   {
+    "name": "ASDA EXPRESS Livingston",
+    "lat": 55.88324384,
+    "long": -3.510635333
+  },
+  {
     "name": "Fieldfare, Harlequin BP",
     "lat": 51.50535665,
     "long": -2.48786365
@@ -5643,6 +5908,11 @@
     "name": "Headingley, U4 Otley Rd",
     "lat": 53.82165,
     "long": -1.57779
+  },
+  {
+    "name": "MFG Market Deeping",
+    "lat": 52.68772535,
+    "long": -0.327974663
   },
   {
     "name": "Maidstone, 15 Week St",
@@ -5673,6 +5943,11 @@
     "name": "Bristol, U3 Kings Chase SC, Regent St",
     "lat": 51.4629371,
     "long": -2.509081512
+  },
+  {
+    "name": "MFG Weeley",
+    "lat": 51.85953108242,
+    "long": 1.102978534966
   },
   {
     "name": "RONTEC Whiddon Down",
@@ -5955,6 +6230,11 @@
     "long": -1.634528786581
   },
   {
+    "name": "MFG Winterbourne Abbas",
+    "lat": 50.712317360391,
+    "long": -2.538646110955
+  },
+  {
     "name": "Gloucester, St Oswald's RP",
     "lat": 51.873871922456,
     "long": -2.247644587427
@@ -6070,6 +6350,11 @@
     "long": -2.58808
   },
   {
+    "name": "ASDA EXPRESS Elgin",
+    "lat": 57.64026875,
+    "long": -3.262396652
+  },
+  {
     "name": "Slough, Westgate RP Drive Thru",
     "lat": 51.51776689,
     "long": -0.629865886
@@ -6088,6 +6373,16 @@
     "name": "EG On The Move Earlsfield",
     "lat": 53.42821299,
     "long": -2.826286817
+  },
+  {
+    "name": "MFG Deal",
+    "lat": 51.22199184,
+    "long": 1.395325396
+  },
+  {
+    "name": "ASDA EXPRESS Kildean",
+    "lat": 56.11163439,
+    "long": -3.917905198
   },
   {
     "name": "London, 83 Old Broad St",
@@ -6190,7 +6485,7 @@
     "long": 0.129915532
   },
   {
-    "name": "Tunbridge Wells, 6 Grosvenor R",
+    "name": "Tunbridge Wells, 6 Grosvenor Rd",
     "lat": 51.13475894,
     "long": 0.263694101
   },
@@ -6345,7 +6640,7 @@
     "long": -0.627033
   },
   {
-    "name": "Fradley, U2A Stirling Ctr, Com",
+    "name": "Fradley, U2A Stirling Ctr, Common Ln",
     "lat": 52.71210658,
     "long": -1.778303841
   },
@@ -6715,7 +7010,7 @@
     "long": -4.674503726
   },
   {
-    "name": "Bradford, 3 Interchange, Bridg",
+    "name": "Bradford, 3 Interchange, Bridge St",
     "lat": 53.79157733,
     "long": -1.750245433
   },
@@ -6970,12 +7265,12 @@
     "long": -3.355690768
   },
   {
-    "name": "Bradford, Greengates RP, Harro",
+    "name": "Bradford, Greengates RP, Harrogate Rd",
     "lat": 53.83112248,
     "long": -1.711721975
   },
   {
-    "name": "Ashton Under Lyne, U3 Arcades",
+    "name": "Ashton Under Lyne, U3 Arcades SC",
     "lat": 53.489344906595,
     "long": -2.096568692416
   },
@@ -7270,7 +7565,7 @@
     "long": -2.120865943
   },
   {
-    "name": "Coventry, U1d Warwickshire SP,",
+    "name": "Coventry, U1d Warwickshire SP, Kynner Wy",
     "lat": 52.398327,
     "long": -1.433600753
   },
@@ -7950,9 +8245,24 @@
     "long": -0.479995747
   },
   {
+    "name": "ASDA EXPRESS Gaydon",
+    "lat": 52.18381999,
+    "long": -1.465464054
+  },
+  {
+    "name": "ASDA EXPRESS Markham Vale",
+    "lat": 53.24341174,
+    "long": -1.333549437
+  },
+  {
     "name": "Lincoln, U3 St Peter At Arches, High St",
     "lat": 53.22987007,
     "long": -0.540016412
+  },
+  {
+    "name": "ASDA EXPRESS Blurton",
+    "lat": 52.98285397,
+    "long": -2.157183661
   },
   {
     "name": "ASDA EXPRESS Thrapston",
@@ -7968,6 +8278,11 @@
     "name": "COMPASS Bovington",
     "lat": 50.70152276,
     "long": -2.242253934
+  },
+  {
+    "name": "ASDA EXPRESS South Park",
+    "lat": 56.1951165,
+    "long": -3.19620361
   },
   {
     "name": "ASDA EXPRESS Monmouth North",
@@ -7995,6 +8310,11 @@
     "long": -1.758825228
   },
   {
+    "name": "ASDA EXPRESS Fullerton",
+    "lat": 55.83913019,
+    "long": -4.176666605
+  },
+  {
     "name": "ASDA EXPRESS Wellingborough",
     "lat": 52.29938643,
     "long": -0.731762795
@@ -8003,6 +8323,11 @@
     "name": "ASDA EXPRESS Hayling Island",
     "lat": 50.82233139,
     "long": -0.981988694
+  },
+  {
+    "name": "ASDA EXPRESS Oswestery",
+    "lat": 52.84965157,
+    "long": -3.028058117
   },
   {
     "name": "APPLEGREEN Northern Ireland M2",
@@ -8060,9 +8385,19 @@
     "long": -2.162810399
   },
   {
+    "name": "ASDA EXPRESS Cannock",
+    "lat": 52.65888891,
+    "long": -1.968349006
+  },
+  {
     "name": "ASDA EXPRESS Micheldever",
     "lat": 51.19468191,
     "long": -1.228329717
+  },
+  {
+    "name": "ASDA EXPRESS Talke",
+    "lat": 53.06409068,
+    "long": -2.253069307
   },
   {
     "name": "MOTO Lancaster North",
@@ -8085,14 +8420,34 @@
     "long": -4.194907685
   },
   {
+    "name": "ASDA EXPRESS Wooferton",
+    "lat": 52.31289058,
+    "long": -2.705900475
+  },
+  {
     "name": "MOTO Frankley South FC",
     "lat": 52.42827008,
     "long": -2.016602135
   },
   {
+    "name": "ASDA EXPRESS Heston",
+    "lat": 51.48837972,
+    "long": -0.371528657
+  },
+  {
+    "name": "ASDA EXPRESS Heathrow S",
+    "lat": 51.46121914,
+    "long": -0.481760055
+  },
+  {
     "name": "ASDA EXPRESS Oval",
     "lat": 52.23020444,
     "long": -1.019052645
+  },
+  {
+    "name": "ASDA EXPRESS Connahs Quay",
+    "lat": 53.22356915,
+    "long": -3.068872104
   },
   {
     "name": "MFG Thetford West",
@@ -8103,6 +8458,11 @@
     "name": "MFG Springs",
     "lat": 53.7151278,
     "long": -2.087419112
+  },
+  {
+    "name": "ASDA EXPRESS Northop",
+    "lat": 53.1979188,
+    "long": -3.090726887
   },
   {
     "name": "ASDA EXPRESS Heath",
@@ -8150,6 +8510,11 @@
     "long": -2.01872362
   },
   {
+    "name": "ASDA EXPRESS Hartlebury",
+    "lat": 52.32346303,
+    "long": -2.233000668
+  },
+  {
     "name": "MOTO Winchester North",
     "lat": 51.12063164,
     "long": -1.254890626
@@ -8185,9 +8550,19 @@
     "long": -1.368844078
   },
   {
+    "name": "ASDA EXPRESS Singing Kettle",
+    "lat": 53.27407037,
+    "long": -3.305810551
+  },
+  {
     "name": "COMPASS Brompton Barracks",
     "lat": 51.392442075365,
     "long": 0.53337207015
+  },
+  {
+    "name": "ASDA EXPRESS Duncansfield",
+    "lat": 55.97728532,
+    "long": -4.067301851
   },
   {
     "name": "ASDA EXPRESS Nunney Catch",
@@ -8198,6 +8573,11 @@
     "name": "ASDA EXPRESS Milnrow",
     "lat": 53.60705843,
     "long": -2.106930026
+  },
+  {
+    "name": "ASDA EXPRESS Ramshill",
+    "lat": 51.00991971,
+    "long": -0.928223079
   },
   {
     "name": "MOTO Baldock",
@@ -8240,6 +8620,26 @@
     "long": -2.17346167
   },
   {
+    "name": "ASDA EXPRESS Springburn",
+    "lat": 55.88872287,
+    "long": -4.233687433
+  },
+  {
+    "name": "ASDA EXPRESS St Matthews",
+    "lat": 54.95973873,
+    "long": -1.491026319
+  },
+  {
+    "name": "ASDA EXPRESS Billinge",
+    "lat": 53.52395656,
+    "long": -2.716417156
+  },
+  {
+    "name": "MFG Huntingdon",
+    "lat": 52.34185697,
+    "long": -0.151112379
+  },
+  {
     "name": "ASDA EXPRESS Lairds",
     "lat": 53.38019718,
     "long": -3.012917642
@@ -8250,9 +8650,19 @@
     "long": -2.185581397
   },
   {
+    "name": "ASDA EXPRESS North Muskham",
+    "lat": 53.12999848,
+    "long": -0.811062302
+  },
+  {
     "name": "MOTO Leigh Delamere West",
     "lat": 51.50982176,
     "long": -2.15803328
+  },
+  {
+    "name": "ASDA EXPRESS Wrexham",
+    "lat": 53.15904424,
+    "long": -2.909784287
   },
   {
     "name": "MOTO Tamworth",
@@ -8260,9 +8670,29 @@
     "long": -1.64083125
   },
   {
+    "name": "ASDA EXPRESS Frimley Road",
+    "lat": 51.32527166,
+    "long": -0.754834927
+  },
+  {
+    "name": "MFG North Bradley",
+    "lat": 51.29539626,
+    "long": -2.197001418
+  },
+  {
     "name": "ASDA EXPRESS Ashby",
     "lat": 52.75132621,
     "long": -1.449173017
+  },
+  {
+    "name": "ASDA EXPRESS Lincoln",
+    "lat": 53.17749405,
+    "long": -0.625110505
+  },
+  {
+    "name": "ASDA EXPRESS Seaton Burn",
+    "lat": 55.06611827,
+    "long": -1.633932854
   },
   {
     "name": "Outlet: Bradford, 45 Great Horton Rd",
@@ -8315,9 +8745,19 @@
     "long": -3.4372101
   },
   {
+    "name": "MFG Interchange",
+    "lat": 53.09642824,
+    "long": -0.78256591
+  },
+  {
     "name": "Bognor Regis, U6 Saltbox Rd Drive Thru",
     "lat": 50.80640124,
     "long": -0.669119125
+  },
+  {
+    "name": "MFG West Road",
+    "lat": 57.64684396,
+    "long": -3.331721821
   },
   {
     "name": "MFG Portland",
@@ -8355,6 +8795,16 @@
     "long": -0.26853
   },
   {
+    "name": "ASDA EXPRESS Heartlands",
+    "lat": 55.86925513,
+    "long": -3.701896879
+  },
+  {
+    "name": "MFG Mintlaw",
+    "lat": 57.52454895,
+    "long": -2.000909259
+  },
+  {
     "name": "Glasgow, 4 Allerdyce Court Drive Thru",
     "lat": 55.9026963,
     "long": -4.377140121
@@ -8370,7 +8820,12 @@
     "long": -3.549408803
   },
   {
-    "name": "Glasgow, 881 Gallowgate, U15 F",
+    "name": "MFG Swallowfield",
+    "lat": 51.39784075,
+    "long": -0.984663583
+  },
+  {
+    "name": "Glasgow, 881 Gallowgate, U15 Forge RP",
     "lat": 55.85398,
     "long": -4.21165
   },
@@ -8463,6 +8918,11 @@
     "name": "Paddington, 10 Praed St",
     "lat": 51.51831189,
     "long": -0.17150822
+  },
+  {
+    "name": "MFG Skyway",
+    "lat": 55.03782218,
+    "long": -1.713893045
   },
   {
     "name": "Colchester, UF Stane RP, Westrn Approach",
@@ -8630,7 +9090,7 @@
     "long": -1.06991
   },
   {
-    "name": "Coventry, U3 Coventry Railway",
+    "name": "Coventry, U3 Coventry Railway Stn",
     "lat": 52.401322584003,
     "long": -1.514720492059
   },
@@ -8653,6 +9113,11 @@
     "name": "Peterborough, U19B Serpentine Green SC",
     "lat": 52.54125,
     "long": -0.2621
+  },
+  {
+    "name": "ASDA EXPRESS Montrose",
+    "lat": 56.72352713,
+    "long": -2.464911689
   },
   {
     "name": "COMPASS Clyde Docklands",
@@ -8710,6 +9175,16 @@
     "long": -0.5118107
   },
   {
+    "name": "MFG Lydford",
+    "lat": 51.07641526,
+    "long": -2.619234196
+  },
+  {
+    "name": "MFG Reading Rose Kiln",
+    "lat": 51.44386854,
+    "long": -0.976369179
+  },
+  {
     "name": "Norwich, 48 London St",
     "lat": 52.62957755,
     "long": 1.295805974
@@ -8763,6 +9238,11 @@
     "name": "RONTEC Dartford",
     "lat": 51.43770128566,
     "long": 0.237076333786
+  },
+  {
+    "name": "ASDA EXPRESS Baynards Green",
+    "lat": 51.95865861,
+    "long": -1.202832287
   },
   {
     "name": "EG On The Move St Asaph",
@@ -8953,6 +9433,11 @@
     "name": "Swansea, 270 Cockett Rd",
     "lat": 51.634641,
     "long": -3.981102
+  },
+  {
+    "name": "Dudley, U1 Grazebrook IP, Hulbert Drive",
+    "lat": 52.4980119963,
+    "long": -2.0961928278
   },
   {
     "name": "Workington, 7A Clay Flatts IE",
@@ -10450,7 +10935,7 @@
     "long": -3.62263817
   },
   {
-    "name": "Harold Hill, Romford, 4 Farnha",
+    "name": "Harold Hill, Romford, 4 Farnham Rd",
     "lat": 51.60683358,
     "long": 0.218423421
   },
@@ -10645,7 +11130,7 @@
     "long": 0.547535625
   },
   {
-    "name": "Tunbridge Wells, U7 Fountains",
+    "name": "Tunbridge Wells, U7 Fountains RP",
     "lat": 51.15656467,
     "long": 0.289186617
   },
@@ -10675,7 +11160,7 @@
     "long": -1.932887929
   },
   {
-    "name": "Derby, Pride Park Stadium Grou",
+    "name": "Derby, Pride Park Stadium Ground Fl",
     "lat": 52.91587202,
     "long": -1.447345498
   },
@@ -10805,7 +11290,7 @@
     "long": -1.070771236
   },
   {
-    "name": "London, U17B St Lower Level, P",
+    "name": "London, U17B St Lower Level, Pancras Stn",
     "lat": 51.531766,
     "long": -0.127276
   },
@@ -10900,7 +11385,7 @@
     "long": -1.82547812
   },
   {
-    "name": "Birmingham, 144 Weoley Castle",
+    "name": "Birmingham, 144 Weoley Castle Rd",
     "lat": 52.43728471,
     "long": -1.971069798
   },
@@ -10918,6 +11403,11 @@
     "name": "Penicuik, 21 John St",
     "lat": 55.827427173763,
     "long": -3.221808583211
+  },
+  {
+    "name": "Outlet: South Shields, 4 Frederick St",
+    "lat": 54.98933946,
+    "long": -1.437458787
   },
   {
     "name": "Openshaw, U7 Lime Sq",
@@ -10960,6 +11450,16 @@
     "long": -4.059004674
   },
   {
+    "name": "ASDA EXPRESS Shoppen",
+    "lat": 51.50927498,
+    "long": -0.732583849
+  },
+  {
+    "name": "ASDA EXPRESS Holt Road",
+    "lat": 53.06018687,
+    "long": -2.957469039
+  },
+  {
     "name": "ASDA EXPRESS Ruddington",
     "lat": 52.89662549,
     "long": -1.142288358
@@ -10968,6 +11468,11 @@
     "name": "PGG Ashington",
     "lat": 55.16993163,
     "long": -1.555759313
+  },
+  {
+    "name": "ASDA EXPRESS Folly Tower",
+    "lat": 51.69282121,
+    "long": -3.021125648
   },
   {
     "name": "PGG Thinford",
@@ -10980,9 +11485,29 @@
     "long": -2.144312558
   },
   {
+    "name": "ASDA EXPRESS Red Ensign",
+    "lat": 53.23929225,
+    "long": -2.950260878
+  },
+  {
     "name": "ASDA EXPRESS Stevenage",
     "lat": 51.88903425,
     "long": -0.202971877
+  },
+  {
+    "name": "ASDA EXPRESS Whitemare Pool",
+    "lat": 54.94701655,
+    "long": -1.515646477
+  },
+  {
+    "name": "ASDA EXPRESS Bridgnorth",
+    "lat": 52.52765402,
+    "long": -2.398760813
+  },
+  {
+    "name": "ASDA EXPRESS Tongham",
+    "lat": 51.22960019,
+    "long": -0.742694204
   },
   {
     "name": "ASDA EXPRESS Snetterton(Drive Thru)",
@@ -10995,9 +11520,19 @@
     "long": -2.232318632
   },
   {
+    "name": "ASDA EXPRESS Lillyhall",
+    "lat": 54.60441301,
+    "long": -3.533932053
+  },
+  {
     "name": "MOTO Swansea",
     "lat": 51.67917502,
     "long": -3.995131454
+  },
+  {
+    "name": "ASDA EXPRESS Marsh",
+    "lat": 51.98481355,
+    "long": -1.705097219
   },
   {
     "name": "MOTO Doncaster North FC",
@@ -11015,9 +11550,19 @@
     "long": -2.265923251
   },
   {
+    "name": "ASDA EXPRESS Oakhurst",
+    "lat": 54.65429452,
+    "long": -3.3724699
+  },
+  {
     "name": "MOTO Woolley Edge North",
     "lat": 53.62169331,
     "long": -1.550142255
+  },
+  {
+    "name": "ASDA EXPRESS Calcutt",
+    "lat": 51.63530543,
+    "long": -1.834376942
   },
   {
     "name": "MOTO Heston West FC",
@@ -11115,6 +11660,11 @@
     "long": -0.727985527
   },
   {
+    "name": "ASDA EXPRESS Hall Lane",
+    "lat": 53.76556136,
+    "long": -2.656615899
+  },
+  {
     "name": "MOTO Heston East",
     "lat": 51.48850318,
     "long": -0.386892673
@@ -11123,6 +11673,16 @@
     "name": "BLAKEMORE Thurcroft",
     "lat": 53.39365541,
     "long": -1.257226162
+  },
+  {
+    "name": "ASDA EXPRESS Fenton",
+    "lat": 52.99761259,
+    "long": -2.158100105
+  },
+  {
+    "name": "ASDA EXPRESS Salford Quays",
+    "lat": 53.46892503,
+    "long": -2.282417018
   },
   {
     "name": "EG On The Move Calder Park",
@@ -11145,6 +11705,11 @@
     "long": -2.812597944
   },
   {
+    "name": "ASDA EXPRESS Dorcan Way",
+    "lat": 51.56855534,
+    "long": -1.744082009
+  },
+  {
     "name": "MOTO Washington North Kiosk",
     "lat": 54.890203,
     "long": -1.559889271
@@ -11160,6 +11725,11 @@
     "long": -1.114758257
   },
   {
+    "name": "ASDA EXPRESS Newtown",
+    "lat": 53.5506251,
+    "long": -2.809020729
+  },
+  {
     "name": "WELCOME BREAK Kates Cabin",
     "lat": 52.54399999,
     "long": -0.331791605
@@ -11173,6 +11743,16 @@
     "name": "HKS Corby",
     "lat": 52.45881015,
     "long": -0.736132038
+  },
+  {
+    "name": "ASDA EXPRESS Hogs Back",
+    "lat": 51.22591591,
+    "long": -0.725865609
+  },
+  {
+    "name": "ASDA EXPRESS Lomondgate",
+    "lat": 55.95725204,
+    "long": -4.56133651
   },
   {
     "name": "EG On The Move 5 Barred",
@@ -11230,6 +11810,11 @@
     "long": 0.716898378
   },
   {
+    "name": "MFG Nunnery Park",
+    "lat": 52.18838982,
+    "long": -2.171716532
+  },
+  {
     "name": "ASDA EXPRESS Beacon Hill",
     "lat": 52.14768117848,
     "long": 1.081003012919
@@ -11243,6 +11828,11 @@
     "name": "MOTO Reading East",
     "lat": 51.42590324,
     "long": -1.035184813
+  },
+  {
+    "name": "ASDA EXPRESS Uttoxeter",
+    "lat": 52.90775325,
+    "long": -1.855280893
   },
   {
     "name": "ASDA EXPRESS Rothwell",
@@ -11265,6 +11855,11 @@
     "long": -1.266597
   },
   {
+    "name": "ASDA EXPRESS Denham",
+    "lat": 51.56888654,
+    "long": -0.504426161
+  },
+  {
     "name": "MOTO Leigh Delamere East",
     "lat": 51.51195558,
     "long": -2.158268263
@@ -11273,6 +11868,16 @@
     "name": "ASDA EXPRESS Chippenham",
     "lat": 51.47897993,
     "long": -2.129881156
+  },
+  {
+    "name": "ASDA EXPRESS Rawmarsh",
+    "lat": 53.46675677,
+    "long": -1.339519386
+  },
+  {
+    "name": "ASDA EXPRESS Kimmel Park East",
+    "lat": 53.274086707457,
+    "long": -3.305825017537
   },
   {
     "name": "ASDA EXPRESS Warminster",
@@ -11320,7 +11925,12 @@
     "long": -4.182423759
   },
   {
-    "name": "Edinburgh, U10 Straiton RP, Th",
+    "name": "ASDA EXPRESS Forrest Park",
+    "lat": 54.58685205,
+    "long": -1.56507093
+  },
+  {
+    "name": "Edinburgh, U10 Straiton RP, The Terrace",
     "lat": 55.885037733162,
     "long": -3.164765008214
   },
@@ -11340,7 +11950,7 @@
     "long": -7.3043976
   },
   {
-    "name": "Dunstable, U1A, Insignia Park Drive Thru",
+    "name": "Dunstable, U1A, Insignia Park",
     "lat": 51.88764122,
     "long": -0.50418515
   },
@@ -11400,6 +12010,11 @@
     "long": -1.317152
   },
   {
+    "name": "ASDA EXPRESS Dumfries",
+    "lat": 55.068238265994,
+    "long": -3.553782229282
+  },
+  {
     "name": "Sheffield, Meadowhall RP Drive Thru",
     "lat": 53.40644845,
     "long": -1.413129338
@@ -11455,9 +12070,19 @@
     "long": -3.223833
   },
   {
+    "name": "ASDA EXPRESS Leith",
+    "lat": 55.98175865,
+    "long": -3.189312258
+  },
+  {
     "name": "MFG Primrose",
     "lat": 51.71423,
     "long": -0.44117
+  },
+  {
+    "name": "MFG Desford Crossroads",
+    "lat": 52.6131354,
+    "long": -1.255101497
   },
   {
     "name": "MFG Haverfordwest",
@@ -11508,6 +12133,11 @@
     "name": "MFG Mabon",
     "lat": 51.64750184,
     "long": -3.291356729
+  },
+  {
+    "name": "ASDA EXPRESS Polmadie",
+    "lat": 55.83767695,
+    "long": -4.242802537
   },
   {
     "name": "RONTEC Alnwick",
@@ -11750,6 +12380,11 @@
     "long": -3.05535
   },
   {
+    "name": "ASDA EXPRESS Hazel Grove",
+    "lat": 53.3735085021,
+    "long": -2.1088814027
+  },
+  {
     "name": "RONTEC Connaught",
     "lat": 51.3062542,
     "long": -0.626611827
@@ -11800,6 +12435,11 @@
     "long": -1.367388256
   },
   {
+    "name": "MFG Whitehorse",
+    "lat": 52.58528,
+    "long": 1.72384
+  },
+  {
     "name": "Aberdeen, 161 Union St",
     "lat": 57.14555156,
     "long": -2.101766625
@@ -11813,6 +12453,11 @@
     "name": "ASDA EXPRESS Retford",
     "lat": 53.31784112,
     "long": -0.938766815
+  },
+  {
+    "name": "MFG Beanacre Rd",
+    "lat": 51.3869357,
+    "long": -2.14487517
   },
   {
     "name": "WELCOME BREAK Peartree",
@@ -11853,6 +12498,11 @@
     "name": "MFG Bruton",
     "lat": 51.10975029,
     "long": -2.459204712
+  },
+  {
+    "name": "MFG Greengate",
+    "lat": 53.53844436,
+    "long": -2.17836825
   },
   {
     "name": "SSP Cardiff Airport",
@@ -11930,7 +12580,7 @@
     "long": 1.71633571077
   },
   {
-    "name": "Northampton, U5 Brackmills TP,",
+    "name": "Northampton, U5 Brackmills TP, Caswell R",
     "lat": 52.216460975881,
     "long": -0.870762019951
   },
@@ -12005,6 +12655,11 @@
     "long": -0.3027158495
   },
   {
+    "name": "MFG Tollgate",
+    "lat": 52.2604954859,
+    "long": 0.710045029462
+  },
+  {
     "name": "EG On The Move Cinderford",
     "lat": 51.82914287324,
     "long": -2.502636545273
@@ -12020,7 +12675,7 @@
     "long": -4.056403984628
   },
   {
-    "name": "Coventry, U4 CODE Building, Fa",
+    "name": "Coventry, U4 CODE Building, Fairfax St",
     "lat": 52.40950979095,
     "long": -1.503930256976
   },
@@ -12135,6 +12790,11 @@
     "long": -1.877354629
   },
   {
+    "name": "London, SU53 Ldn Bridge Statn",
+    "lat": 51.504983743421,
+    "long": -0.085016976712
+  },
+  {
     "name": "Eastbourne, U2 Langney SC, Kingfisher Dr",
     "lat": 50.8034674762,
     "long": 0.30351216752
@@ -12200,6 +12860,11 @@
     "long": -2.99733437534
   },
   {
+    "name": "MFG Totton",
+    "lat": 50.923615535608,
+    "long": -1.524431682786
+  },
+  {
     "name": "MFG Morton Park",
     "lat": 54.519133668827,
     "long": -1.5022102095
@@ -12230,6 +12895,11 @@
     "long": -0.03666001277
   },
   {
+    "name": "ASDA EXPRESS Gowy",
+    "lat": 53.20025060558,
+    "long": -2.801634832852
+  },
+  {
     "name": "Teignmouth, 12 Wellington St",
     "lat": 50.54623988,
     "long": -3.49557169
@@ -12245,6 +12915,11 @@
     "long": -1.616952207
   },
   {
+    "name": "ASDA EXPRESS Peterhead",
+    "lat": 57.4859759,
+    "long": -1.803377503
+  },
+  {
     "name": "MFG Bickerbar",
     "lat": 52.93181535,
     "long": -0.156642317
@@ -12258,6 +12933,11 @@
     "name": "Porth, 18 Cymmer Rd",
     "lat": 51.61404981,
     "long": -3.413825284
+  },
+  {
+    "name": "MFG Stretford",
+    "lat": 53.449456959318,
+    "long": -2.302826063434
   },
   {
     "name": "Canary Wharf, U365 Cabot Square West",
@@ -12293,6 +12973,16 @@
     "name": "Shrewsbury, 27 Pride Hill",
     "lat": 52.70875256,
     "long": -2.75241031
+  },
+  {
+    "name": "MFG Dover South",
+    "lat": 51.118228316933,
+    "long": 1.306888559258
+  },
+  {
+    "name": "MFG Three Elms",
+    "lat": 51.21360535,
+    "long": 0.312272954
   },
   {
     "name": "ASDA EXPRESS Discovery Park",
