@@ -45,11 +45,6 @@
     "long": -0.59765458
   },
   {
-    "name": "Outlet: Leicester, 237C Uppingham Rd",
-    "lat": 52.64205294,
-    "long": -1.090438534
-  },
-  {
     "name": "Llanharan, U3 Bridgend Rd",
     "lat": 51.53323664,
     "long": -3.451712793
@@ -65,7 +60,7 @@
     "long": -3.273863704
   },
   {
-    "name": "Edinburgh, U21 Westside Plaza",
+    "name": "Edinburgh, U21 Westside Plaza SC",
     "lat": 55.915379778987,
     "long": -3.28487032499
   },
@@ -360,7 +355,7 @@
     "long": -2.769097719
   },
   {
-    "name": "New Milton, 9 Old Grn Pde, Christch Rd",
+    "name": "New Milton, 9 Old Grn Pde, Chr",
     "lat": 50.74726925,
     "long": -1.664534782
   },
@@ -385,7 +380,7 @@
     "long": -0.386654998
   },
   {
-    "name": "Bath, U56 Southgate, Southgate",
+    "name": "Bath, U56 Southgate, Southgate St",
     "lat": 51.37872223,
     "long": -2.359536219
   },
@@ -528,11 +523,6 @@
     "name": "Merthyr Tydfil, U6 Beacons Place SC",
     "lat": 51.7455039,
     "long": -3.3779801
-  },
-  {
-    "name": "Melksham, U3 Ashville Ctr, Commerce Way",
-    "lat": 51.35509171,
-    "long": -2.140384904
   },
   {
     "name": "Newton Abbot, U3 Market Wlk SC",
@@ -1340,7 +1330,7 @@
     "long": -0.871741666
   },
   {
-    "name": "Doncaster, U16  Food Mall, Frn",
+    "name": "Doncaster, U16  Food Mall, Frnchgate CTR",
     "lat": 53.52287,
     "long": -1.13889
   },
@@ -2135,11 +2125,6 @@
     "long": -2.1927741377
   },
   {
-    "name": "MOTO Blackburn",
-    "lat": 53.71287044,
-    "long": -2.477515676
-  },
-  {
     "name": "EG On The Move Matrix",
     "lat": 53.68688842,
     "long": -2.667928542
@@ -2328,6 +2313,11 @@
     "name": "ASDA EXPRESS Sproughton Road",
     "lat": 52.06308306,
     "long": 1.10886265
+  },
+  {
+    "name": "MFG Walmer",
+    "lat": 51.20619139,
+    "long": 1.39527239
   },
   {
     "name": "BLAKEMORE Carlton",
@@ -2955,7 +2945,7 @@
     "long": -2.5269951438
   },
   {
-    "name": "Tunstall, Sandyford Service Station",
+    "name": "Tunstall, Sandyford Service St",
     "lat": 53.06906377411,
     "long": -2.214696332477
   },
@@ -3125,6 +3115,11 @@
     "long": -1.39467602846
   },
   {
+    "name": "EG On The Move Wherstead",
+    "lat": 52.025446,
+    "long": 1.139235
+  },
+  {
     "name": "Bangor, U9 Menai Centre",
     "lat": 53.22801183695,
     "long": -4.1258701102
@@ -3153,11 +3148,6 @@
     "name": "Devizes, U4 Garden TE",
     "lat": 51.36069714781,
     "long": -1.97813067462
-  },
-  {
-    "name": "Maesteg, U7 Talbot St",
-    "lat": 51.6087945974,
-    "long": -3.6602937766
   },
   {
     "name": "Banbury, U6 Castle Quay SC",
@@ -3198,6 +3188,11 @@
     "name": "Romford, U1A The Brewery",
     "lat": 51.57652151703,
     "long": 0.179870805112
+  },
+  {
+    "name": "Outlet: Tilbury, 39 Calcutta Rd",
+    "lat": 51.46159167383,
+    "long": 0.361302415549
   },
   {
     "name": "COMPASS Midland Met Hospital",
@@ -3393,11 +3388,6 @@
     "name": "Eltham, 166 High St",
     "lat": 51.45066153,
     "long": 0.056369211
-  },
-  {
-    "name": "Stratford, U3 Westfield SC",
-    "lat": 51.5435545,
-    "long": -0.0066512
   },
   {
     "name": "Loughton, U7 Epping Forest SP, Lngstn Rd",
@@ -3625,7 +3615,7 @@
     "long": -2.485067458
   },
   {
-    "name": "Doncaster, U1 White Rose RC, C",
+    "name": "Doncaster, U1 White Rose RC, Carr Hse Rd",
     "lat": 53.51515854,
     "long": -1.128694874
   },
@@ -4385,7 +4375,7 @@
     "long": -1.479691838
   },
   {
-    "name": "Wythenshawe, UA, The Hub, Ledson Rd",
+    "name": "Wythenshawe, UA, The Hub, Leds",
     "lat": 53.39289742,
     "long": -2.292148152
   },
@@ -4710,7 +4700,7 @@
     "long": -1.496843937
   },
   {
-    "name": "Chesterfield, U3 Lockoford Lan",
+    "name": "Chesterfield, U3 Lockoford Lane",
     "lat": 53.25217287,
     "long": -1.42363403
   },
@@ -4743,11 +4733,6 @@
     "name": "Bridgend, U1 Triangle SC",
     "lat": 51.50710671,
     "long": -3.560431849
-  },
-  {
-    "name": "Cardiff, Leckwith Rd, Capital SP",
-    "lat": 51.47178788,
-    "long": -3.205045602
   },
   {
     "name": "Hull, U15 Kingswood RP",
@@ -5280,6 +5265,11 @@
     "long": -2.804127191
   },
   {
+    "name": "MFG Gate",
+    "lat": 51.28960192,
+    "long": 0.994615148
+  },
+  {
     "name": "London, U60 Upper Level, St Pancras Stn",
     "lat": 51.531766,
     "long": -0.127276
@@ -5610,7 +5600,7 @@
     "long": -0.18206
   },
   {
-    "name": "Bridlington, U5 The Promenades",
+    "name": "Bridlington, U5 The Promenades SC",
     "lat": 54.082875032827,
     "long": -0.189849106436
   },
@@ -5640,7 +5630,7 @@
     "long": -1.30669362301
   },
   {
-    "name": "Greggs @ Primark, Birmingham Pavillion",
+    "name": "Greggs @ Primark, Birmingham P",
     "lat": 52.47928469,
     "long": -1.894491012
   },
@@ -6150,7 +6140,7 @@
     "long": -4.474402026269
   },
   {
-    "name": "Newtonabbey, UA Abbey SC, Longwood Rd",
+    "name": "Newtonabbey, UA Abbey SC, Long",
     "lat": 54.65555091,
     "long": -5.918945418
   },
@@ -6605,6 +6595,11 @@
     "long": -0.285938491481
   },
   {
+    "name": "MFG Anlaby",
+    "lat": 53.74744472612,
+    "long": -0.42629900653
+  },
+  {
     "name": "MFG Boroughbridge",
     "lat": 54.08555816005,
     "long": -1.39811320409
@@ -6995,7 +6990,7 @@
     "long": -2.017023303
   },
   {
-    "name": "Doncaster, U16 The Wheatley Hall RP",
+    "name": "Doncaster, U16 The Wheatley Ha",
     "lat": 53.5427321,
     "long": -1.103684896
   },
@@ -7305,7 +7300,7 @@
     "long": -1.40534949
   },
   {
-    "name": "Beverley, Unit 9A Flemingate SC",
+    "name": "Beverley, Unit 9A Flemingate S",
     "lat": 53.8400084,
     "long": -0.4206332
   },
@@ -7320,7 +7315,7 @@
     "long": -2.446674367
   },
   {
-    "name": "Honiton, U1A Honiton RP, Reme Drive",
+    "name": "Honiton, U1A Honiton RP, Reme",
     "lat": 50.79215369,
     "long": -3.208357067
   },
@@ -8415,6 +8410,11 @@
     "long": -4.254704823
   },
   {
+    "name": "Heckmondwike, 65 Market St",
+    "lat": 53.70696688,
+    "long": -1.674803191
+  },
+  {
     "name": "Sheffield, Meadowhall SC, The Gallery",
     "lat": 53.41518654,
     "long": -1.411337943
@@ -8465,7 +8465,7 @@
     "long": -3.181268694082
   },
   {
-    "name": "Bury, 16 Princess Pde, Mill Ga",
+    "name": "Bury, 16 Princess Pde, Mill Gate SC",
     "lat": 53.59146172,
     "long": -2.295064435
   },
@@ -8498,11 +8498,6 @@
     "name": "ASDA EXPRESS Thrapston",
     "lat": 52.39194827,
     "long": -0.525532928
-  },
-  {
-    "name": "MOTO Burton In Kendal Kiosk",
-    "lat": 54.17902763,
-    "long": -2.733675387
   },
   {
     "name": "COMPASS Bovington",
@@ -8895,11 +8890,6 @@
     "long": -0.754834927
   },
   {
-    "name": "MFG North Bradley",
-    "lat": 51.29539626,
-    "long": -2.197001418
-  },
-  {
     "name": "ASDA EXPRESS Ashby",
     "lat": 52.75132621,
     "long": -1.449173017
@@ -8913,11 +8903,6 @@
     "name": "ASDA EXPRESS Seaton Burn",
     "lat": 55.06611827,
     "long": -1.633932854
-  },
-  {
-    "name": "Outlet: Bradford, 45 Great Horton Rd",
-    "lat": 53.79092963,
-    "long": -1.762405357
   },
   {
     "name": "Bromsgrove, U5A Bromsgrove RP",
@@ -9230,7 +9215,7 @@
     "long": 0.74099
   },
   {
-    "name": "Stockport, 209 Stockport Rd Drive Thru",
+    "name": "Stockport, 209 Stockport Rd Dr",
     "lat": 53.4006987,
     "long": -2.193259
   },
@@ -9475,7 +9460,7 @@
     "long": -3.452278598
   },
   {
-    "name": "Rugeley, U36 Riverside IE, Power Stn Rd",
+    "name": "Rugeley, U36 Riverside IE, Pow",
     "lat": 52.7645049,
     "long": -1.9307084
   },
@@ -10630,7 +10615,7 @@
     "long": 0.521232074
   },
   {
-    "name": "St Austell, U5 Cornwall Services",
+    "name": "St Austell, U5 Cornwall Servic",
     "lat": 50.42592,
     "long": -4.815299
   },
@@ -10658,11 +10643,6 @@
     "name": "Stockton, U23 Teesside RP",
     "lat": 54.55588929,
     "long": -1.275847335
-  },
-  {
-    "name": "Devizes, 43 Market Pl",
-    "lat": 51.35227661,
-    "long": -1.994989293
   },
   {
     "name": "Cardiff, 140 Queen St",
@@ -11005,7 +10985,7 @@
     "long": -1.511019559
   },
   {
-    "name": "Market Harborough, U5 St Marys Pl SC",
+    "name": "Market Harborough, U5 St Marys",
     "lat": 52.47744541,
     "long": -0.919128875
   },
@@ -11018,11 +10998,6 @@
     "name": "Derby, 830 Osmaston Rd",
     "lat": 52.8906679,
     "long": -1.452351014
-  },
-  {
-    "name": "Longbridge, 4 High Street",
-    "lat": 52.39553749,
-    "long": -1.984114904
   },
   {
     "name": "Redditch, 8 Kingfisher Wlk",
@@ -11110,9 +11085,9 @@
     "long": -1.894432995
   },
   {
-    "name": "Neath Abbey, U2 New Rd",
-    "lat": 51.66305361,
-    "long": -3.826972222
+    "name": "Swansea, U4 New Cut Rd",
+    "lat": 51.62496375,
+    "long": -3.938344515
   },
   {
     "name": "East Kilbride SC, Princess Mall",
@@ -11123,6 +11098,11 @@
     "name": "Leven, 53 High St",
     "lat": 56.194473150297,
     "long": -2.997093534822
+  },
+  {
+    "name": "Carlisle, U1 Kingstown IE",
+    "lat": 54.92582082,
+    "long": -2.947567188
   },
   {
     "name": "Felling, U5 Booth St",
@@ -11270,7 +11250,7 @@
     "long": -3.62263817
   },
   {
-    "name": "Harold Hill, Romford, 4 Farnha",
+    "name": "Harold Hill, Romford, 4 Farnham Rd",
     "lat": 51.60683358,
     "long": 0.218423421
   },
@@ -12230,7 +12210,7 @@
     "long": -1.56507093
   },
   {
-    "name": "Edinburgh, U10 Straiton RP, The Terrace",
+    "name": "Edinburgh, U10 Straiton RP, Th",
     "lat": 55.885037733162,
     "long": -3.164765008214
   },
@@ -12343,6 +12323,11 @@
     "name": "Accrington, The Viaduct, Hyndburn Rd",
     "lat": 53.75437999,
     "long": -2.36907898
+  },
+  {
+    "name": "WELCOME BREAK Slade End",
+    "lat": 52.46412248,
+    "long": 0.043786348
   },
   {
     "name": "Kilmarnock, U10 Glencairn RP",
@@ -13250,7 +13235,7 @@
     "long": -0.19389169999
   },
   {
-    "name": "Leeds, U14 Bramley SC, Lower T",
+    "name": "Leeds, U14 Bramley SC, Lower Town St",
     "lat": 53.811874663696,
     "long": -1.62657984287
   },
@@ -13445,7 +13430,7 @@
     "long": 0.986229092532
   },
   {
-    "name": "Eskbank, Eskbank Roundabout Dr",
+    "name": "Eskbank, Eskbank Roundabout Drive Thru",
     "lat": 55.88129427,
     "long": -3.08729394
   },
