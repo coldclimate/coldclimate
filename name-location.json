@@ -20,6 +20,11 @@
     "long": -1.901779855
   },
   {
+    "name": "Daventry, U20 Bowen Sq",
+    "lat": 52.25734156,
+    "long": -1.161484289
+  },
+  {
     "name": "Birmingham, U38 Great Western Arc",
     "lat": 52.48194607,
     "long": -1.897458586
@@ -380,7 +385,7 @@
     "long": -0.386654998
   },
   {
-    "name": "Bath, U56 Southgate, Southgate St",
+    "name": "Bath, U56 Southgate, Southgate",
     "lat": 51.37872223,
     "long": -2.359536219
   },
@@ -423,6 +428,11 @@
     "name": "Birmingham, U6 Cherry St",
     "lat": 52.48052424,
     "long": -1.897366957
+  },
+  {
+    "name": "Wolverhampton, New Cross Hospital",
+    "lat": 52.599879,
+    "long": -2.096208
   },
   {
     "name": "Cardiff, 39 Wellfield Rd",
@@ -2415,11 +2425,6 @@
     "long": -4.506013
   },
   {
-    "name": "MFG Meadow",
-    "lat": 53.57974517,
-    "long": -2.377801886
-  },
-  {
     "name": "EG On The Move Warrington",
     "lat": 53.39843301,
     "long": -2.542527705
@@ -3165,11 +3170,6 @@
     "long": -3.59914963317
   },
   {
-    "name": "Maesteg, U7 Talbot St",
-    "lat": 51.6087945974,
-    "long": -3.6602937766
-  },
-  {
     "name": "Banbury, U6 Castle Quay SC",
     "lat": 52.062730779209,
     "long": -1.335423244321
@@ -3230,7 +3230,7 @@
     "long": -1.59120963085
   },
   {
-    "name": "Darlington, U50 Cornmill SC, Tubwell Rd",
+    "name": "Darlington, U50 Cornmill SC, T",
     "lat": 54.525042547655,
     "long": -1.55345114482
   },
@@ -3263,6 +3263,11 @@
     "name": "MOTO Sawtry FC",
     "lat": 52.42629370932,
     "long": -0.26996656647
+  },
+  {
+    "name": "EG On The Move Middlesbrough Sth",
+    "lat": 54.55909510945,
+    "long": -1.259719721822
   },
   {
     "name": "MOTO Sawtry",
@@ -3745,6 +3750,11 @@
     "long": -3.172062
   },
   {
+    "name": "Redhill, 35 Station Rd",
+    "lat": 51.24058134,
+    "long": -0.1690998
+  },
+  {
     "name": "High Wycombe, 13 Queens Sq",
     "lat": 51.63037663,
     "long": -0.752646595
@@ -4188,11 +4198,6 @@
     "name": "Putney, 145 High St",
     "lat": 51.46186887,
     "long": -0.216436505
-  },
-  {
-    "name": "Southampton, Hedge End, 3 Lwr Northam Rd",
-    "lat": 50.91398453,
-    "long": -1.30310283
   },
   {
     "name": "Orpington, 238 High St",
@@ -4868,11 +4873,6 @@
     "name": "Kingston, 28 Market Pl",
     "lat": 51.40966457,
     "long": -0.305802081
-  },
-  {
-    "name": "Kingston, 14 Castle St",
-    "lat": 51.41140618,
-    "long": -0.30171985
   },
   {
     "name": "Chigwell, 197 Manford Way",
@@ -6098,11 +6098,6 @@
     "name": "Wallsend, U3 Cobalt BP",
     "lat": 55.02001,
     "long": -1.50665
-  },
-  {
-    "name": "SODEXO Manchester Royal Infirmary",
-    "lat": 53.46137655,
-    "long": -2.224678147
   },
   {
     "name": "Eastbourne, 81 Terminus Rd",
@@ -7385,6 +7380,11 @@
     "long": -2.446674367
   },
   {
+    "name": "Honiton, U1A Honiton RP, Reme Drive",
+    "lat": 50.79215369,
+    "long": -3.208357067
+  },
+  {
     "name": "Wallington, 86 Woodcote Rd",
     "lat": 51.35861734,
     "long": -0.149773318
@@ -8420,7 +8420,7 @@
     "long": -2.529434568
   },
   {
-    "name": "Wolverhampton, 3 The Gallery, Mander CTR",
+    "name": "Wolverhampton, 3 The Gallery,",
     "lat": 52.584979,
     "long": -2.128396
   },
@@ -8740,11 +8740,6 @@
     "long": 0.727213958
   },
   {
-    "name": "MFG Springs",
-    "lat": 53.7151278,
-    "long": -2.087419112
-  },
-  {
     "name": "ASDA EXPRESS Northop",
     "lat": 53.1979188,
     "long": -3.090726887
@@ -8978,6 +8973,11 @@
     "name": "Outlet: Bradford, 45 Great Horton Rd",
     "lat": 53.79092963,
     "long": -1.762405357
+  },
+  {
+    "name": "Bromsgrove, U5A Bromsgrove RP",
+    "lat": 52.33817272,
+    "long": -2.05556969
   },
   {
     "name": "Glasgow, 1 Gorstan Path",
@@ -9505,6 +9505,11 @@
     "long": -3.8523961
   },
   {
+    "name": "Boscombe, 617 Christchurch Rd",
+    "lat": 50.72668879,
+    "long": -1.838518534
+  },
+  {
     "name": "Greggs @ Tesco Failsworth",
     "lat": 53.50854,
     "long": -2.15856
@@ -9710,7 +9715,7 @@
     "long": -1.083233376
   },
   {
-    "name": "Bangor, Caernarfon Rd, Bryn Llwyd SS",
+    "name": "Bangor, Caernarfon Rd, Bryn Ll",
     "lat": 53.210426481677,
     "long": -4.148654233272
   },
@@ -10563,6 +10568,11 @@
     "name": "Woodville, U1, 42 High St",
     "lat": 52.76768955,
     "long": -1.532350915
+  },
+  {
+    "name": "Mablethorpe, 37 High St",
+    "lat": 53.34141774,
+    "long": 0.260590076
   },
   {
     "name": "Pontypridd, 79A Taff St",
@@ -11420,7 +11430,7 @@
     "long": -4.133749866
   },
   {
-    "name": "Blackwood, U13 St Davids IE, P",
+    "name": "Blackwood, U13 St Davids IE, Pinewd Crt",
     "lat": 51.67011704,
     "long": -3.219128865
   },
@@ -11438,11 +11448,6 @@
     "name": "Handforth, 134 Wilmslow Rd",
     "lat": 53.34998425,
     "long": -2.214875351
-  },
-  {
-    "name": "Ipswich, Quantum BP, 38 White House Rd",
-    "lat": 52.08108277,
-    "long": 1.116763283
   },
   {
     "name": "Chellaston, Riber Dr",
@@ -11598,11 +11603,6 @@
     "name": "Whitehaven, 61 Kings St",
     "lat": 54.54846594,
     "long": -3.589733109
-  },
-  {
-    "name": "Newcastle, 73 Grainger St",
-    "lat": 54.97141741,
-    "long": -1.615367713
   },
   {
     "name": "Gateshead, Metrocentre, Yellow Mall",
@@ -12128,11 +12128,6 @@
     "name": "EG On The Move 5 Barred",
     "lat": 53.76620584,
     "long": -2.602693149
-  },
-  {
-    "name": "ASDA EXPRESS Cirenchester",
-    "lat": 51.72521808,
-    "long": -1.947993699
   },
   {
     "name": "ASDA EXPRESS Barton Mills",
@@ -12955,11 +12950,6 @@
     "long": 1.71633571077
   },
   {
-    "name": "Northampton, U5 Brackmills TP, Caswell R",
-    "lat": 52.216460975881,
-    "long": -0.870762019951
-  },
-  {
     "name": "Lye, U5 Forge RP, Dudley Rd",
     "lat": 52.46236518,
     "long": -2.116886895
@@ -12978,6 +12968,11 @@
     "name": "Greggs @ Tesco Extra Romford",
     "lat": 51.593308387,
     "long": 0.2188327067
+  },
+  {
+    "name": "Outlet: Edmonton, 235 Bounces Rd",
+    "lat": 51.628063225902,
+    "long": -0.046659930293
   },
   {
     "name": "MFG Merry Hill",
@@ -13440,7 +13435,7 @@
     "long": -1.777244695
   },
   {
-    "name": "Milton Keynes, UK Central RP, Patriot Dr",
+    "name": "Milton Keynes, UK Central RP,",
     "lat": 52.041388654469,
     "long": -0.77699829017
   },
@@ -13503,11 +13498,6 @@
     "name": "Porth, 18 Cymmer Rd",
     "lat": 51.61404981,
     "long": -3.413825284
-  },
-  {
-    "name": "MFG Stretford",
-    "lat": 53.449456959318,
-    "long": -2.302826063434
   },
   {
     "name": "Canary Wharf, U365 Cabot Square West",
