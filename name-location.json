@@ -55,7 +55,7 @@
     "long": -3.451712793
   },
   {
-    "name": "Edinburgh, Davidson Mains, 21 Main St",
+    "name": "Edinburgh, Davidson Mains, 21",
     "lat": 55.9655599,
     "long": -3.273863704
   },
@@ -345,11 +345,6 @@
     "long": -2.769097719
   },
   {
-    "name": "New Milton, 9 Old Grn Pde, Chr",
-    "lat": 50.74726925,
-    "long": -1.664534782
-  },
-  {
     "name": "London, U1 London Victoria Coach Stn",
     "lat": 51.4923588,
     "long": -0.148310277
@@ -500,7 +495,7 @@
     "long": -0.725097301
   },
   {
-    "name": "Merthyr Tydfil, U6 Beacons Pla",
+    "name": "Merthyr Tydfil, U6 Beacons Place SC",
     "lat": 51.7455039,
     "long": -3.3779801
   },
@@ -2220,7 +2215,7 @@
     "long": -4.02515
   },
   {
-    "name": "Coventry, U8B Alvis RP, Holyhe",
+    "name": "Coventry, U8B Alvis RP, Holyhead Rd",
     "lat": 52.41158,
     "long": -1.52697
   },
@@ -2260,7 +2255,7 @@
     "long": -0.68764
   },
   {
-    "name": "London, U2, 101 Tottenham Cour",
+    "name": "London, U2, 101 Tottenham Court Rd",
     "lat": 51.52276494,
     "long": -0.136736673
   },
@@ -2980,7 +2975,7 @@
     "long": -0.263346579199
   },
   {
-    "name": "Basingstoke, U12 Chineham SC,",
+    "name": "Basingstoke, U12 Chineham SC, Reading Rd",
     "lat": 51.284580048397,
     "long": -1.059692822572
   },
@@ -4585,7 +4580,7 @@
     "long": -3.560431849
   },
   {
-    "name": "Cardiff, Leckwith Rd, Capital",
+    "name": "Cardiff, Leckwith Rd, Capital SP",
     "lat": 51.47178788,
     "long": -3.205045602
   },
@@ -4810,7 +4805,7 @@
     "long": -3.019035823012
   },
   {
-    "name": "Cardiff, UA Excelsior IE, Batc",
+    "name": "Cardiff, UA Excelsior IE, Batchelor Rd",
     "lat": 51.501131651197,
     "long": -3.19755548752
   },
@@ -5100,7 +5095,7 @@
     "long": -2.804127191
   },
   {
-    "name": "London, U60 Upper Level, St Pa",
+    "name": "London, U60 Upper Level, St Pancras Stn",
     "lat": 51.531766,
     "long": -0.127276
   },
@@ -6240,7 +6235,7 @@
     "long": -1.87363808724
   },
   {
-    "name": "Crawley, Northwood Park, Gatwi",
+    "name": "Crawley, Northwood Park, Gatwick Rd",
     "lat": 51.133236291564,
     "long": -0.16745734092
   },
@@ -7065,7 +7060,7 @@
     "long": -1.297744191
   },
   {
-    "name": "Edmonton, Bury St West, 8 Cambridge Tce",
+    "name": "Edmonton, Bury St West, 8 Camb",
     "lat": 51.63430917,
     "long": -0.070959018
   },
@@ -7365,7 +7360,7 @@
     "long": -3.355690768
   },
   {
-    "name": "Ashton Under Lyne, U3 Arcades SC",
+    "name": "Ashton Under Lyne, U3 Arcades",
     "lat": 53.489344906595,
     "long": -2.096568692416
   },
@@ -7883,6 +7878,11 @@
     "name": "Benwell, 9 Adelaide SC",
     "lat": 54.97004226,
     "long": -1.65518813
+  },
+  {
+    "name": "Cockermouth, 54 Main St",
+    "lat": 54.66386508,
+    "long": -3.365052205
   },
   {
     "name": "Outlet: Birmingham, 130 Highgate St",
@@ -8810,7 +8810,7 @@
     "long": -0.984663583
   },
   {
-    "name": "Glasgow, 881 Gallowgate, U15 Forge RP",
+    "name": "Glasgow, 881 Gallowgate, U15 F",
     "lat": 55.85398,
     "long": -4.21165
   },
@@ -9640,7 +9640,7 @@
     "long": -2.17489114863
   },
   {
-    "name": "Ellesmere Port, Cheshire Oaks",
+    "name": "Ellesmere Port, Cheshire Oaks Bitesize",
     "lat": 53.2640230328,
     "long": -2.88008265711
   },
@@ -11730,6 +11730,11 @@
     "long": -0.944439661
   },
   {
+    "name": "MOTO Doncaster North",
+    "lat": 53.59171454,
+    "long": -0.990433826
+  },
+  {
     "name": "MFG Landmark",
     "lat": 50.40296429,
     "long": -4.101758654
@@ -12225,7 +12230,7 @@
     "long": -3.27021283
   },
   {
-    "name": "Colchester, U14 Nrthrn Gatewy",
+    "name": "Colchester, U14 Nrthrn Gatewy Drive Thru",
     "lat": 51.92405228979,
     "long": 0.899188688587
   },
@@ -12630,7 +12635,7 @@
     "long": -4.35745912671
   },
   {
-    "name": "Bangor, U67 Dunlop CP, Balloo",
+    "name": "Bangor, U67 Dunlop CP, Balloo Link",
     "lat": 54.645123269903,
     "long": -5.669253590605
   },
@@ -12735,6 +12740,11 @@
     "long": -2.14782716297
   },
   {
+    "name": "Bishopbriggs, U9A1 Strathkelvi",
+    "lat": 55.92149709995,
+    "long": -4.20755763033
+  },
+  {
     "name": "Cardiff, U8 Clearwater Way",
     "lat": 51.514704765412,
     "long": -3.169973991228
@@ -12800,7 +12810,7 @@
     "long": -1.91247753915
   },
   {
-    "name": "Liverpool, U4, 209 Great Howar",
+    "name": "Liverpool, U4, 209 Great Howard St",
     "lat": 53.426978376708,
     "long": -2.99733437534
   },
@@ -12875,7 +12885,7 @@
     "long": -2.08153007534
   },
   {
-    "name": "Farnham, U3B Romans BP, East S",
+    "name": "Farnham, U3B Romans BP, East St",
     "lat": 51.218447488524,
     "long": -0.79074774976
   },
@@ -12923,6 +12933,11 @@
     "name": "Shenfield, 204 Hutton Rd",
     "lat": 51.63076564085,
     "long": 0.328689808185
+  },
+  {
+    "name": "ASDA EXPRESS Wembury Road",
+    "lat": 50.3513,
+    "long": -4.07589
   },
   {
     "name": "London, 74 Aldgate High St",
@@ -12993,6 +13008,11 @@
     "name": "Leeds Bradford Airport",
     "lat": 53.869185,
     "long": -1.661617
+  },
+  {
+    "name": "Newcastle, U9 Central Station",
+    "lat": 54.96868114,
+    "long": -1.616952207
   },
   {
     "name": "ASDA EXPRESS Peterhead",
