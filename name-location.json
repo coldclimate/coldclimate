@@ -2040,6 +2040,11 @@
     "long": -3.005523944946
   },
   {
+    "name": "ASDA EXPRESS Ormskirk",
+    "lat": 53.56577144,
+    "long": -2.89307089
+  },
+  {
     "name": "MOTO Grantham North",
     "lat": 52.94900276,
     "long": -0.678567377
@@ -3255,7 +3260,7 @@
     "long": -0.26996656647
   },
   {
-    "name": "EG On The Move Middlesbrough S",
+    "name": "EG On The Move Middlesbrough Sth",
     "lat": 54.55909510945,
     "long": -1.259719721822
   },
@@ -3680,12 +3685,12 @@
     "long": -2.145674056
   },
   {
-    "name": "Peterborough, U94 Queensgate S",
+    "name": "Peterborough, U94 Queensgate SC",
     "lat": 52.574402352516,
     "long": -0.245624769904
   },
   {
-    "name": "Merthyr Tydfl, 16 Nwmrkt Wlk, Tydfil SC",
+    "name": "Merthyr Tydfl, 16 Nwmrkt Wlk,",
     "lat": 51.745150732275,
     "long": -3.380192494682
   },
@@ -4110,7 +4115,7 @@
     "long": -1.518474409
   },
   {
-    "name": "Wrexham, U28 The Brdgwter Ctr, Wrxham IE",
+    "name": "Wrexham, U28 The Brdgwter Ctr,",
     "lat": 53.03898156,
     "long": -2.927806061
   },
@@ -4550,7 +4555,7 @@
     "long": -1.376785267606
   },
   {
-    "name": "Acocks Green, 25 Olton Boulevard East",
+    "name": "Acocks Green, 25 Olton Bouleva",
     "lat": 52.44332019,
     "long": -1.833927602
   },
@@ -5255,7 +5260,7 @@
     "long": -2.504905746
   },
   {
-    "name": "EG On The Move Westholme Kirkh",
+    "name": "EG On The Move Westholme Kirkham",
     "lat": 53.79596562,
     "long": -2.890539793
   },
@@ -5328,6 +5333,11 @@
     "name": "EG On The Move Hedon",
     "lat": 53.7404034,
     "long": -0.214804458
+  },
+  {
+    "name": "ASDA EXPRESS Aldersbrook",
+    "lat": 51.56234983,
+    "long": 0.033399011
   },
   {
     "name": "WELCOME BREAK Howden",
@@ -6060,7 +6070,7 @@
     "long": -2.115333
   },
   {
-    "name": "Greggs @ Primark The Horsefair, Bristol",
+    "name": "Greggs @ Primark The Horsefair",
     "lat": 51.4585,
     "long": -2.59125
   },
@@ -6170,7 +6180,7 @@
     "long": -4.60814
   },
   {
-    "name": "Outlet: Cardiff, St Mellons DC Crkhwl Rd",
+    "name": "Outlet: Cardiff, St Mellons DC",
     "lat": 51.52499169,
     "long": -3.101954365
   },
@@ -7325,7 +7335,7 @@
     "long": -1.297744191
   },
   {
-    "name": "Edmonton, Bury St West, 8 Cambridge Tce",
+    "name": "Edmonton, Bury St West, 8 Camb",
     "lat": 51.63430917,
     "long": -0.070959018
   },
@@ -7405,7 +7415,7 @@
     "long": -1.40534949
   },
   {
-    "name": "Beverley, Unit 9A Flemingate S",
+    "name": "Beverley, Unit 9A Flemingate SC",
     "lat": 53.8400084,
     "long": -0.4206332
   },
@@ -8575,11 +8585,6 @@
     "long": -1.333549437
   },
   {
-    "name": "Lincoln, U3 St Peter At Arches, High St",
-    "lat": 53.22987007,
-    "long": -0.540016412
-  },
-  {
     "name": "ASDA EXPRESS Blurton",
     "lat": 52.98285397,
     "long": -2.157183661
@@ -9065,11 +9070,6 @@
     "long": -0.78256591
   },
   {
-    "name": "Bognor Regis, U6 Saltbox Rd Drive Thru",
-    "lat": 50.80640124,
-    "long": -0.669119125
-  },
-  {
     "name": "MFG West Road",
     "lat": 57.64684396,
     "long": -3.331721821
@@ -9085,7 +9085,7 @@
     "long": -3.190431321
   },
   {
-    "name": "Enfield, U9a Enfield RP, 5 Crown Rd",
+    "name": "Enfield, U9a Enfield RP, 5 Cro",
     "lat": 51.65433814,
     "long": -0.057848995
   },
@@ -9385,7 +9385,7 @@
     "long": -2.156108881
   },
   {
-    "name": "Llandaf North, U1 The Tivoli, 14 Stn Rd",
+    "name": "Llandaf North, U1 The Tivoli,",
     "lat": 51.50299929,
     "long": -3.226107162
   },
@@ -9630,7 +9630,7 @@
     "long": -1.224159512
   },
   {
-    "name": "Outlet: Plaistow, 107 Plaistow",
+    "name": "Outlet: Plaistow, 107 Plaistow Rd",
     "lat": 51.53386192,
     "long": 0.011256296
   },
@@ -9900,7 +9900,7 @@
     "long": -1.54174417358
   },
   {
-    "name": "Yaxley, Enterprise Park, Enter",
+    "name": "Yaxley, Enterprise Park, Enterprise Wy",
     "lat": 52.524463842831,
     "long": -0.2405375139
   },
@@ -10200,7 +10200,7 @@
     "long": -0.052398438
   },
   {
-    "name": "Frinton-On-Sea, 66 Connaught A",
+    "name": "Frinton-On-Sea, 66 Connaught Ave",
     "lat": 51.83270183,
     "long": 1.245380397
   },
@@ -12025,6 +12025,11 @@
     "long": -0.446533482
   },
   {
+    "name": "MOTO Toddington North",
+    "lat": 51.94695381,
+    "long": -0.503396648
+  },
+  {
     "name": "MFG Plympton",
     "lat": 50.38290771,
     "long": -4.031535619
@@ -12208,6 +12213,11 @@
     "name": "ASDA EXPRESS Beacon Hill",
     "lat": 52.14768117848,
     "long": 1.081003012919
+  },
+  {
+    "name": "MOTO Medway East",
+    "lat": 51.34168584,
+    "long": 0.608061927
   },
   {
     "name": "MOTO Reading East",
@@ -12605,7 +12615,7 @@
     "long": -2.0193
   },
   {
-    "name": "Harlow, U1B Queensgate RP, Edinburgh Way",
+    "name": "Harlow, U1B Queensgate RP, Edi",
     "lat": 51.78315552,
     "long": 0.106508157
   },
@@ -12680,7 +12690,7 @@
     "long": 0.78161
   },
   {
-    "name": "London, U2 Canary Wharf Station",
+    "name": "London, U2 Canary Wharf Statio",
     "lat": 51.5051,
     "long": -0.0248
   },
@@ -13240,7 +13250,7 @@
     "long": -3.169973991228
   },
   {
-    "name": "Greggs @ Tesco Extra Southend On Sea",
+    "name": "Greggs @ Tesco Extra Southend",
     "lat": 51.5606403375,
     "long": 0.68432824881
   },
@@ -13305,7 +13315,7 @@
     "long": -1.91247753915
   },
   {
-    "name": "Liverpool, U4, 209 Great Howard St",
+    "name": "Liverpool, U4, 209 Great Howar",
     "lat": 53.426978376708,
     "long": -2.99733437534
   },
@@ -13545,7 +13555,7 @@
     "long": -2.302826063434
   },
   {
-    "name": "Canary Wharf, U365 Cabot Square West",
+    "name": "Canary Wharf, U365 Cabot Squar",
     "lat": 51.50508,
     "long": -0.02045
   },
