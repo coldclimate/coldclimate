@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actor Filmography Tube Map</title>
+  <style>
+    /* ── Reset & tokens ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #f0f0f0;
+      --surface:      #ffffff;
+      --text:         #1a1a1a;
+      --text-muted:   #595959;
+      --border-col:   #cccccc;
+      --focus:        #005fcc;
+      --focus-ring:   0 0 0 3px #005fcc;
+      --radius:       8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:         #141414;
+        --surface:    #242424;
+        --text:       #e8e8e8;
+        --text-muted: #a0a0a0;
+        --border-col: #3a3a3a;
+        --focus:      #4da6ff;
+        --focus-ring: 0 0 0 3px #4da6ff;
+      }
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* ── Skip link ───────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      background: var(--focus);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 9999;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; outline: none; box-shadow: var(--focus-ring); }
+
+    /* ── Header ──────────────────────────────────────────── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border-col);
+      padding: 16px 24px;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 700; }
+    header p  { font-size: 0.875rem; color: var(--text-muted); margin-top: 2px; }
+
+    /* ── Main layout ─────────────────────────────────────── */
+    main { padding: 24px; max-width: 1600px; }
+
+    /* ── Diagram section ─────────────────────────────────── */
+    #diagram-figure { margin: 0 0 24px; }
+
+    #diagram-caption {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    #diagram-container {
+      background: var(--surface);
+      border: 1px solid var(--border-col);
+      border-radius: var(--radius);
+      overflow: auto;
+      max-height: calc(100vh - 260px);
+      padding: 0;
+    }
+
+    #diagram-svg { display: block; }
+
+    /* SVG text inherits colour from CSS custom props */
+    #diagram-svg text.label-film  { fill: var(--text); font-size: 11px; }
+    #diagram-svg text.label-year  { fill: var(--text-muted); font-size: 10px; }
+    #diagram-svg text.label-actor { font-size: 13px; font-weight: 700; }
+
+    /* Interchange node colours (adapt to dark mode via CSS vars) */
+    .interchange-ring   { fill: var(--text); }
+    .interchange-center { fill: var(--surface); stroke: var(--text); stroke-width: 2; }
+
+    /* Station interactive states */
+    .station {
+      cursor: pointer;
+    }
+    .station:focus { outline: none; }
+    .station:focus .station-hit,
+    .station:hover .station-hit {
+      opacity: 1;
+    }
+    .station-hit {
+      fill: transparent;
+      opacity: 0;
+    }
+    .station:focus-visible .station-focus-ring,
+    .station:focus .station-focus-ring {
+      display: block;
+    }
+    .station-focus-ring { display: none; }
+
+    /* ── Legend ──────────────────────────────────────────── */
+    #legend {
+      background: var(--surface);
+      border: 1px solid var(--border-col);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    #legend h2 { font-size: 0.9rem; font-weight: 700; text-transform: uppercase;
+                 letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px; }
+    .legend-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .legend-swatch {
+      display: inline-block;
+      width: 36px;
+      height: 7px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* ── Data table section ──────────────────────────────── */
+    #table-section { margin-bottom: 24px; }
+
+    .toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border-col);
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 0.875rem;
+      font-family: inherit;
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    .toggle-btn:hover { background: var(--bg); }
+    .toggle-btn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+    .toggle-btn .toggle-icon { font-size: 0.75rem; transition: transform 0.2s; }
+    .toggle-btn[aria-expanded="true"] .toggle-icon { transform: rotate(90deg); }
+
+    #data-table-wrapper { margin-top: 12px; overflow-x: auto; }
+
+    #data-table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.875rem;
+      background: var(--surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-col);
+    }
+    #data-table th, #data-table td {
+      text-align: left;
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border-col);
+    }
+    #data-table th {
+      font-weight: 600;
+      background: var(--bg);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    #data-table tbody tr:last-child td { border-bottom: none; }
+    #data-table tbody tr:hover td { background: var(--bg); }
+    .shared-badge {
+      display: inline-block;
+      background: var(--focus);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* ── Film detail dialog ──────────────────────────────── */
+    #film-detail-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+    #film-detail-overlay[hidden] { display: none; }
+
+    #film-detail {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 28px;
+      max-width: 420px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+    #film-detail-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: 1px solid var(--border-col);
+      border-radius: 6px;
+      font-size: 1.1rem;
+      color: var(--text);
+      cursor: pointer;
+      font-family: inherit;
+    }
+    #film-detail-close:hover { background: var(--bg); }
+    #film-detail-close:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+    #film-detail-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding-right: 40px;
+      margin-bottom: 4px;
+    }
+    #film-detail-year {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    #film-detail-actors-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    #film-detail-actors { list-style: none; }
+    #film-detail-actors li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border-col);
+    }
+    #film-detail-actors li:last-child { border-bottom: none; }
+    .actor-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Reduced motion ──────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <h1 id="page-title">Actor Filmography Tube Map</h1>
+    <p id="page-subtitle"></p>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <figure id="diagram-figure" aria-labelledby="diagram-caption">
+      <figcaption id="diagram-caption"></figcaption>
+      <div id="diagram-container"
+           role="region"
+           aria-label="Filmography tube map — scroll horizontally to see all films">
+        <!-- SVG injected by JavaScript -->
+      </div>
+    </figure>
+
+    <nav id="legend" aria-label="Actor routes">
+      <h2>Routes</h2>
+      <ul class="legend-list" id="legend-list"></ul>
+    </nav>
+
+    <section id="table-section" aria-labelledby="table-heading">
+      <h2 id="table-heading" class="sr-only">Film data table</h2>
+      <button class="toggle-btn"
+              id="table-toggle"
+              aria-expanded="false"
+              aria-controls="data-table-wrapper">
+        <span class="toggle-icon" aria-hidden="true">▶</span>
+        Show full data table
+      </button>
+      <div id="data-table-wrapper" hidden>
+        <table id="data-table" aria-label="All films and actors">
+          <thead>
+            <tr>
+              <th scope="col">Film</th>
+              <th scope="col">Year</th>
+              <th scope="col">Actor(s)</th>
+            </tr>
+          </thead>
+          <tbody id="data-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Film detail dialog -->
+  <div id="film-detail-overlay" hidden>
+    <div id="film-detail"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="film-detail-title">
+      <button id="film-detail-close" aria-label="Close film details">✕</button>
+      <h2 id="film-detail-title"></h2>
+      <p id="film-detail-year"></p>
+      <p id="film-detail-actors-label">Featuring</p>
+      <ul id="film-detail-actors" aria-label="Actors in this film"></ul>
+    </div>
+  </div>
+
+  <!-- Visually-hidden utility (for sr-only) -->
+  <style>
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+  </style>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ── Data ──────────────────────────────────────────────────────── */
+    const DATA = {"actors": [{"index": 0, "name": "Tom Hanks", "color": "#C00000"}, {"index": 1, "name": "Tom Hardy", "color": "#0057A8"}, {"index": 2, "name": "Tom Holland", "color": "#007A33"}, {"index": 3, "name": "Tom Hollander", "color": "#9B0056"}, {"index": 4, "name": "Tom Hiddleston", "color": "#E86800"}], "films": [{"id": 1311594, "title": "John Diamond", "year": 1981, "actors": [3]}, {"id": 12309, "title": "Bachelor Party", "year": 1984, "actors": [0]}, {"id": 2619, "title": "Splash", "year": 1984, "actors": [0]}, {"id": 10905, "title": "The Man with One Red Shoe", "year": 1985, "actors": [0]}, {"id": 19259, "title": "Volunteers", "year": 1985, "actors": [0]}, {"id": 29968, "title": "Nothing in Common", "year": 1986, "actors": [0]}, {"id": 10466, "title": "The Money Pit", "year": 1986, "actors": [0]}, {"id": 10023, "title": "Dragnet", "year": 1987, "actors": [0]}, {"id": 2280, "title": "Big", "year": 1988, "actors": [0]}, {"id": 454330, "title": "Saturday Night Live: 15th Anniversary", "year": 1989, "actors": [0]}, {"id": 11974, "title": "The 'Burbs", "year": 1989, "actors": [0]}, {"id": 6951, "title": "Turner & Hooch", "year": 1989, "actors": [0]}, {"id": 2565, "title": "Joe Versus the Volcano", "year": 1990, "actors": [0]}, {"id": 9586, "title": "The Bonfire of the Vanities", "year": 1990, "actors": [0]}, {"id": 11287, "title": "A League of Their Own", "year": 1992, "actors": [0]}, {"id": 20763, "title": "Radio Flyer", "year": 1992, "actors": [0]}, {"id": 9800, "title": "Philadelphia", "year": 1993, "actors": [0]}, {"id": 858, "title": "Sleepless in Seattle", "year": 1993, "actors": [0]}, {"id": 13, "title": "Forrest Gump", "year": 1994, "actors": [0]}, {"id": 438280, "title": "Milner", "year": 1994, "actors": [3]}, {"id": 568, "title": "Apollo 13", "year": 1995, "actors": [0]}, {"id": 862, "title": "Toy Story", "year": 1995, "actors": [0]}, {"id": 247309, "title": "Absolutely Fabulous: The Last Shout", "year": 1996, "actors": [3]}, {"id": 58102, "title": "Some Mother's Son", "year": 1996, "actors": [3]}, {"id": 9591, "title": "That Thing You Do!", "year": 1996, "actors": [0]}, {"id": 32562, "title": "The Celluloid Closet", "year": 1996, "actors": [0]}, {"id": 39463, "title": "True Blue", "year": 1996, "actors": [3]}, {"id": 919154, "title": "Gobble", "year": 1997, "actors": [3]}, {"id": 40694, "title": "Bedrooms and Hallways", "year": 1998, "actors": [3]}, {"id": 857, "title": "Saving Private Ryan", "year": 1998, "actors": [0]}, {"id": 6373, "title": "The Very Thought of You", "year": 1998, "actors": [3]}, {"id": 9489, "title": "You've Got Mail", "year": 1998, "actors": [0]}, {"id": 269535, "title": "Saturday Night Live: 25th Anniversary Special", "year": 1999, "actors": [0]}, {"id": 158751, "title": "The Clandestine Marriage", "year": 1999, "actors": [3]}, {"id": 497, "title": "The Green Mile", "year": 1999, "actors": [0]}, {"id": 863, "title": "Toy Story 2", "year": 1999, "actors": [0]}, {"id": 8358, "title": "Cast Away", "year": 2000, "actors": [0]}, {"id": 13966, "title": "Maybe Baby", "year": 2000, "actors": [3]}, {"id": 385050, "title": "The Announcement", "year": 2000, "actors": [3]}, {"id": 456703, "title": "Walking the Mile: The Making of The Green Mile", "year": 2000, "actors": [0]}, {"id": 40196, "title": "America | A Tribute to Heroes", "year": 2001, "actors": [0]}, {"id": 855, "title": "Black Hawk Down", "year": 2001, "actors": [1]}, {"id": 12900, "title": "Conspiracy", "year": 2001, "actors": [4]}, {"id": 10491, "title": "Enigma", "year": 2001, "actors": [3]}, {"id": 593329, "title": "Get a Grip", "year": 2001, "actors": [1]}, {"id": 5279, "title": "Gosford Park", "year": 2001, "actors": [3]}, {"id": 281725, "title": "The Life and Adventures of Nicholas Nickleby", "year": 2001, "actors": [3, 4]}, {"id": 703284, "title": "Tommaso", "year": 2001, "actors": [1]}, {"id": 640, "title": "Catch Me If You Can", "year": 2002, "actors": [0]}, {"id": 63971, "title": "Deserter", "year": 2002, "actors": [1]}, {"id": 77283, "title": "Lawless Heart", "year": 2002, "actors": [3]}, {"id": 30072, "title": "Possession", "year": 2002, "actors": [3]}, {"id": 4147, "title": "Road to Perdition", "year": 2002, "actors": [0]}, {"id": 201, "title": "Star Trek: Nemesis", "year": 2002, "actors": [1]}, {"id": 36464, "title": "The Gathering Storm", "year": 2002, "actors": [4]}, {"id": 777027, "title": "The Making of Gosford Park", "year": 2002, "actors": [3]}, {"id": 28236, "title": "Concert for George", "year": 2003, "actors": [0]}, {"id": 18538, "title": "Dot the I", "year": 2003, "actors": [1]}, {"id": 15473, "title": "LD 50 Lethal Dose", "year": 2003, "actors": [1]}, {"id": 65096, "title": "EMR", "year": 2004, "actors": [1]}, {"id": 37641, "title": "Elvis Has Left the Building", "year": 2004, "actors": [0]}, {"id": 4836, "title": "Layer Cake", "year": 2004, "actors": [1]}, {"id": 15644, "title": "Paparazzi", "year": 2004, "actors": [3]}, {"id": 48643, "title": "Piccadilly Jim", "year": 2004, "actors": [3]}, {"id": 26108, "title": "Stage Beauty", "year": 2004, "actors": [3]}, {"id": 367323, "title": "The Hotel In Amsterdam", "year": 2004, "actors": [3]}, {"id": 5516, "title": "The Ladykillers", "year": 2004, "actors": [0]}, {"id": 7548, "title": "The Libertine", "year": 2004, "actors": [3]}, {"id": 5255, "title": "The Polar Express", "year": 2004, "actors": [0]}, {"id": 25935, "title": "The Reckoning", "year": 2004, "actors": [1]}, {"id": 594, "title": "The Terminal", "year": 2004, "actors": [0]}, {"id": 187116, "title": "A Waste of Shame: The Mystery of Shakespeare and His Sonnets", "year": 2005, "actors": [4]}, {"id": 796912, "title": "Colditz", "year": 2005, "actors": [1]}, {"id": 59958, "title": "Gideon's Daughter", "year": 2005, "actors": [1]}, {"id": 42348, "title": "Live 8", "year": 2005, "actors": [0]}, {"id": 30172, "title": "Magnificent Desolation: Walking on the Moon", "year": 2005, "actors": [0]}, {"id": 4348, "title": "Pride & Prejudice", "year": 2005, "actors": [3]}, {"id": 9726, "title": "A Good Year", "year": 2006, "actors": [3]}, {"id": 45158, "title": "A for Andromeda", "year": 2006, "actors": [1]}, {"id": 920, "title": "Cars", "year": 2006, "actors": [0]}, {"id": 15414, "title": "Land of the Blind", "year": 2006, "actors": [3]}, {"id": 1887, "title": "Marie Antoinette", "year": 2006, "actors": [1]}, {"id": 18870, "title": "Minotaur", "year": 2006, "actors": [1]}, {"id": 58, "title": "Pirates of the Caribbean: Dead Man's Chest", "year": 2006, "actors": [3]}, {"id": 37983, "title": "Rabbit Fever", "year": 2006, "actors": [3]}, {"id": 18558, "title": "Scenes of a Sexual Nature", "year": 2006, "actors": [1]}, {"id": 37924, "title": "Sweeney Todd", "year": 2006, "actors": [1]}, {"id": 591, "title": "The Da Vinci Code", "year": 2006, "actors": [0]}, {"id": 6538, "title": "Charlie Wilson's War", "year": 2007, "actors": [0]}, {"id": 4517, "title": "Elizabeth: The Golden Age", "year": 2007, "actors": [3]}, {"id": 6309, "title": "Flood", "year": 2007, "actors": [1]}, {"id": 285, "title": "Pirates of the Caribbean: At World's End", "year": 2007, "actors": [3]}, {"id": 337559, "title": "Saturday Night Live in the '90s: Pop Culture Nation", "year": 2007, "actors": [0]}, {"id": 50032, "title": "Stuart: A Life Backwards", "year": 2007, "actors": [1]}, {"id": 18437, "title": "The Darwin Awards", "year": 2007, "actors": [3]}, {"id": 127639, "title": "The Inheritance", "year": 2007, "actors": [1]}, {"id": 15302, "title": "The Pixar Story", "year": 2007, "actors": [0]}, {"id": 35, "title": "The Simpsons Movie", "year": 2007, "actors": [0]}, {"id": 15069, "title": "WΔZ", "year": 2007, "actors": [1]}, {"id": 18089, "title": "Miss Austen Regrets", "year": 2008, "actors": [4]}, {"id": 13809, "title": "RocknRolla", "year": 2008, "actors": [1]}, {"id": 54185, "title": "Sucker Punch", "year": 2008, "actors": [1]}, {"id": 16279, "title": "The Great Buck Howard", "year": 2008, "actors": [0]}, {"id": 29982, "title": "Unrelated", "year": 2008, "actors": [4]}, {"id": 2253, "title": "Valkyrie", "year": 2008, "actors": [3]}, {"id": 13448, "title": "Angels & Demons", "year": 2009, "actors": [0]}, {"id": 18533, "title": "Bronson", "year": 2009, "actors": [1]}, {"id": 33396, "title": "Darwin's Secret Notebooks", "year": 2009, "actors": [4]}, {"id": 58524, "title": "Gracie!", "year": 2009, "actors": [3]}, {"id": 19833, "title": "In the Loop", "year": 2009, "actors": [3]}, {"id": 340984, "title": "Perfect", "year": 2009, "actors": [1]}, {"id": 17332, "title": "The Soloist", "year": 2009, "actors": [3]}, {"id": 14979, "title": "Thick as Thieves", "year": 2009, "actors": [1]}, {"id": 705899, "title": "We Are One: The Obama Inaugural Celebration at the Lincoln Memorial", "year": 2009, "actors": [0]}, {"id": 1253743, "title": "Away We Stay", "year": 2010, "actors": [3]}, {"id": 27205, "title": "Inception", "year": 2010, "actors": [1]}, {"id": 10193, "title": "Toy Story 3", "year": 2010, "actors": [0]}, {"id": 64655, "title": "Archipelago", "year": 2011, "actors": [4]}, {"id": 64685, "title": "Extremely Loud & Incredibly Close", "year": 2011, "actors": [0]}, {"id": 194952, "title": "Friend Request Pending", "year": 2011, "actors": [4]}, {"id": 69224, "title": "From the Ashes", "year": 2011, "actors": [1]}, {"id": 50456, "title": "Hanna", "year": 2011, "actors": [3]}, {"id": 77887, "title": "Hawaiian Vacation", "year": 2011, "actors": [0]}, {"id": 155776, "title": "Heroes and Demons", "year": 2011, "actors": [1]}, {"id": 59861, "title": "Larry Crowne", "year": 2011, "actors": [0]}, {"id": 59436, "title": "Midnight in Paris", "year": 2011, "actors": [4]}, {"id": 761281, "title": "Redemption: Bringing Warrior to Life", "year": 2011, "actors": [1]}, {"id": 167670, "title": "Sergeant Slaughter, My Big Brother", "year": 2011, "actors": [1]}, {"id": 82424, "title": "Small Fry", "year": 2011, "actors": [0]}, {"id": 51994, "title": "The Deep Blue Sea", "year": 2011, "actors": [4]}, {"id": 10195, "title": "Thor", "year": 2011, "actors": [4]}, {"id": 448360, "title": "Thor: From Asgard to Earth", "year": 2011, "actors": [4]}, {"id": 49517, "title": "Tinker Tailor Soldier Spy", "year": 2011, "actors": [1]}, {"id": 57212, "title": "War Horse", "year": 2011, "actors": [4]}, {"id": 59440, "title": "Warrior", "year": 2011, "actors": [1]}, {"id": 110392, "title": "A Liar's Autobiography: The Untrue Story of Monty Python's Graham Chapman", "year": 2012, "actors": [3]}, {"id": 1113682, "title": "Close Up", "year": 2012, "actors": [0]}, {"id": 83542, "title": "Cloud Atlas", "year": 2012, "actors": [0]}, {"id": 703363, "title": "Ending the Knight", "year": 2012, "actors": [1]}, {"id": 126314, "title": "Final Cut: Ladies and Gentlemen", "year": 2012, "actors": [0]}, {"id": 127850, "title": "Inventing David Geffen", "year": 2012, "actors": [0]}, {"id": 82633, "title": "Lawless", "year": 2012, "actors": [1]}, {"id": 1512198, "title": "Marvel Studios: Building a Cinematic Universe", "year": 2012, "actors": [4]}, {"id": 388241, "title": "Out of Time", "year": 2012, "actors": [4]}, {"id": 130925, "title": "Partysaurus Rex", "year": 2012, "actors": [0]}, {"id": 103733, "title": "Radioman", "year": 2012, "actors": [0]}, {"id": 136066, "title": "Stars in Shorts", "year": 2012, "actors": [4]}, {"id": 24428, "title": "The Avengers", "year": 2012, "actors": [4]}, {"id": 49026, "title": "The Dark Knight Rises", "year": 2012, "actors": [1]}, {"id": 80278, "title": "The Impossible", "year": 2012, "actors": [2]}, {"id": 59962, "title": "This Means War", "year": 2012, "actors": [1]}, {"id": 122906, "title": "About Time", "year": 2013, "actors": [3]}, {"id": 102780, "title": "Byzantium", "year": 2013, "actors": [3]}, {"id": 109424, "title": "Captain Phillips", "year": 2013, "actors": [0]}, {"id": 205492, "title": "Dr. Easy", "year": 2013, "actors": [3]}, {"id": 208028, "title": "Exhibition", "year": 2013, "actors": [4]}, {"id": 162215, "title": "How I Live Now", "year": 2013, "actors": [2]}, {"id": 411587, "title": "Moments", "year": 2013, "actors": [2]}, {"id": 232599, "title": "Muse of Fire", "year": 2013, "actors": [4]}, {"id": 152603, "title": "Only Lovers Left Alive", "year": 2013, "actors": [4]}, {"id": 220816, "title": "Out of Darkness", "year": 2013, "actors": [4]}, {"id": 140823, "title": "Saving Mr. Banks", "year": 2013, "actors": [0]}, {"id": 111473, "title": "The Invisible Woman", "year": 2013, "actors": [3]}, {"id": 200942, "title": "The Voorman Problem", "year": 2013, "actors": [3]}, {"id": 76338, "title": "Thor: The Dark World", "year": 2013, "actors": [4]}, {"id": 580798, "title": "A Brothers' Journey: Thor & Loki", "year": 2014, "actors": [4]}, {"id": 270292, "title": "A Poet in New York", "year": 2014, "actors": [3]}, {"id": 253639, "title": "And the Oscar Goes To...", "year": 2014, "actors": [0]}, {"id": 298931, "title": "Billy Elliot: The Musical Live", "year": 2014, "actors": [2]}, {"id": 210479, "title": "Locke", "year": 2014, "actors": [1, 2]}, {"id": 259910, "title": "Marvel Studios: Assembling a Universe", "year": 2014, "actors": [4]}, {"id": 145220, "title": "Muppets Most Wanted", "year": 2014, "actors": [3, 4]}, {"id": 253299, "title": "National Theatre Live: Coriolanus", "year": 2014, "actors": [4]}, {"id": 154400, "title": "The Drop", "year": 2014, "actors": [1]}, {"id": 270302, "title": "The Riot Club", "year": 2014, "actors": [3]}, {"id": 175112, "title": "Tinker Bell and the Pirate Fairy", "year": 2014, "actors": [4]}, {"id": 256835, "title": "Toy Story That Time Forgot", "year": 2014, "actors": [0]}, {"id": 291060, "title": "Travelling at Night with Jim Jarmusch", "year": 2014, "actors": [4]}, {"id": 897465, "title": "Walking the Mile", "year": 2014, "actors": [0]}, {"id": 296098, "title": "Bridge of Spies", "year": 2015, "actors": [0]}, {"id": 181283, "title": "Child 44", "year": 2015, "actors": [1]}, {"id": 201085, "title": "Crimson Peak", "year": 2015, "actors": [4]}, {"id": 254302, "title": "High-Rise", "year": 2015, "actors": [4]}, {"id": 205775, "title": "In the Heart of the Sea", "year": 2015, "actors": [2]}, {"id": 276907, "title": "Legend", "year": 2015, "actors": [1]}, {"id": 328483, "title": "London Road", "year": 2015, "actors": [1]}, {"id": 76341, "title": "Mad Max: Fury Road", "year": 2015, "actors": [1]}, {"id": 316067, "title": "Misery Loves Comedy", "year": 2015, "actors": [0]}, {"id": 177677, "title": "Mission: Impossible - Rogue Nation", "year": 2015, "actors": [3]}, {"id": 281957, "title": "The Revenant", "year": 2015, "actors": [1]}, {"id": 285783, "title": "The Walk", "year": 2015, "actors": [0]}, {"id": 345323, "title": "Unity", "year": 2015, "actors": [4]}, {"id": 1319046, "title": "WillShake", "year": 2015, "actors": [4]}, {"id": 1374644, "title": "A Case of the Cold War: Bridge of Spies", "year": 2016, "actors": [0]}, {"id": 270010, "title": "A Hologram for the King", "year": 2016, "actors": [0]}, {"id": 271110, "title": "Captain America: Civil War", "year": 2016, "actors": [2]}, {"id": 402446, "title": "Edge of Winter", "year": 2016, "actors": [2]}, {"id": 639757, "title": "Hand Tailored Gothic", "year": 2016, "actors": [4]}, {"id": 639756, "title": "I Remember Crimson Peak", "year": 2016, "actors": [4]}, {"id": 297806, "title": "I Saw the Light", "year": 2016, "actors": [4]}, {"id": 207932, "title": "Inferno", "year": 2016, "actors": [0]}, {"id": 363676, "title": "Sully", "year": 2016, "actors": [0]}, {"id": 639755, "title": "The Light and Dark of Crimson Peak", "year": 2016, "actors": [4]}, {"id": 354859, "title": "The Promise", "year": 2016, "actors": [3]}, {"id": 1125624, "title": "There's Something About Romcoms", "year": 2016, "actors": [0]}, {"id": 626329, "title": "A Fan's Guide to Spider-Man Homecoming", "year": 2017, "actors": [2]}, {"id": 407445, "title": "Breathe", "year": 2017, "actors": [3]}, {"id": 595640, "title": "Creating a King: Realizing an Icon", "year": 2017, "actors": [4]}, {"id": 595642, "title": "Creating a King: Summoning a God", "year": 2017, "actors": [4]}, {"id": 374720, "title": "Dunkirk", "year": 2017, "actors": [1]}, {"id": 704725, "title": "Going Mad: The Battle of Fury Road", "year": 2017, "actors": [1]}, {"id": 293167, "title": "Kong: Skull Island", "year": 2017, "actors": [4]}, {"id": 340442, "title": "Pilgrimage", "year": 2017, "actors": [2]}, {"id": 425530, "title": "Revolution: New Art for a New World", "year": 2017, "actors": [3]}, {"id": 315635, "title": "Spider-Man: Homecoming", "year": 2017, "actors": [2]}, {"id": 467062, "title": "Spielberg", "year": 2017, "actors": [0]}, {"id": 339988, "title": "The Circle", "year": 2017, "actors": [0]}, {"id": 314095, "title": "The Lost City of Z", "year": 2017, "actors": [2]}, {"id": 446354, "title": "The Post", "year": 2017, "actors": [0]}, {"id": 284053, "title": "Thor: Ragnarok", "year": 2017, "actors": [4]}, {"id": 1001895, "title": "Tom Hiddleston: The Intrepid Traveler", "year": 2017, "actors": [4]}, {"id": 257785, "title": "Tulip Fever", "year": 2017, "actors": [3]}, {"id": 475132, "title": "A Private War", "year": 2018, "actors": [3]}, {"id": 299536, "title": "Avengers: Infinity War", "year": 2018, "actors": [2, 4]}, {"id": 558912, "title": "Beyond Boundaries: The Harvey Weinstein Scandal", "year": 2018, "actors": [0]}, {"id": 405774, "title": "Bird Box", "year": 2018, "actors": [3]}, {"id": 424694, "title": "Bohemian Rhapsody", "year": 2018, "actors": [3]}, {"id": 387592, "title": "Early Man", "year": 2018, "actors": [4]}, {"id": 539572, "title": "Leading Lady Parts", "year": 2018, "actors": [4]}, {"id": 407436, "title": "Mowgli: Legend of the Jungle", "year": 2018, "actors": [3]}, {"id": 504561, "title": "Quincy", "year": 2018, "actors": [0]}, {"id": 418879, "title": "The Current War", "year": 2018, "actors": [2]}, {"id": 494603, "title": "The Highway Rat", "year": 2018, "actors": [3]}, {"id": 550600, "title": "The Mayo Clinic", "year": 2018, "actors": [0]}, {"id": 335983, "title": "Venom", "year": 2018, "actors": [1]}, {"id": 501907, "title": "A Beautiful Day in the Neighborhood", "year": 2019, "actors": [0]}, {"id": 299534, "title": "Avengers: Endgame", "year": 2019, "actors": [2, 4]}, {"id": 662151, "title": "Celebrating Marvel's Stan Lee", "year": 2019, "actors": [2, 4]}, {"id": 550958, "title": "Holy Lands", "year": 2019, "actors": [3]}, {"id": 595841, "title": "Making Waves: The Art of Cinematic Sound", "year": 2019, "actors": [0]}, {"id": 588732, "title": "Mamma Mia! Here We Go Yet Again", "year": 2019, "actors": [3]}, {"id": 647375, "title": "Marvel Studios: Expanding the Universe", "year": 2019, "actors": [4]}, {"id": 758025, "title": "Peter's To-Do List", "year": 2019, "actors": [2]}, {"id": 429617, "title": "Spider-Man: Far From Home", "year": 2019, "actors": [2]}, {"id": 431693, "title": "Spies in Disguise", "year": 2019, "actors": [2]}, {"id": 605910, "title": "The House Is Alive: Constructing 'Crimson Peak'", "year": 2019, "actors": [4]}, {"id": 301528, "title": "Toy Story 4", "year": 2019, "actors": [0]}, {"id": 740985, "title": "Borat Subsequent Moviefilm", "year": 2020, "actors": [0]}, {"id": 429422, "title": "Capone", "year": 2020, "actors": [1]}, {"id": 738005, "title": "Chadwick Boseman: A Tribute for a King", "year": 2020, "actors": [4]}, {"id": 771301, "title": "Cinderella: A Comic Relief Pantomime for Christmas", "year": 2020, "actors": [3]}, {"id": 448119, "title": "Dolittle", "year": 2020, "actors": [2]}, {"id": 516486, "title": "Greyhound", "year": 2020, "actors": [0]}, {"id": 581032, "title": "News of the World", "year": 2020, "actors": [0]}, {"id": 508439, "title": "Onward", "year": 2020, "actors": [2]}, {"id": 1654121, "title": "Onward: Magic Gems", "year": 2020, "actors": [2]}, {"id": 499932, "title": "The Devil All the Time", "year": 2020, "actors": [2]}, {"id": 412656, "title": "Chaos Walking", "year": 2021, "actors": [2]}, {"id": 544401, "title": "Cherry", "year": 2021, "actors": [2]}, {"id": 664236, "title": "Extinct", "year": 2021, "actors": [3]}, {"id": 522402, "title": "Finch", "year": 2021, "actors": [0]}, {"id": 806492, "title": "Letters Live from the Archive: Freemasons’ Hall", "year": 2021, "actors": [4]}, {"id": 877188, "title": "Marvel Studios' 2021 Disney+ Day Special", "year": 2021, "actors": [4]}, {"id": 634649, "title": "Spider-Man: No Way Home", "year": 2021, "actors": [1, 2]}, {"id": 846214, "title": "The Good, the Bart, and the Loki", "year": 2021, "actors": [4]}, {"id": 476669, "title": "The King's Man", "year": 2021, "actors": [3]}, {"id": 874167, "title": "The Timekeepers of Eternity", "year": 2021, "actors": [3]}, {"id": 580489, "title": "Venom: Let There Be Carnage", "year": 2021, "actors": [1, 2]}, {"id": 1065395, "title": "We Are Cinema", "year": 2021, "actors": [0]}, {"id": 937278, "title": "A Man Called Otto", "year": 2022, "actors": [0]}, {"id": 979163, "title": "Beyond Infinity: Buzz and the Journey to Lightyear", "year": 2022, "actors": [0]}, {"id": 1059404, "title": "Charlie Mackesy: The Boy, the Mole, the Fox, the Horse and Me", "year": 2022, "actors": [3]}, {"id": 614934, "title": "Elvis", "year": 2022, "actors": [0]}, {"id": 962192, "title": "Halftime", "year": 2022, "actors": [0]}, {"id": 1016902, "title": "Norman Lear: 100 Years of Music and Laughter", "year": 2022, "actors": [0]}, {"id": 532639, "title": "Pinocchio", "year": 2022, "actors": [0]}, {"id": 961651, "title": "Spider-Man: All Roads Lead to No Way Home", "year": 2022, "actors": [2]}, {"id": 995133, "title": "The Boy, the Mole, the Fox and the Horse", "year": 2022, "actors": [3]}, {"id": 949793, "title": "The Play What I Wrote", "year": 2022, "actors": [4]}, {"id": 335787, "title": "Uncharted", "year": 2022, "actors": [2]}, {"id": 1015602, "title": "Welcome to the Club", "year": 2022, "actors": [4]}, {"id": 640146, "title": "Ant-Man and the Wasp: Quantumania", "year": 2023, "actors": [4]}, {"id": 747188, "title": "Asteroid City", "year": 2023, "actors": [0]}, {"id": 1122214, "title": "Disney 100: Remember That", "year": 2023, "actors": [4]}, {"id": 1113554, "title": "Last Call", "year": 2023, "actors": [2]}, {"id": 1192825, "title": "Marvel Studios Assembled: The Making of Loki Season 2", "year": 2023, "actors": [4]}, {"id": 1374318, "title": "Absolutely Fabulous: Inside Out", "year": 2024, "actors": [3]}, {"id": 940139, "title": "Here", "year": 2024, "actors": [0]}, {"id": 1008409, "title": "The Bikeriders", "year": 2024, "actors": [1]}, {"id": 1251636, "title": "The Bloody Hundredth", "year": 2024, "actors": [0]}, {"id": 912649, "title": "Venom: The Last Dance", "year": 2024, "actors": [1]}, {"id": 979660, "title": "Freaky Tales", "year": 2025, "actors": [0]}, {"id": 668489, "title": "Havoc", "year": 2025, "actors": [1]}, {"id": 1504199, "title": "It’s a Mad Max World", "year": 2025, "actors": [1]}, {"id": 1492608, "title": "John Candy: I Like Me", "year": 2025, "actors": [0]}, {"id": 1545263, "title": "Mad Max and the Genius of George Miller", "year": 2025, "actors": [1]}, {"id": 1481746, "title": "Rhino", "year": 2025, "actors": [1]}, {"id": 1433330, "title": "SNL50: The Homecoming Concert", "year": 2025, "actors": [0]}, {"id": 842924, "title": "The Life of Chuck", "year": 2025, "actors": [4]}, {"id": 1137350, "title": "The Phoenician Scheme", "year": 2025, "actors": [0]}, {"id": 1003596, "title": "Avengers: Doomsday", "year": 2026, "actors": [4]}, {"id": 969681, "title": "Spider-Man: Brand New Day", "year": 2026, "actors": [2]}, {"id": 1368337, "title": "The Odyssey", "year": 2026, "actors": [2]}, {"id": 1084244, "title": "Toy Story 5", "year": 2026, "actors": [0]}]};
+    const { actors, films } = DATA;
+
+    /* ── Layout constants ──────────────────────────────────────────── */
+    const PAD       = { top: 100, right: 200, bottom: 60, left: 200 };
+    const TRACK_W   = 140;  // horizontal spacing between actor columns
+    const R         = 10;   // normal station radius
+    const R_INTER   = 14;   // interchange station radius
+    const LINE_W    = 8;    // route line stroke width
+    const LABEL_GAP = 10;   // gap between node edge and label
+
+    /* ── Derived geometry — year-proportional vertical layout ──────── */
+    films.sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+
+    /* Y positions scaled to real time: each calendar year = YEAR_PX pixels,
+       with a minimum spacing between any two consecutive films. */
+    const YEAR_PX    = 50;  // pixels per year of gap
+    const MIN_FILM_H = 80;  // minimum spacing between consecutive films
+
+    const filmYMap = new Map();
+    let curY = PAD.top, prevYear = null;
+    for (const film of films) {
+      if (prevYear === null) {
+        filmYMap.set(film.id, PAD.top);
+      } else {
+        curY += Math.max((film.year - prevYear) * YEAR_PX, MIN_FILM_H);
+        filmYMap.set(film.id, curY);
+      }
+      prevYear = film.year;
+    }
+
+    function filmY(film) { return filmYMap.get(film.id); }
+    function actorX(idx) { return PAD.left + idx * TRACK_W; }
+
+    const svgW = PAD.left + actors.length * TRACK_W + PAD.right;
+    const svgH = (films.length > 0 ? filmYMap.get(films[films.length - 1].id) : PAD.top) + PAD.bottom;
+
+    /* ── SVG helpers ───────────────────────────────────────────────── */
+    const NS = 'http://www.w3.org/2000/svg';
+
+    function svgEl(tag, attrs) {
+      const e = document.createElementNS(NS, tag);
+      if (attrs) {
+        for (const [k, v] of Object.entries(attrs)) {
+          e.setAttribute(k, v);
+        }
+      }
+      return e;
+    }
+
+    function svgText(attrs, text) {
+      const e = svgEl('text', attrs);
+      e.textContent = text;
+      return e;
+    }
+
+    function truncate(str, max) {
+      return str.length <= max ? str : str.slice(0, max - 1) + '…';
+    }
+
+    /* Single x position for a film node: widest-gap algorithm.
+       For shared films, places node in the largest gap between participating
+       actors' columns that avoids non-participating columns. */
+    function nodeX(film) {
+      if (film.actors.length === 1) {
+        return actorX(film.actors[0]);
+      }
+
+      // Get x positions of participating actors, sorted
+      const participating = film.actors.map(actorX).sort((a, b) => a - b);
+      const minX = participating[0];
+      const maxX = participating[participating.length - 1];
+
+      // Find all non-participating actor columns within this range
+      const nonParticipatingXs = [];
+      for (const actor of actors) {
+        if (!film.actors.includes(actor.index)) {
+          const x = actorX(actor.index);
+          if (x > minX && x < maxX) {
+            nonParticipatingXs.push(x);
+          }
+        }
+      }
+
+      // If no non-participating actors between min and max, use midpoint
+      if (nonParticipatingXs.length === 0) {
+        return (minX + maxX) / 2;
+      }
+
+      // Find the widest gap that avoids non-participating columns
+      nonParticipatingXs.sort((a, b) => a - b);
+
+      let widestGap = { start: minX, end: maxX, width: 0 };
+
+      // Gap before first non-participating column
+      const gaps = [];
+      gaps.push({
+        start: minX,
+        end: nonParticipatingXs[0],
+        width: nonParticipatingXs[0] - minX
+      });
+
+      // Gaps between non-participating columns
+      for (let i = 0; i < nonParticipatingXs.length - 1; i++) {
+        gaps.push({
+          start: nonParticipatingXs[i],
+          end: nonParticipatingXs[i + 1],
+          width: nonParticipatingXs[i + 1] - nonParticipatingXs[i]
+        });
+      }
+
+      // Gap after last non-participating column
+      gaps.push({
+        start: nonParticipatingXs[nonParticipatingXs.length - 1],
+        end: maxX,
+        width: maxX - nonParticipatingXs[nonParticipatingXs.length - 1]
+      });
+
+      // Find widest gap
+      for (const g of gaps) {
+        if (g.width > widestGap.width) widestGap = g;
+      }
+
+      // Return midpoint of the widest gap
+      return (widestGap.start + widestGap.end) / 2;
+    }
+
+    /* Outer visual radius of a film node */
+    function outerR(film) {
+      return film.actors.length > 1 ? R_INTER + 4 : R;
+    }
+
+    /* ── Path helpers (vertical routing: top → bottom) ─────────────── */
+
+    /* SVG path commands for one tube-routing segment (vertical→diagonal→vertical) */
+    function segStr(x1, y1, x2, y2) {
+      const dx = Math.abs(x2 - x1);
+      const dy = y2 - y1;
+      if (dx < 1) return `L ${x2} ${y2}`;           // purely vertical
+      if (dy <= dx) return `L ${x2} ${y2}`;          // steep: straight diagonal
+      const v = (dy - dx) / 2;
+      return `L ${x1} ${y1 + v} L ${x2} ${y2 - v} L ${x2} ${y2}`;
+    }
+
+    /* Build an SVG path string with 45° kinks */
+    function tubePath(pts) {
+      if (pts.length === 0) return '';
+      let d = `M ${pts[0].x} ${pts[0].y}`;
+      for (let i = 1; i < pts.length; i++) {
+        const x1 = pts[i-1].x, y1 = pts[i-1].y;
+        const x2 = pts[i].x,   y2 = pts[i].y;
+        d += ` ${segStr(x1, y1, x2, y2)}`;
+      }
+      return d;
+    }
+
+    /* ── Build SVG ─────────────────────────────────────────────────── */
+    const svg = svgEl('svg', {
+      id:          'diagram-svg',
+      viewBox:     `0 0 ${svgW} ${svgH}`,
+      width:       svgW,
+      height:      svgH,
+      role:        'img',
+      'aria-labelledby': 'svg-title svg-desc',
+      focusable:   'false',
+    });
+
+    /* Accessible title + description */
+    const sharedFilms = films.filter(f => f.actors.length > 1);
+    const actorNames  = actors.map(a => a.name).join(', ');
+
+    const svgTitleEl = svgEl('title', { id: 'svg-title' });
+    svgTitleEl.textContent = 'Actor Filmography Tube Map';
+    svg.appendChild(svgTitleEl);
+
+    const svgDescEl = svgEl('desc', { id: 'svg-desc' });
+    svgDescEl.textContent =
+      `Tube map showing filmographies of ${actorNames}. ` +
+      `${films.length} films shown across ${actors.length} routes. ` +
+      (sharedFilms.length
+        ? `${sharedFilms.length} shared film${sharedFilms.length > 1 ? 's' : ''}: ` +
+          sharedFilms.map(f => `${f.title} (${f.year})`).join(', ') + '.'
+        : 'No films shared between actors.');
+    svg.appendChild(svgDescEl);
+
+    /* ── Detect overlap runs (consecutive films shared between same pair of actors) ── */
+    /* For each pair of actors, find consecutive films they both appear in.
+       If found, offset them to show side-by-side instead of overlapping. */
+    const offsetMap = new Map(); // filmId -> [{actorIdx, offsetX}, ...]
+    const OVERLAP_OFFSET = 35; // pixels to offset when paths overlap
+
+    // For each pair of actors
+    for (let a1 = 0; a1 < actors.length; a1++) {
+      for (let a2 = a1 + 1; a2 < actors.length; a2++) {
+        // Find films both actors appear in, sorted by year and title
+        const bothInFilms = films
+          .filter(f => f.actors.includes(a1) && f.actors.includes(a2))
+          .sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+
+        if (bothInFilms.length < 2) continue;
+
+        // Check for consecutive pairs in THEIR shared films (not global)
+        for (let i = 0; i < bothInFilms.length - 1; i++) {
+          const film1 = bothInFilms[i];
+          const film2 = bothInFilms[i + 1];
+
+          // These are consecutive in the shared films, so offset them
+          if (!offsetMap.has(film1.id)) offsetMap.set(film1.id, []);
+          if (!offsetMap.has(film2.id)) offsetMap.set(film2.id, []);
+
+          // Determine offset directions: lower index = left, higher = right
+          const offsetX1 = a1 < a2 ? -OVERLAP_OFFSET : OVERLAP_OFFSET;
+          const offsetX2 = a2 > a1 ? OVERLAP_OFFSET : -OVERLAP_OFFSET;
+
+          offsetMap.get(film1.id).push({ actorIdx: a1, offsetX: offsetX1 });
+          offsetMap.get(film1.id).push({ actorIdx: a2, offsetX: offsetX2 });
+          offsetMap.get(film2.id).push({ actorIdx: a1, offsetX: offsetX1 });
+          offsetMap.get(film2.id).push({ actorIdx: a2, offsetX: offsetX2 });
+
+          console.log(`✓ ${actors[a1].name} + ${actors[a2].name}: "${film1.title}" → "${film2.title}"`);
+        }
+      }
+    }
+
+    console.log('offsetMap:', offsetMap);
+
+    /* ── Actor route paths (vertical, with 45° kinks and offsets for overlaps) ── */
+    for (const actor of actors) {
+      const myFilms = films
+        .filter(f => f.actors.includes(actor.index))
+        .sort((a, b) => filmY(a) - filmY(b));
+      if (myFilms.length < 1) continue;
+
+      /* Build path with offsets for overlapping segments */
+      const pts = [];
+      const connectors = []; // Thin lines from offset path to actual node
+
+      for (const film of myFilms) {
+        const baseX = nodeX(film);
+        let x = baseX;
+        const y = filmY(film);
+
+        /* Check if this actor's path should be offset at this film */
+        if (offsetMap.has(film.id)) {
+          for (const entry of offsetMap.get(film.id)) {
+            if (entry.actorIdx === actor.index) {
+              x = baseX + entry.offsetX;
+              /* Record connector line from offset path to actual node */
+              connectors.push({
+                fromX: x,
+                fromY: y,
+                toX: baseX,
+                toY: y,
+              });
+              break;
+            }
+          }
+        }
+
+        pts.push({ x, y });
+      }
+
+      /* Draw the main route path */
+      if (pts.length >= 2) {
+        svg.appendChild(svgEl('path', {
+          d:                tubePath(pts),
+          fill:             'none',
+          stroke:           actor.color,
+          'stroke-width':   LINE_W,
+          'stroke-linecap': 'round',
+          'stroke-linejoin':'round',
+          'aria-hidden':    'true',
+        }));
+      }
+
+      /* Draw thin connector lines from offset path to actual node */
+      for (const conn of connectors) {
+        svg.appendChild(svgEl('line', {
+          x1:            conn.fromX,
+          y1:            conn.fromY,
+          x2:            conn.toX,
+          y2:            conn.toY,
+          stroke:        actor.color,
+          'stroke-width': 1.5,
+          'opacity':     '0.6',
+          'aria-hidden': 'true',
+        }));
+      }
+
+      /* Actor name label at the top of their column */
+      svg.appendChild(svgText({
+        x:             actorX(actor.index),
+        y:             PAD.top - 18,
+        'text-anchor': 'middle',
+        class:         'label-actor',
+        fill:          actor.color,
+        'aria-hidden': 'true',
+      }, actor.name));
+    }
+
+    /* ── Station nodes — one node per film ─────────────────────────── */
+    const stationEls = []; // [{group, film}] for event wiring
+
+    films.forEach((film, rowIdx) => {
+      const x        = nodeX(film);
+      const y        = filmY(film);
+      const isShared = film.actors.length > 1;
+      const or       = outerR(film);
+
+      /* One interactive group per film */
+      const group = svgEl('g', {
+        class:        'station',
+        role:         'button',
+        tabindex:     '0',
+        'aria-label': `${film.title}, ${film.year}` +
+                      (isShared
+                        ? `. Interchange — shared by: ${film.actors.map(i => actors[i].name).join(' and ')}`
+                        : `. ${actors[film.actors[0]].name}`),
+        'data-film-id': String(film.id),
+      });
+
+      /* Hit area */
+      group.appendChild(svgEl('rect', {
+        class:  'station-hit',
+        x:      x - 28,
+        y:      y - 28,
+        width:  56,
+        height: 56,
+        rx:     8,
+      }));
+
+      if (isShared) {
+        group.appendChild(svgEl('circle', {
+          cx: x, cy: y, r: or,
+          class:         'interchange-ring',
+          'aria-hidden': 'true',
+        }));
+        group.appendChild(svgEl('circle', {
+          cx: x, cy: y, r: R_INTER,
+          class:         'interchange-center',
+          'aria-hidden': 'true',
+        }));
+      } else {
+        const actor = actors[film.actors[0]];
+        group.appendChild(svgEl('circle', {
+          cx: x, cy: y, r: R,
+          fill:           'var(--surface)',
+          stroke:         actor.color,
+          'stroke-width': 3,
+          class:          'station-circle',
+          'aria-hidden':  'true',
+        }));
+      }
+
+      /* Focus ring */
+      group.appendChild(svgEl('circle', {
+        cx: x, cy: y,
+        r:              or + 6,
+        fill:           'none',
+        stroke:         'var(--focus)',
+        'stroke-width': 2.5,
+        class:          'station-focus-ring',
+        'aria-hidden':  'true',
+      }));
+
+      /* Film label — alternate left/right to avoid overlap.
+         Even rows: label to the left; odd rows: label to the right. */
+      const toRight  = (rowIdx % 2 !== 0);
+      const labelX   = toRight ? x + or + LABEL_GAP : x - or - LABEL_GAP;
+      const anchor   = toRight ? 'start' : 'end';
+
+      group.appendChild(svgText({
+        x: labelX, y: y - 4,
+        'text-anchor':       anchor,
+        'dominant-baseline': 'auto',
+        class:               'label-film',
+        'font-weight':       isShared ? '700' : '400',
+        'aria-hidden':       'true',
+      }, truncate(film.title, 26)));
+
+      group.appendChild(svgText({
+        x: labelX, y: y + 11,
+        'text-anchor':       anchor,
+        'dominant-baseline': 'auto',
+        class:               'label-year',
+        'aria-hidden':       'true',
+      }, String(film.year)));
+
+      svg.appendChild(group);
+      stationEls.push({ group, film });
+    });
+
+    /* ── Insert SVG into page ──────────────────────────────────────── */
+    document.getElementById('diagram-container').appendChild(svg);
+
+    /* ── Page header subtitle ──────────────────────────────────────── */
+    const subtitle = document.getElementById('page-subtitle');
+    subtitle.textContent =
+      `${actors.map(a => a.name).join(' · ')} — ${films.length} films`;
+
+    /* ── Figcaption ────────────────────────────────────────────────── */
+    const caption = document.getElementById('diagram-caption');
+    caption.textContent =
+      `${films.length} film${films.length !== 1 ? 's' : ''} across ` +
+      `${actors.length} actor${actors.length !== 1 ? 's' : ''}. ` +
+      (sharedFilms.length
+        ? `${sharedFilms.length} shared interchange${sharedFilms.length > 1 ? 's' : ''}: ` +
+          sharedFilms.map(f => `${f.title} (${f.year})`).join(', ') + '.'
+        : 'No shared films found.');
+
+    /* ── Legend ────────────────────────────────────────────────────── */
+    const legendList = document.getElementById('legend-list');
+    for (const actor of actors) {
+      const li      = document.createElement('li');
+      li.className  = 'legend-item';
+
+      const swatch  = document.createElement('span');
+      swatch.className = 'legend-swatch';
+      swatch.style.background = actor.color;
+      swatch.setAttribute('aria-hidden', 'true');
+
+      const label   = document.createElement('span');
+      label.textContent = actor.name;
+
+      li.appendChild(swatch);
+      li.appendChild(label);
+      legendList.appendChild(li);
+    }
+
+    /* ── Data table ────────────────────────────────────────────────── */
+    const tbody = document.getElementById('data-table-body');
+    for (const film of films) {
+      const tr = document.createElement('tr');
+
+      const tdTitle = document.createElement('td');
+      tdTitle.textContent = film.title;
+      if (film.actors.length > 1) {
+        const badge = document.createElement('span');
+        badge.className = 'shared-badge';
+        badge.textContent = 'shared';
+        tdTitle.appendChild(badge);
+      }
+
+      const tdYear  = document.createElement('td');
+      tdYear.textContent = String(film.year);
+
+      const tdActors = document.createElement('td');
+      tdActors.textContent = film.actors.map(i => actors[i].name).join(', ');
+
+      tr.append(tdTitle, tdYear, tdActors);
+      tbody.appendChild(tr);
+    }
+
+    /* ── Table toggle ──────────────────────────────────────────────── */
+    const toggleBtn     = document.getElementById('table-toggle');
+    const tableWrapper  = document.getElementById('data-table-wrapper');
+
+    toggleBtn.addEventListener('click', () => {
+      const open = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!open));
+      toggleBtn.querySelector('.toggle-icon').textContent = open ? '▶' : '▼';
+      toggleBtn.childNodes[1].nodeValue = open ? ' Show full data table' : ' Hide full data table';
+      tableWrapper.hidden = open;
+    });
+
+    /* ── Film detail modal ─────────────────────────────────────────── */
+    const overlay      = document.getElementById('film-detail-overlay');
+    const dialog       = document.getElementById('film-detail');
+    const closeBtn     = document.getElementById('film-detail-close');
+    const detailTitle  = document.getElementById('film-detail-title');
+    const detailYear   = document.getElementById('film-detail-year');
+    const detailActors = document.getElementById('film-detail-actors');
+
+    let lastTrigger = null;
+
+    function openModal(film, trigger) {
+      lastTrigger = trigger;
+
+      detailTitle.textContent = film.title;
+      detailYear.textContent  = `Released ${film.year}`;
+
+      detailActors.innerHTML = '';
+      for (const idx of film.actors) {
+        const actor = actors[idx];
+        const li    = document.createElement('li');
+
+        const dot   = document.createElement('span');
+        dot.className = 'actor-dot';
+        dot.style.background = actor.color;
+        dot.setAttribute('aria-hidden', 'true');
+
+        const name  = document.createElement('span');
+        name.textContent = actor.name;
+
+        li.appendChild(dot);
+        li.appendChild(name);
+        detailActors.appendChild(li);
+      }
+
+      overlay.hidden = false;
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      overlay.hidden = true;
+      if (lastTrigger) lastTrigger.focus();
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeModal();
+    });
+
+    /* Keyboard: Escape closes; Tab is trapped inside dialog */
+    document.addEventListener('keydown', e => {
+      if (overlay.hidden) return;
+      if (e.key === 'Escape') { e.preventDefault(); closeModal(); return; }
+      if (e.key !== 'Tab') return;
+
+      const focusable = Array.from(
+        dialog.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])')
+      ).filter(el => !el.disabled);
+
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last  = focusable[focusable.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    });
+
+    /* ── Station interactions ──────────────────────────────────────── */
+    for (const { group, film } of stationEls) {
+      group.addEventListener('click', () => openModal(film, group));
+      group.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal(film, group);
+        }
+      });
+    }
+
+    /* ── Arrow-key navigation between stations ─────────────────────── */
+    // Roving focus: up/down arrows move between stations in chronological order
+    svg.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+      const current = document.activeElement;
+      const allStations = stationEls.map(s => s.group);
+      const idx = allStations.indexOf(current);
+      if (idx === -1) return;
+      e.preventDefault();
+      const next = e.key === 'ArrowDown'
+        ? allStations[Math.min(idx + 1, allStations.length - 1)]
+        : allStations[Math.max(idx - 1, 0)];
+      next.focus();
+      next.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+    });
+
+  }());
+  </script>
+
+</body>
+</html>
