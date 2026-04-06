@@ -374,15 +374,13 @@
     })
     .attr('stroke-width', 2)
     .on('mouseenter', function(e, d) {
-      if (d.type === 'film') {
-        tooltip.textContent = `${d.title} (${d.year})`;
-        tooltip.style.display = 'block';
-        const rect = e.target.getBoundingClientRect();
-        const left = Math.round(rect.left + rect.width / 2);
-        const top = Math.round(rect.top - 30);
-        tooltip.style.left = (left - tooltip.offsetWidth / 2) + 'px';
-        tooltip.style.top = top + 'px';
-      }
+      tooltip.textContent = `${d.title} (${d.year})`;
+      tooltip.style.display = 'block';
+      const rect = e.target.getBoundingClientRect();
+      const left = Math.round(rect.left + rect.width / 2);
+      const top = Math.round(rect.top - 30);
+      tooltip.style.left = (left - tooltip.offsetWidth / 2) + 'px';
+      tooltip.style.top = top + 'px';
     })
     .on('mouseleave', function() {
       tooltip.style.display = 'none';
