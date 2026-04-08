@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actor Filmography Tube Map</title>
+  <style>
+    /* ── Reset & tokens ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #f0f0f0;
+      --surface:      #ffffff;
+      --text:         #1a1a1a;
+      --text-muted:   #595959;
+      --border-col:   #cccccc;
+      --focus:        #005fcc;
+      --focus-ring:   0 0 0 3px #005fcc;
+      --radius:       8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:         #141414;
+        --surface:    #242424;
+        --text:       #e8e8e8;
+        --text-muted: #a0a0a0;
+        --border-col: #3a3a3a;
+        --focus:      #4da6ff;
+        --focus-ring: 0 0 0 3px #4da6ff;
+      }
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* ── Skip link ───────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      background: var(--focus);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 9999;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; outline: none; box-shadow: var(--focus-ring); }
+
+    /* ── Header ──────────────────────────────────────────── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border-col);
+      padding: 16px 24px;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 700; }
+    header p  { font-size: 0.875rem; color: var(--text-muted); margin-top: 2px; }
+
+    /* ── Main layout ─────────────────────────────────────── */
+    main { padding: 24px; max-width: 1600px; }
+
+    /* ── Diagram section ─────────────────────────────────── */
+    #diagram-figure { margin: 0 0 24px; }
+
+    #diagram-caption {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    #diagram-container {
+      background: var(--surface);
+      border: 1px solid var(--border-col);
+      border-radius: var(--radius);
+      padding: 0;
+      width: 100%;
+    }
+
+    #diagram-svg { display: block; width: 100%; height: auto; }
+
+    /* SVG text inherits colour from CSS custom props */
+    #diagram-svg text.label-film  { fill: var(--text); font-size: 11px; font-weight: 500; }
+    #diagram-svg text.label-year  { fill: var(--text-muted); font-size: 9px; }
+    #diagram-svg text.label-actor { font-size: 14px; font-weight: 700; letter-spacing: 0.5px; }
+
+    /* Interchange node colours (adapt to dark mode via CSS vars) */
+    .interchange-ring   { fill: var(--text); }
+    .interchange-center { fill: var(--surface); stroke: var(--text); stroke-width: 2; }
+
+    /* Station interactive states */
+    .station {
+      cursor: pointer;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+      transition: filter 0.15s;
+    }
+    .station:hover {
+      filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+    }
+    .station:focus { outline: none; }
+    .station:focus .station-hit,
+    .station:hover .station-hit {
+      opacity: 1;
+    }
+    .station-hit {
+      fill: transparent;
+      opacity: 0;
+    }
+    .station:focus-visible .station-focus-ring,
+    .station:focus .station-focus-ring {
+      display: block;
+    }
+    .station-focus-ring { display: none; }
+
+    /* ── Legend ──────────────────────────────────────────── */
+    #legend {
+      background: var(--surface);
+      border: 1px solid var(--border-col);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    #legend h2 { font-size: 0.9rem; font-weight: 700; text-transform: uppercase;
+                 letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px; }
+    .legend-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .legend-swatch {
+      display: inline-block;
+      width: 36px;
+      height: 7px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* ── Data table section ──────────────────────────────── */
+    #table-section { margin-bottom: 24px; }
+
+    .toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border-col);
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 0.875rem;
+      font-family: inherit;
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    .toggle-btn:hover { background: var(--bg); }
+    .toggle-btn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+    .toggle-btn .toggle-icon { font-size: 0.75rem; transition: transform 0.2s; }
+    .toggle-btn[aria-expanded="true"] .toggle-icon { transform: rotate(90deg); }
+
+    #data-table-wrapper { margin-top: 12px; overflow-x: auto; }
+
+    #data-table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.875rem;
+      background: var(--surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-col);
+    }
+    #data-table th, #data-table td {
+      text-align: left;
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border-col);
+    }
+    #data-table th {
+      font-weight: 600;
+      background: var(--bg);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    #data-table tbody tr:last-child td { border-bottom: none; }
+    #data-table tbody tr:hover td { background: var(--bg); }
+    .shared-badge {
+      display: inline-block;
+      background: var(--focus);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* ── Film detail dialog ──────────────────────────────── */
+    #film-detail-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+    #film-detail-overlay[hidden] { display: none; }
+
+    #film-detail {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 28px;
+      max-width: 420px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+    #film-detail-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: 1px solid var(--border-col);
+      border-radius: 6px;
+      font-size: 1.1rem;
+      color: var(--text);
+      cursor: pointer;
+      font-family: inherit;
+    }
+    #film-detail-close:hover { background: var(--bg); }
+    #film-detail-close:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+    #film-detail-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding-right: 40px;
+      margin-bottom: 4px;
+    }
+    #film-detail-year {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    #film-detail-actors-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    #film-detail-actors { list-style: none; }
+    #film-detail-actors li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border-col);
+    }
+    #film-detail-actors li:last-child { border-bottom: none; }
+    .actor-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Reduced motion ──────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <h1 id="page-title">Actor Filmography Tube Map</h1>
+    <p id="page-subtitle"></p>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <figure id="diagram-figure" aria-labelledby="diagram-caption">
+      <figcaption id="diagram-caption"></figcaption>
+      <div id="diagram-container"
+           role="region"
+           aria-label="Filmography tube map — scroll horizontally to see all films">
+        <!-- SVG injected by JavaScript -->
+      </div>
+    </figure>
+
+    <nav id="legend" aria-label="Actor routes">
+      <h2>Routes</h2>
+      <ul class="legend-list" id="legend-list"></ul>
+    </nav>
+
+    <section id="table-section" aria-labelledby="table-heading">
+      <h2 id="table-heading" class="sr-only">Film data table</h2>
+      <button class="toggle-btn"
+              id="table-toggle"
+              aria-expanded="false"
+              aria-controls="data-table-wrapper">
+        <span class="toggle-icon" aria-hidden="true">▶</span>
+        Show full data table
+      </button>
+      <div id="data-table-wrapper" hidden>
+        <table id="data-table" aria-label="All films and actors">
+          <thead>
+            <tr>
+              <th scope="col">Film</th>
+              <th scope="col">Year</th>
+              <th scope="col">Actor(s)</th>
+            </tr>
+          </thead>
+          <tbody id="data-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Film detail dialog -->
+  <div id="film-detail-overlay" hidden>
+    <div id="film-detail"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="film-detail-title">
+      <button id="film-detail-close" aria-label="Close film details">✕</button>
+      <h2 id="film-detail-title"></h2>
+      <p id="film-detail-year"></p>
+      <p id="film-detail-actors-label">Featuring</p>
+      <ul id="film-detail-actors" aria-label="Actors in this film"></ul>
+    </div>
+  </div>
+
+  <!-- Visually-hidden utility (for sr-only) -->
+  <style>
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+  </style>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ── Data ──────────────────────────────────────────────────────── */
+    const DATA = {"actors": [{"index": 0, "name": "Barry Keoghan", "color": "#C00000"}, {"index": 1, "name": "Cillian Murphy", "color": "#0057A8"}, {"index": 2, "name": "Tom Vaughan-Lawlor", "color": "#007A33"}, {"index": 3, "name": "Saoirse Ronan", "color": "#9B0056"}, {"index": 4, "name": "Charlie Murphy", "color": "#E86800"}], "films": [{"id": 170, "title": "28 Days Later", "year": 2002, "actors": [1]}, {"id": 2289, "title": "Cold Mountain", "year": 2003, "actors": [1]}, {"id": 272, "title": "Batman Begins", "year": 2005, "actors": [1]}, {"id": 11460, "title": "Red Eye", "year": 2005, "actors": [1]}, {"id": 10097, "title": "The Tiger's Tail", "year": 2006, "actors": [2]}, {"id": 4347, "title": "Atonement", "year": 2007, "actors": [3]}, {"id": 2977, "title": "Becoming Jane", "year": 2007, "actors": [2]}, {"id": 1272, "title": "Sunshine", "year": 2007, "actors": [1]}, {"id": 13600, "title": "City of Ember", "year": 2008, "actors": [3]}, {"id": 155, "title": "The Dark Knight", "year": 2008, "actors": [1]}, {"id": 7980, "title": "The Lovely Bones", "year": 2009, "actors": [3]}, {"id": 27205, "title": "Inception", "year": 2010, "actors": [1]}, {"id": 20526, "title": "TRON: Legacy", "year": 2010, "actors": [1]}, {"id": 49009, "title": "The Way Back", "year": 2010, "actors": [3]}, {"id": 600329, "title": "All My Sons", "year": 2011, "actors": [2]}, {"id": 50456, "title": "Hanna", "year": 2011, "actors": [3]}, {"id": 49530, "title": "In Time", "year": 2011, "actors": [1]}, {"id": 49026, "title": "The Dark Knight Rises", "year": 2012, "actors": [1]}, {"id": 205220, "title": "Philomena", "year": 2013, "actors": [4]}, {"id": 72710, "title": "The Host", "year": 2013, "actors": [3]}, {"id": 252178, "title": "'71", "year": 2014, "actors": [0, 4]}, {"id": 145220, "title": "Muppets Most Wanted", "year": 2014, "actors": [3]}, {"id": 286873, "title": "Northmen: A Viking Saga", "year": 2014, "actors": [4]}, {"id": 120467, "title": "The Grand Budapest Hotel", "year": 2014, "actors": [3]}, {"id": 157353, "title": "Transcendence", "year": 2014, "actors": [1]}, {"id": 167073, "title": "Brooklyn", "year": 2015, "actors": [3]}, {"id": 205775, "title": "In the Heart of the Sea", "year": 2015, "actors": [1]}, {"id": 371462, "title": "Mammal", "year": 2016, "actors": [0]}, {"id": 325789, "title": "The Infiltrator", "year": 2016, "actors": [2]}, {"id": 430158, "title": "To Walk Invisible", "year": 2016, "actors": [4]}, {"id": 436245, "title": "Daphne", "year": 2017, "actors": [2]}, {"id": 374720, "title": "Dunkirk", "year": 2017, "actors": [0, 1]}, {"id": 391713, "title": "Lady Bird", "year": 2017, "actors": [3]}, {"id": 339877, "title": "Loving Vincent", "year": 2017, "actors": [3]}, {"id": 464566, "title": "Maze", "year": 2017, "actors": [2]}, {"id": 469721, "title": "The Cured", "year": 2017, "actors": [2]}, {"id": 379149, "title": "The Foreigner", "year": 2017, "actors": [4]}, {"id": 399057, "title": "The Killing of a Sacred Deer", "year": 2017, "actors": [0]}, {"id": 283591, "title": "The Secret Scripture", "year": 2017, "actors": [2]}, {"id": 489931, "title": "American Animals", "year": 2018, "actors": [0]}, {"id": 299536, "title": "Avengers: Infinity War", "year": 2018, "actors": [2]}, {"id": 438145, "title": "Black '47", "year": 2018, "actors": [0]}, {"id": 525025, "title": "Citizen Lane", "year": 2018, "actors": [2]}, {"id": 959675, "title": "Inbox", "year": 2018, "actors": [4]}, {"id": 457136, "title": "Mary Queen of Scots", "year": 2018, "actors": [3]}, {"id": 484641, "title": "Anna", "year": 2019, "actors": [1]}, {"id": 299534, "title": "Avengers: Endgame", "year": 2019, "actors": [2]}, {"id": 490853, "title": "Dark Lies the Island", "year": 2019, "actors": [4]}, {"id": 331482, "title": "Little Women", "year": 2019, "actors": [3]}, {"id": 512239, "title": "The Corrupted", "year": 2019, "actors": [4]}, {"id": 568467, "title": "Ammonite", "year": 2020, "actors": [3]}, {"id": 618229, "title": "Rialto", "year": 2020, "actors": [2]}, {"id": 655080, "title": "The Winter Lake", "year": 2020, "actors": [4]}, {"id": 520763, "title": "A Quiet Place Part II", "year": 2021, "actors": [1]}, {"id": 624793, "title": "Creation Stories", "year": 2021, "actors": [4]}, {"id": 822010, "title": "Danny Boy", "year": 2021, "actors": [2]}, {"id": 524434, "title": "Eternals", "year": 2021, "actors": [0]}, {"id": 761890, "title": "The Bright Side", "year": 2021, "actors": [2]}, {"id": 542178, "title": "The French Dispatch of the Liberty, Kansas Evening Sun", "year": 2021, "actors": [3]}, {"id": 559907, "title": "The Green Knight", "year": 2021, "actors": [0]}, {"id": 939356, "title": "Marvel Studios Assembled: The Making of Eternals", "year": 2022, "actors": [0]}, {"id": 766475, "title": "See How They Run", "year": 2022, "actors": [3]}, {"id": 674324, "title": "The Banshees of Inisherin", "year": 2022, "actors": [0]}, {"id": 414906, "title": "The Batman", "year": 2022, "actors": [0]}, {"id": 647808, "title": "The Nan Movie", "year": 2022, "actors": [2]}, {"id": 507250, "title": "Dead Shot", "year": 2023, "actors": [2]}, {"id": 760245, "title": "Foe", "year": 2023, "actors": [3]}, {"id": 1035798, "title": "Nightmare Radio: The Night Stalker", "year": 2023, "actors": [2]}, {"id": 872585, "title": "Oppenheimer", "year": 2023, "actors": [1]}, {"id": 930564, "title": "Saltburn", "year": 2023, "actors": [0]}, {"id": 1171296, "title": "Baltimore", "year": 2024, "actors": [2]}, {"id": 1128752, "title": "Bird", "year": 2024, "actors": [0]}, {"id": 896151, "title": "Blitz", "year": 2024, "actors": [3]}, {"id": 1184495, "title": "Joy", "year": 2024, "actors": [4]}, {"id": 1102493, "title": "Small Things Like These", "year": 2024, "actors": [1]}, {"id": 857655, "title": "The Beautiful Game", "year": 2024, "actors": [2]}, {"id": 976584, "title": "The Book of Clarence", "year": 2024, "actors": [2]}, {"id": 785542, "title": "The Outrun", "year": 2024, "actors": [3]}, {"id": 1093237, "title": "Hurry Up Tomorrow", "year": 2025, "actors": [0]}, {"id": 1242404, "title": "Steve", "year": 2025, "actors": [1]}, {"id": 1272837, "title": "28 Years Later: The Bone Temple", "year": 2026, "actors": [1]}, {"id": 1171145, "title": "Crime 101", "year": 2026, "actors": [0]}, {"id": 1567605, "title": "Ebenezer: A Christmas Carol", "year": 2026, "actors": [4]}, {"id": 875828, "title": "Peaky Blinders: The Immortal Man", "year": 2026, "actors": [0, 1]}, {"id": 1247603, "title": "The Beatles: George", "year": 2028, "actors": [0]}, {"id": 1247601, "title": "The Beatles: John", "year": 2028, "actors": [0]}, {"id": 1247605, "title": "The Beatles: Paul", "year": 2028, "actors": [0]}, {"id": 1247606, "title": "The Beatles: Ringo", "year": 2028, "actors": [0, 3]}]};
+    const { actors, films } = DATA;
+
+    /* ── Layout constants (Tube Map style) ─────────────────────────── */
+    const PAD       = { top: 120, right: 250, bottom: 80, left: 250 };
+    const TRACK_W   = 160;  // horizontal spacing between actor columns
+    const R         = 8;    // normal station radius
+    const R_INTER   = 12;   // interchange station radius
+    const LINE_W    = 6;    // route line stroke width (thinner, more elegant)
+    const LABEL_GAP = 14;   // gap between node edge and label
+
+    /* ── Derived geometry — year-proportional vertical layout ──────── */
+    films.sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+
+    /* Y positions scaled to real time: each calendar year = YEAR_PX pixels,
+       with a minimum spacing between any two consecutive films. */
+    const YEAR_PX    = 50;  // pixels per year of gap
+    const MIN_FILM_H = 80;  // minimum spacing between consecutive films
+
+    const filmYMap = new Map();
+    let curY = PAD.top, prevYear = null;
+    for (const film of films) {
+      if (prevYear === null) {
+        filmYMap.set(film.id, PAD.top);
+      } else {
+        curY += Math.max((film.year - prevYear) * YEAR_PX, MIN_FILM_H);
+        filmYMap.set(film.id, curY);
+      }
+      prevYear = film.year;
+    }
+
+    function filmY(film) { return filmYMap.get(film.id); }
+    function actorX(idx) { return PAD.left + idx * TRACK_W; }
+
+    const svgW = PAD.left + actors.length * TRACK_W + PAD.right;
+    const svgH = (films.length > 0 ? filmYMap.get(films[films.length - 1].id) : PAD.top) + PAD.bottom;
+
+    /* ── SVG helpers ───────────────────────────────────────────────── */
+    const NS = 'http://www.w3.org/2000/svg';
+
+    function svgEl(tag, attrs) {
+      const e = document.createElementNS(NS, tag);
+      if (attrs) {
+        for (const [k, v] of Object.entries(attrs)) {
+          e.setAttribute(k, v);
+        }
+      }
+      return e;
+    }
+
+    function svgText(attrs, text) {
+      const e = svgEl('text', attrs);
+      e.textContent = text;
+      return e;
+    }
+
+    function truncate(str, max) {
+      return str.length <= max ? str : str.slice(0, max - 1) + '…';
+    }
+
+    /* Single x position for a film node: widest-gap algorithm.
+       For shared films, places node in the largest gap between participating
+       actors' columns that avoids non-participating columns. */
+    function nodeX(film) {
+      if (film.actors.length === 1) {
+        return actorX(film.actors[0]);
+      }
+
+      // Get x positions of participating actors, sorted
+      const participating = film.actors.map(actorX).sort((a, b) => a - b);
+      const minX = participating[0];
+      const maxX = participating[participating.length - 1];
+
+      // Find all non-participating actor columns within this range
+      const nonParticipatingXs = [];
+      for (const actor of actors) {
+        if (!film.actors.includes(actor.index)) {
+          const x = actorX(actor.index);
+          if (x > minX && x < maxX) {
+            nonParticipatingXs.push(x);
+          }
+        }
+      }
+
+      // If no non-participating actors between min and max, use midpoint
+      if (nonParticipatingXs.length === 0) {
+        return (minX + maxX) / 2;
+      }
+
+      // Find the widest gap that avoids non-participating columns
+      nonParticipatingXs.sort((a, b) => a - b);
+
+      let widestGap = { start: minX, end: maxX, width: 0 };
+
+      // Gap before first non-participating column
+      const gaps = [];
+      gaps.push({
+        start: minX,
+        end: nonParticipatingXs[0],
+        width: nonParticipatingXs[0] - minX
+      });
+
+      // Gaps between non-participating columns
+      for (let i = 0; i < nonParticipatingXs.length - 1; i++) {
+        gaps.push({
+          start: nonParticipatingXs[i],
+          end: nonParticipatingXs[i + 1],
+          width: nonParticipatingXs[i + 1] - nonParticipatingXs[i]
+        });
+      }
+
+      // Gap after last non-participating column
+      gaps.push({
+        start: nonParticipatingXs[nonParticipatingXs.length - 1],
+        end: maxX,
+        width: maxX - nonParticipatingXs[nonParticipatingXs.length - 1]
+      });
+
+      // Find widest gap
+      for (const g of gaps) {
+        if (g.width > widestGap.width) widestGap = g;
+      }
+
+      // Return midpoint of the widest gap
+      return (widestGap.start + widestGap.end) / 2;
+    }
+
+    /* Outer visual radius of a film node */
+    function outerR(film) {
+      return film.actors.length > 1 ? R_INTER + 4 : R;
+    }
+
+    /* ── Path helpers (vertical routing: top → bottom) ─────────────── */
+
+    /* Build a smooth Tube Map-style path using quadratic Bezier curves */
+    function tubePath(pts) {
+      if (pts.length === 0) return '';
+      if (pts.length === 1) return `M ${pts[0].x} ${pts[0].y}`;
+
+      let d = `M ${pts[0].x} ${pts[0].y}`;
+
+      if (pts.length === 2) {
+        // Two points: draw a smooth curve
+        const x1 = pts[0].x, y1 = pts[0].y;
+        const x2 = pts[1].x, y2 = pts[1].y;
+        const cpx = (x1 + x2) / 2;  // control point x
+        const cpy = (y1 + y2) / 2;  // control point y
+        d += ` Q ${cpx} ${cpy} ${x2} ${y2}`;
+      } else {
+        // Multiple points: smooth curves through all points
+        for (let i = 1; i < pts.length; i++) {
+          const p0 = pts[i - 1];
+          const p1 = pts[i];
+          const p2 = i + 1 < pts.length ? pts[i + 1] : p1;
+
+          // Control point: average of current and next point
+          const cpx = (p0.x + p1.x) / 2;
+          const cpy = (p0.y + p1.y) / 2;
+
+          d += ` Q ${cpx} ${cpy} ${p1.x} ${p1.y}`;
+        }
+      }
+
+      return d;
+    }
+
+    /* ── Build SVG ─────────────────────────────────────────────────── */
+    const svg = svgEl('svg', {
+      id:          'diagram-svg',
+      viewBox:     `0 0 ${svgW} ${svgH}`,
+      width:       svgW,
+      height:      svgH,
+      role:        'img',
+      'aria-labelledby': 'svg-title svg-desc',
+      focusable:   'false',
+    });
+
+    /* Accessible title + description */
+    const sharedFilms = films.filter(f => f.actors.length > 1);
+    const actorNames  = actors.map(a => a.name).join(', ');
+
+    const svgTitleEl = svgEl('title', { id: 'svg-title' });
+    svgTitleEl.textContent = 'Actor Filmography Tube Map';
+    svg.appendChild(svgTitleEl);
+
+    const svgDescEl = svgEl('desc', { id: 'svg-desc' });
+    svgDescEl.textContent =
+      `Tube map showing filmographies of ${actorNames}. ` +
+      `${films.length} films shown across ${actors.length} routes. ` +
+      (sharedFilms.length
+        ? `${sharedFilms.length} shared film${sharedFilms.length > 1 ? 's' : ''}: ` +
+          sharedFilms.map(f => `${f.title} (${f.year})`).join(', ') + '.'
+        : 'No films shared between actors.');
+    svg.appendChild(svgDescEl);
+
+    /* ── Detect overlap runs (consecutive films shared between same pair of actors) ── */
+    /* For each pair of actors, find consecutive films they both appear in.
+       If found, offset them to show side-by-side instead of overlapping. */
+    const offsetMap = new Map(); // filmId -> [{actorIdx, offsetX}, ...]
+    const OVERLAP_OFFSET = 35; // pixels to offset when paths overlap
+
+    // For each pair of actors
+    for (let a1 = 0; a1 < actors.length; a1++) {
+      for (let a2 = a1 + 1; a2 < actors.length; a2++) {
+        // Find films both actors appear in, sorted by year and title
+        const bothInFilms = films
+          .filter(f => f.actors.includes(a1) && f.actors.includes(a2))
+          .sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+
+        if (bothInFilms.length < 2) continue;
+
+        // Check for consecutive pairs in THEIR shared films (not global)
+        for (let i = 0; i < bothInFilms.length - 1; i++) {
+          const film1 = bothInFilms[i];
+          const film2 = bothInFilms[i + 1];
+
+          // These are consecutive in the shared films, so offset them
+          if (!offsetMap.has(film1.id)) offsetMap.set(film1.id, []);
+          if (!offsetMap.has(film2.id)) offsetMap.set(film2.id, []);
+
+          // Determine offset directions: lower index = left, higher = right
+          const offsetX1 = a1 < a2 ? -OVERLAP_OFFSET : OVERLAP_OFFSET;
+          const offsetX2 = a2 > a1 ? OVERLAP_OFFSET : -OVERLAP_OFFSET;
+
+          offsetMap.get(film1.id).push({ actorIdx: a1, offsetX: offsetX1 });
+          offsetMap.get(film1.id).push({ actorIdx: a2, offsetX: offsetX2 });
+          offsetMap.get(film2.id).push({ actorIdx: a1, offsetX: offsetX1 });
+          offsetMap.get(film2.id).push({ actorIdx: a2, offsetX: offsetX2 });
+
+          console.log(`✓ ${actors[a1].name} + ${actors[a2].name}: "${film1.title}" → "${film2.title}"`);
+        }
+      }
+    }
+
+    console.log('offsetMap:', offsetMap);
+
+    /* ── Actor route paths (vertical, with 45° kinks and offsets for overlaps) ── */
+    for (const actor of actors) {
+      const myFilms = films
+        .filter(f => f.actors.includes(actor.index))
+        .sort((a, b) => filmY(a) - filmY(b));
+      if (myFilms.length < 1) continue;
+
+      /* Build path with offsets for overlapping segments */
+      const pts = [];
+      const connectors = []; // Thin lines from offset path to actual node
+
+      for (const film of myFilms) {
+        const baseX = nodeX(film);
+        let x = baseX;
+        const y = filmY(film);
+
+        /* Check if this actor's path should be offset at this film */
+        if (offsetMap.has(film.id)) {
+          for (const entry of offsetMap.get(film.id)) {
+            if (entry.actorIdx === actor.index) {
+              x = baseX + entry.offsetX;
+              /* Record connector line from offset path to actual node */
+              connectors.push({
+                fromX: x,
+                fromY: y,
+                toX: baseX,
+                toY: y,
+              });
+              break;
+            }
+          }
+        }
+
+        pts.push({ x, y });
+      }
+
+      /* Draw the main route path (with subtle shadow) */
+      if (pts.length >= 2) {
+        // Shadow layer
+        svg.appendChild(svgEl('path', {
+          d:                tubePath(pts),
+          fill:             'none',
+          stroke:           'rgba(0, 0, 0, 0.08)',
+          'stroke-width':   LINE_W + 1.5,
+          'stroke-linecap': 'round',
+          'stroke-linejoin':'round',
+          'aria-hidden':    'true',
+        }));
+        // Main route
+        svg.appendChild(svgEl('path', {
+          d:                tubePath(pts),
+          fill:             'none',
+          stroke:           actor.color,
+          'stroke-width':   LINE_W,
+          'stroke-linecap': 'round',
+          'stroke-linejoin':'round',
+          'aria-hidden':    'true',
+        }));
+      }
+
+      /* Draw thin connector lines from offset path to actual node */
+      for (const conn of connectors) {
+        svg.appendChild(svgEl('line', {
+          x1:            conn.fromX,
+          y1:            conn.fromY,
+          x2:            conn.toX,
+          y2:            conn.toY,
+          stroke:        actor.color,
+          'stroke-width': 1.5,
+          'opacity':     '0.6',
+          'aria-hidden': 'true',
+        }));
+      }
+
+      /* Actor name label at the top of their column */
+      svg.appendChild(svgText({
+        x:             actorX(actor.index),
+        y:             PAD.top - 18,
+        'text-anchor': 'middle',
+        class:         'label-actor',
+        fill:          actor.color,
+        'aria-hidden': 'true',
+      }, actor.name));
+    }
+
+    /* ── Station nodes — one node per film ─────────────────────────── */
+    const stationEls = []; // [{group, film}] for event wiring
+
+    films.forEach((film, rowIdx) => {
+      const x        = nodeX(film);
+      const y        = filmY(film);
+      const isShared = film.actors.length > 1;
+      const or       = outerR(film);
+
+      /* One interactive group per film */
+      const group = svgEl('g', {
+        class:        'station',
+        role:         'button',
+        tabindex:     '0',
+        'aria-label': `${film.title}, ${film.year}` +
+                      (isShared
+                        ? `. Interchange — shared by: ${film.actors.map(i => actors[i].name).join(' and ')}`
+                        : `. ${actors[film.actors[0]].name}`),
+        'data-film-id': String(film.id),
+      });
+
+      /* Hit area */
+      group.appendChild(svgEl('rect', {
+        class:  'station-hit',
+        x:      x - 28,
+        y:      y - 28,
+        width:  56,
+        height: 56,
+        rx:     8,
+      }));
+
+      if (isShared) {
+        group.appendChild(svgEl('circle', {
+          cx: x, cy: y, r: or,
+          class:         'interchange-ring',
+          'aria-hidden': 'true',
+        }));
+        group.appendChild(svgEl('circle', {
+          cx: x, cy: y, r: R_INTER,
+          class:         'interchange-center',
+          'aria-hidden': 'true',
+        }));
+      } else {
+        const actor = actors[film.actors[0]];
+        group.appendChild(svgEl('circle', {
+          cx: x, cy: y, r: R,
+          fill:           'var(--surface)',
+          stroke:         actor.color,
+          'stroke-width': 3,
+          class:          'station-circle',
+          'aria-hidden':  'true',
+        }));
+      }
+
+      /* Focus ring */
+      group.appendChild(svgEl('circle', {
+        cx: x, cy: y,
+        r:              or + 6,
+        fill:           'none',
+        stroke:         'var(--focus)',
+        'stroke-width': 2.5,
+        class:          'station-focus-ring',
+        'aria-hidden':  'true',
+      }));
+
+      /* Film label — alternate left/right to avoid overlap.
+         Even rows: label to the left; odd rows: label to the right. */
+      const toRight  = (rowIdx % 2 !== 0);
+      const labelX   = toRight ? x + or + LABEL_GAP : x - or - LABEL_GAP;
+      const anchor   = toRight ? 'start' : 'end';
+
+      group.appendChild(svgText({
+        x: labelX, y: y - 4,
+        'text-anchor':       anchor,
+        'dominant-baseline': 'auto',
+        class:               'label-film',
+        'font-weight':       isShared ? '700' : '400',
+        'aria-hidden':       'true',
+      }, truncate(film.title, 26)));
+
+      group.appendChild(svgText({
+        x: labelX, y: y + 11,
+        'text-anchor':       anchor,
+        'dominant-baseline': 'auto',
+        class:               'label-year',
+        'aria-hidden':       'true',
+      }, String(film.year)));
+
+      svg.appendChild(group);
+      stationEls.push({ group, film });
+    });
+
+    /* ── Insert SVG into page ──────────────────────────────────────── */
+    document.getElementById('diagram-container').appendChild(svg);
+
+    /* ── Page header subtitle ──────────────────────────────────────── */
+    const subtitle = document.getElementById('page-subtitle');
+    subtitle.textContent =
+      `${actors.map(a => a.name).join(' · ')} — ${films.length} films`;
+
+    /* ── Figcaption ────────────────────────────────────────────────── */
+    const caption = document.getElementById('diagram-caption');
+    caption.textContent =
+      `${films.length} film${films.length !== 1 ? 's' : ''} across ` +
+      `${actors.length} actor${actors.length !== 1 ? 's' : ''}. ` +
+      (sharedFilms.length
+        ? `${sharedFilms.length} shared interchange${sharedFilms.length > 1 ? 's' : ''}: ` +
+          sharedFilms.map(f => `${f.title} (${f.year})`).join(', ') + '.'
+        : 'No shared films found.');
+
+    /* ── Legend ────────────────────────────────────────────────────── */
+    const legendList = document.getElementById('legend-list');
+    for (const actor of actors) {
+      const li      = document.createElement('li');
+      li.className  = 'legend-item';
+
+      const swatch  = document.createElement('span');
+      swatch.className = 'legend-swatch';
+      swatch.style.background = actor.color;
+      swatch.setAttribute('aria-hidden', 'true');
+
+      const label   = document.createElement('span');
+      label.textContent = actor.name;
+
+      li.appendChild(swatch);
+      li.appendChild(label);
+      legendList.appendChild(li);
+    }
+
+    /* ── Data table ────────────────────────────────────────────────── */
+    const tbody = document.getElementById('data-table-body');
+    for (const film of films) {
+      const tr = document.createElement('tr');
+
+      const tdTitle = document.createElement('td');
+      tdTitle.textContent = film.title;
+      if (film.actors.length > 1) {
+        const badge = document.createElement('span');
+        badge.className = 'shared-badge';
+        badge.textContent = 'shared';
+        tdTitle.appendChild(badge);
+      }
+
+      const tdYear  = document.createElement('td');
+      tdYear.textContent = String(film.year);
+
+      const tdActors = document.createElement('td');
+      tdActors.textContent = film.actors.map(i => actors[i].name).join(', ');
+
+      tr.append(tdTitle, tdYear, tdActors);
+      tbody.appendChild(tr);
+    }
+
+    /* ── Table toggle ──────────────────────────────────────────────── */
+    const toggleBtn     = document.getElementById('table-toggle');
+    const tableWrapper  = document.getElementById('data-table-wrapper');
+
+    toggleBtn.addEventListener('click', () => {
+      const open = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!open));
+      toggleBtn.querySelector('.toggle-icon').textContent = open ? '▶' : '▼';
+      toggleBtn.childNodes[1].nodeValue = open ? ' Show full data table' : ' Hide full data table';
+      tableWrapper.hidden = open;
+    });
+
+    /* ── Film detail modal ─────────────────────────────────────────── */
+    const overlay      = document.getElementById('film-detail-overlay');
+    const dialog       = document.getElementById('film-detail');
+    const closeBtn     = document.getElementById('film-detail-close');
+    const detailTitle  = document.getElementById('film-detail-title');
+    const detailYear   = document.getElementById('film-detail-year');
+    const detailActors = document.getElementById('film-detail-actors');
+
+    let lastTrigger = null;
+
+    function openModal(film, trigger) {
+      lastTrigger = trigger;
+
+      detailTitle.textContent = film.title;
+      detailYear.textContent  = `Released ${film.year}`;
+
+      detailActors.innerHTML = '';
+      for (const idx of film.actors) {
+        const actor = actors[idx];
+        const li    = document.createElement('li');
+
+        const dot   = document.createElement('span');
+        dot.className = 'actor-dot';
+        dot.style.background = actor.color;
+        dot.setAttribute('aria-hidden', 'true');
+
+        const name  = document.createElement('span');
+        name.textContent = actor.name;
+
+        li.appendChild(dot);
+        li.appendChild(name);
+        detailActors.appendChild(li);
+      }
+
+      overlay.hidden = false;
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      overlay.hidden = true;
+      if (lastTrigger) lastTrigger.focus();
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeModal();
+    });
+
+    /* Keyboard: Escape closes; Tab is trapped inside dialog */
+    document.addEventListener('keydown', e => {
+      if (overlay.hidden) return;
+      if (e.key === 'Escape') { e.preventDefault(); closeModal(); return; }
+      if (e.key !== 'Tab') return;
+
+      const focusable = Array.from(
+        dialog.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])')
+      ).filter(el => !el.disabled);
+
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last  = focusable[focusable.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    });
+
+    /* ── Station interactions ──────────────────────────────────────── */
+    for (const { group, film } of stationEls) {
+      group.addEventListener('click', () => openModal(film, group));
+      group.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal(film, group);
+        }
+      });
+    }
+
+    /* ── Arrow-key navigation between stations ─────────────────────── */
+    // Roving focus: up/down arrows move between stations in chronological order
+    svg.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+      const current = document.activeElement;
+      const allStations = stationEls.map(s => s.group);
+      const idx = allStations.indexOf(current);
+      if (idx === -1) return;
+      e.preventDefault();
+      const next = e.key === 'ArrowDown'
+        ? allStations[Math.min(idx + 1, allStations.length - 1)]
+        : allStations[Math.max(idx - 1, 0)];
+      next.focus();
+      next.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+    });
+
+  }());
+  </script>
+
+</body>
+</html>
