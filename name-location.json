@@ -735,11 +735,6 @@
     "long": -2.350218354
   },
   {
-    "name": "Manchester, U5 Thorncliffe House",
-    "lat": 53.46141704,
-    "long": -2.229255495
-  },
-  {
     "name": "Wirral, U2 Croft RP, Welton Rd",
     "lat": 53.34102533,
     "long": -2.977126139
@@ -1613,11 +1608,6 @@
     "name": "Hillingdon, 370 Long Lane",
     "lat": 51.55081276,
     "long": -0.448662578
-  },
-  {
-    "name": "Dunstable, U18 Quadrant SC",
-    "lat": 51.887133293792,
-    "long": -0.520569968559
   },
   {
     "name": "Bury St Edmunds, 29 Cornhill",
@@ -3395,7 +3385,7 @@
     "long": -0.887220345213
   },
   {
-    "name": "Greggs Express @ MFG Glasgow A",
+    "name": "Greggs Express @ MFG Glasgow Airport",
     "lat": 0.0,
     "long": 0.0
   },
@@ -4605,7 +4595,7 @@
     "long": -2.485277828
   },
   {
-    "name": "Exeter, Marsh Barton TE, U12 T",
+    "name": "Exeter, Marsh Barton TE, U12 Trusham Rd",
     "lat": 50.70694747,
     "long": -3.529586415
   },
@@ -5715,7 +5705,7 @@
     "long": -1.73306
   },
   {
-    "name": "Harwich, U1A Harwich Gateway RP",
+    "name": "Harwich, U1A Harwich Gateway R",
     "lat": 51.9412,
     "long": 1.25814
   },
@@ -6740,7 +6730,7 @@
     "long": -2.61048427745
   },
   {
-    "name": "Dunstable, U30 Quadrant SC, Br",
+    "name": "Dunstable, U30 Quadrant SC, Broadwalk",
     "lat": 51.887266401641,
     "long": -0.52063216043
   },
@@ -7190,6 +7180,11 @@
     "long": -1.103684896
   },
   {
+    "name": "Manchester, 998 Ashton New Rd",
+    "lat": 53.48129047,
+    "long": -2.170058406
+  },
+  {
     "name": "Urmston, U9B Eden Square SC",
     "lat": 53.44889657,
     "long": -2.354305541
@@ -7410,7 +7405,7 @@
     "long": -1.297744191
   },
   {
-    "name": "Edmonton, Bury St West, 8 Cambridge Tce",
+    "name": "Edmonton, Bury St West, 8 Camb",
     "lat": 51.63430917,
     "long": -0.070959018
   },
@@ -9270,7 +9265,7 @@
     "long": -4.080462286
   },
   {
-    "name": "Cardiff, Cardiff University, P",
+    "name": "Cardiff, Cardiff University, Park Pl",
     "lat": 51.48829523,
     "long": -3.1783434
   },
@@ -9580,7 +9575,7 @@
     "long": -1.818707
   },
   {
-    "name": "Highbridge, UB, Oaktree BP Dri",
+    "name": "Highbridge, UB, Oaktree BP Drive Thru",
     "lat": 51.23017954,
     "long": -2.959718394
   },
@@ -9970,6 +9965,11 @@
     "long": -1.069548992998
   },
   {
+    "name": "Bradford, 100 Rooley Avenue",
+    "lat": 53.765089267188,
+    "long": -1.76059929246
+  },
+  {
     "name": "Gateshead, Metrocentre, 42 The Galleria",
     "lat": 54.956323968578,
     "long": -1.66876259553
@@ -10010,7 +10010,7 @@
     "long": -3.20495591835
   },
   {
-    "name": "Wembley, U4 The Hive, Wembley",
+    "name": "Wembley, U4 The Hive, Wembley Park Blvrd",
     "lat": 51.556778509,
     "long": -0.2824628251
   },
@@ -10910,7 +10910,7 @@
     "long": -1.506073874
   },
   {
-    "name": "Craven Arms, U1 Craven Ctr, Sh",
+    "name": "Craven Arms, U1 Craven Ctr, Shrwsbury Rd",
     "lat": 52.44072589,
     "long": -2.835855429
   },
@@ -12565,7 +12565,7 @@
     "long": -1.12431172
   },
   {
-    "name": "Accrington, The Viaduct, Hyndburn Rd",
+    "name": "Accrington, The Viaduct, Hyndb",
     "lat": 53.75437999,
     "long": -2.36907898
   },
@@ -13668,6 +13668,11 @@
     "name": "EG On The Move Braintree",
     "lat": 51.87868,
     "long": 0.53785
+  },
+  {
+    "name": "MFG Starbeck",
+    "lat": 53.992876146933,
+    "long": -1.495450798694
   },
   {
     "name": "MFG Swanwick",
