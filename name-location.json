@@ -1045,11 +1045,6 @@
     "long": -1.133264086
   },
   {
-    "name": "Birmingham, U18B Fox SC, Washwood Hth Rd",
-    "lat": 52.49416922,
-    "long": -1.819225665
-  },
-  {
     "name": "Swansea, U6F Swansea EP",
     "lat": 51.65849966,
     "long": -3.90861481
@@ -2615,12 +2610,12 @@
     "long": -3.141254739
   },
   {
-    "name": "Wakefield, Silkwood Park Drive",
+    "name": "Wakefield, Silkwood Park Drive Thru",
     "lat": 53.681855,
     "long": -1.547752
   },
   {
-    "name": "Wellingbrgh, Denington Rd Drive Thru",
+    "name": "Wellingbrgh, Denington Rd Driv",
     "lat": 52.29530005,
     "long": -0.686777891
   },
@@ -3228,11 +3223,6 @@
     "name": "WELCOME BREAK Hickling",
     "lat": 52.85142596312,
     "long": -1.030681068179
-  },
-  {
-    "name": "Pennywell, 3 Pennywell SC",
-    "lat": 54.896924479271,
-    "long": -1.43960944909
   },
   {
     "name": "MFG Bromyard",
@@ -4790,7 +4780,7 @@
     "long": -4.244026739
   },
   {
-    "name": "Burnley, 69 The Mall, Charter",
+    "name": "Burnley, 69 The Mall, Charter Wlk SC",
     "lat": 53.79016947,
     "long": -2.244240485
   },
@@ -5125,7 +5115,7 @@
     "long": -2.24028
   },
   {
-    "name": "Blackburn, The Mall SC, King William St",
+    "name": "Blackburn, The Mall SC, King W",
     "lat": 53.74835451,
     "long": -2.483588853
   },
@@ -6525,11 +6515,6 @@
     "long": -1.98950130491
   },
   {
-    "name": "Derby, U21 Merlin Park IE",
-    "lat": 52.905102552745,
-    "long": -1.46265664865
-  },
-  {
     "name": "Leigh, U13 Spinning Gate SC, Ellsmere St",
     "lat": 53.495213953516,
     "long": -2.51761650551
@@ -6735,11 +6720,6 @@
     "long": -0.52063216043
   },
   {
-    "name": "Bristol, U15 Imperial RP, Wills Way",
-    "lat": 51.415350074206,
-    "long": -2.60024785563
-  },
-  {
     "name": "Buxton, 24 Spring Gardens",
     "lat": 53.258986582538,
     "long": -1.91196859329
@@ -6798,6 +6778,11 @@
     "name": "MFG Crowborough",
     "lat": 51.05972892849,
     "long": 0.159497258187
+  },
+  {
+    "name": "MFG Dunglass",
+    "lat": 55.935442393877,
+    "long": -4.516092377247
   },
   {
     "name": "MFG Tavistock",
@@ -7900,7 +7885,7 @@
     "long": -0.147814408
   },
   {
-    "name": "Preston, St George SC, 13 Orchard St",
+    "name": "Preston, St George SC, 13 Orch",
     "lat": 53.7603939,
     "long": -2.7005563
   },
@@ -8180,7 +8165,7 @@
     "long": -2.932990925
   },
   {
-    "name": "Bradford, U19C Forster Square RP",
+    "name": "Bradford, U19C Forster Square",
     "lat": 53.8011135,
     "long": -1.75373388
   },
@@ -10455,7 +10440,7 @@
     "long": -6.442455294
   },
   {
-    "name": "Cramlington, U15a Nelson Park",
+    "name": "Cramlington, U15a Nelson Park IE",
     "lat": 55.09731047,
     "long": -1.609073523
   },
@@ -11485,7 +11470,7 @@
     "long": -3.62263817
   },
   {
-    "name": "Harold Hill, Romford, 4 Farnha",
+    "name": "Harold Hill, Romford, 4 Farnham Rd",
     "lat": 51.60683358,
     "long": 0.218423421
   },
@@ -13085,7 +13070,7 @@
     "long": -2.732626846302
   },
   {
-    "name": "Tyldesley, U4 Parr Bridge RP, Msley Rd",
+    "name": "Tyldesley, U4 Parr Bridge RP,",
     "lat": 53.511184,
     "long": -2.431355
   },
@@ -13610,6 +13595,11 @@
     "long": -3.52681617056
   },
   {
+    "name": "Southport, 41 Chapel St",
+    "lat": 53.64736585452,
+    "long": -3.00381119694
+  },
+  {
     "name": "Crewe, U12 The Market Ctr, Victoria St",
     "lat": 53.099365792842,
     "long": -2.44114352733
@@ -13628,6 +13618,11 @@
     "name": "Milton Keynes, UK Central RP, Patriot Dr",
     "lat": 52.041388654469,
     "long": -0.77699829017
+  },
+  {
+    "name": "London, U8 London Bridge Stn B",
+    "lat": 51.504680197846,
+    "long": -0.08599469166
   },
   {
     "name": "Inverness, 46 High St",
