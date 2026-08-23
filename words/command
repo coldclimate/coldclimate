@@ -1,0 +1,1 @@
+cat thing.epub.annot | xq '.annotationSet.annotation[].target.fragment.text' | perl -e 'print sort { length($a) <=> length($b) } <>' |tr -d '"'
